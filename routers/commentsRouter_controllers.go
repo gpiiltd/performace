@@ -16,6 +16,24 @@ func init() {
             Filters: nil,
             Params: nil})
 
+    beego.GlobalControllerRouter["performance/controllers:TeamLeadController"] = append(beego.GlobalControllerRouter["performance/controllers:TeamLeadController"],
+        beego.ControllerComments{
+            Method: "GetMyTeamInfo",
+            Router: `/myteam/`,
+            AllowHTTPMethods: []string{"get"},
+            MethodParams: param.Make(),
+            Filters: nil,
+            Params: nil})
+
+    beego.GlobalControllerRouter["performance/controllers:TeamLeadController"] = append(beego.GlobalControllerRouter["performance/controllers:TeamLeadController"],
+        beego.ControllerComments{
+            Method: "CreateTeam",
+            Router: `/team/`,
+            AllowHTTPMethods: []string{"post"},
+            MethodParams: param.Make(),
+            Filters: nil,
+            Params: nil})
+
     beego.GlobalControllerRouter["performance/controllers:TokenController"] = append(beego.GlobalControllerRouter["performance/controllers:TokenController"],
         beego.ControllerComments{
             Method: "GetTokenString",

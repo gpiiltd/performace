@@ -66,14 +66,16 @@ type Model struct {
 //User struct shows models for users
 type User struct {
 	Model
-	FullName string `gorm:"type:varchar(100)" json:"full_name"`
-	JobTitle string `gorm:"type:varchar(100)" json:"job_title"`
-	Gender   string `gorm:"type:varchar(100)" json:"gender"`
-	Location string `gorm:"type:varchar(100)" json:"location"`
-	Number   string `gorm:"type:varchar(100)"  json:"number"`
-	Email    string `gorm:"type:varchar(100); unique_index" json:"email"`
-	Role     uint   `gorm:"type:int(10)" json:"role"`
-	Image    string `gorm:"type:varchar(100)" json:"image"`
+	FullName     string `gorm:"type:varchar(100)" json:"full_name"`
+	JobTitle     string `gorm:"type:varchar(100)" json:"job_title"`
+	Gender       string `gorm:"type:varchar(100)" json:"gender"`
+	Location     string `gorm:"type:varchar(100)" json:"location"`
+	Number       string `gorm:"type:varchar(100)"  json:"number"`
+	Email        string `gorm:"type:varchar(100); unique_index" json:"email"`
+	Role         uint64 `gorm:"type:int(10)" json:"role"`
+	Department   string `gorm:"department" json:"department"`
+	DepartmentID uint64 `gorm:"type:int(10)" json:"department_id"`
+	Image        string `gorm:"type:varchar(100)" json:"image"`
 }
 
 //Team holds the object for creating a new team on the system

@@ -28,6 +28,37 @@ paths:
           description: '{string} id of the user'
         "403":
           description: body is empty
+  /lead/myteam/:
+    get:
+      tags:
+      - lead
+      description: gets a team information
+      operationId: TeamLeadController.GetMyTeamInfo
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.ValidResponse'
+        "403":
+          description: body is empty
+  /lead/team/:
+    post:
+      tags:
+      - lead
+      description: creates a new team using the user ID
+      operationId: TeamLeadController.CreateTeam
+      parameters:
+      - in: path
+        name: teamid
+        description: the team object
+        required: true
+        schema:
+          $ref: '#/definitions/models.Team'
+      responses:
+        "200":
+          description: '{string} id of the user'
+        "403":
+          description: body is empty
   /token/token/{email}:
     get:
       tags:
@@ -94,6 +125,34 @@ definitions:
   models.Success:
     title: Success
     type: object
+  models.Team:
+    title: Team
+    type: object
+    properties:
+      created_at:
+        type: string
+        format: datetime
+      deleted_at:
+        type: string
+        format: datetime
+      department:
+        type: string
+      department_id:
+        type: integer
+        format: int64
+      id:
+        type: integer
+        format: int64
+      lead:
+        type: string
+      lead_id:
+        type: integer
+        format: int64
+      name:
+        type: string
+      updated_at:
+        type: string
+        format: datetime
   models.User:
     title: User
     type: object
@@ -104,6 +163,11 @@ definitions:
       deleted_at:
         type: string
         format: datetime
+      department:
+        type: string
+      department_id:
+        type: integer
+        format: int64
       email:
         type: string
       full_name:
@@ -123,10 +187,13 @@ definitions:
         type: string
       role:
         type: integer
-        format: int32
+        format: int64
       updated_at:
         type: string
         format: datetime
+  models.ValidResponse:
+    title: ValidResponse
+    type: object
 tags:
 - name: user
   description: |

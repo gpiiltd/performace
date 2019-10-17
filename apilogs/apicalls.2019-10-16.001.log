@@ -1,0 +1,360 @@
+2019/10/07 00:13:20.812 [I] [asm_amd64.s:1337]  http server Running on http://:2253
+2019/10/07 00:15:00.250 [I] [asm_amd64.s:1337]  http server Running on http://:2253
+2019/10/07 00:15:32.178 [I] [asm_amd64.s:1337]  http server Running on http://:2253
+2019/10/07 00:16:26.214 [I] [asm_amd64.s:1337]  http server Running on http://:2253
+2019/10/07 00:17:31.062 [I] [asm_amd64.s:1337]  http server Running on http://:2253
+2019/10/07 00:18:40.328 [I] [asm_amd64.s:1337]  http server Running on http://:2253
+2019/10/07 00:28:10.704 [I] [asm_amd64.s:1337]  http server Running on http://:2253
+2019/10/09 11:48:13.072 [I] [asm_amd64.s:1337]  http server Running on http://:2253
+2019/10/09 11:48:14.313 [I] [asm_amd64.s:1337]  http server Running on http://:2253
+2019/10/09 11:48:15.947 [I] [asm_amd64.s:1337]  http server Running on http://:2253
+2019/10/09 11:48:59.276 [I] [asm_amd64.s:1337]  http server Running on http://:2253
+2019/10/16 13:15:44.221 [I] [asm_amd64.s:1337]  http server Running on http://:2253
+2019/10/16 13:15:47.068 [I] [asm_amd64.s:1337]  http server Running on http://:2253
+2019/10/16 13:15:49.223 [I] [asm_amd64.s:1337]  http server Running on http://:2253
+2019/10/16 13:17:16.724 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s|   match|[44m GET     [0m /v1/token/token/endy.apina@my-gpi.io   r:/v1/token/:email
+2019/10/16 13:17:18.307 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/16 13:17:18.462 [D] [server.go:2774]  |            ::1|[42m 200 [0m|    84.8015ms|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/16 13:17:45.044 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s|   match|[44m GET     [0m /v1/token/token/apinaendy@gmail.com   r:/v1/token/:email
+2019/10/16 13:17:45.227 [D] [server.go:2774]  |            ::1|[42m 200 [0m|      997.1µs| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/16 13:17:45.322 [D] [server.go:2774]  |            ::1|[42m 200 [0m|    49.8624ms|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/16 13:17:49.106 [D] [server.go:2774]  |            ::1|[42m 200 [0m|   927.7309ms|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/16 13:17:51.144 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/16 13:17:51.765 [D] [server.go:2774]  |            ::1|[42m 200 [0m|   576.0494ms|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/16 13:17:53.442 [D] [server.go:2774]  |            ::1|[42m 200 [0m|    85.7722ms|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/16 13:17:55.052 [D] [server.go:2774]  |            ::1|[42m 200 [0m|    79.9577ms|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/16 13:17:56.033 [D] [server.go:2774]  |            ::1|[42m 200 [0m|    90.7596ms|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/16 13:18:12.503 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/16 13:18:12.681 [D] [server.go:2774]  |            ::1|[42m 200 [0m|   111.2313ms|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/16 13:18:14.146 [D] [server.go:2774]  |            ::1|[42m 200 [0m|    35.9215ms|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/16 13:19:16.841 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/16 13:19:17.213 [D] [server.go:2774]  |            ::1|[42m 200 [0m|   317.4179ms|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/16 13:19:23.064 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/16 13:19:23.239 [D] [server.go:2774]  |            ::1|[42m 200 [0m|   159.9556ms|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/16 13:20:34.990 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/16 13:20:35.194 [D] [server.go:2774]  |            ::1|[42m 200 [0m|   136.6586ms|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/16 13:20:38.212 [D] [server.go:2774]  |            ::1|[42m 200 [0m|    588.858ms|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/16 13:20:39.379 [D] [server.go:2774]  |            ::1|[42m 200 [0m|   283.8341ms|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/16 13:20:40.657 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/16 13:20:40.713 [D] [server.go:2774]  |            ::1|[42m 200 [0m|    38.8941ms|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/16 13:20:42.570 [D] [server.go:2774]  |            ::1|[42m 200 [0m|   160.8329ms|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/16 13:20:47.811 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/16 13:20:47.975 [D] [server.go:2774]  |            ::1|[42m 200 [0m|   145.9514ms|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/16 13:20:49.569 [D] [server.go:2774]  |            ::1|[42m 200 [0m|   269.7094ms|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/16 13:21:27.835 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/16 13:21:28.302 [D] [server.go:2774]  |            ::1|[42m 200 [0m|   401.5151ms|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/16 13:21:33.800 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/16 13:21:34.139 [D] [server.go:2774]  |            ::1|[42m 200 [0m|   291.4285ms|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/16 13:21:41.722 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/16 13:21:41.915 [D] [server.go:2774]  |            ::1|[42m 200 [0m|    90.9107ms|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/16 13:29:25.157 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/16 13:29:25.246 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[46m POST    [0m /v1/user/update/
+2019/10/16 13:35:54.872 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     1.0037ms| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/16 13:35:55.058 [D] [server.go:2774]  |            ::1|[42m 200 [0m|      852.6µs| nomatch|[46m POST    [0m /v1/user/update/
+2019/10/16 13:36:10.885 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/16 13:36:11.052 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[46m POST    [0m /v1/user/update/
+2019/10/16 13:37:47.115 [D] [server.go:2774]  |            ::1|[42m 200 [0m|      589.6µs|   match|[44m GET     [0m /v1/token/token/test@my-gpi.io   r:/v1/token/:email
+2019/10/16 13:37:47.870 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/16 13:37:48.126 [D] [server.go:2774]  |            ::1|[42m 200 [0m|   108.3827ms|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/16 13:41:04.730 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s|   match|[44m GET     [0m /v1/token/token/noreply@my-gpi.io   r:/v1/token/:email
+2019/10/16 13:42:06.769 [D] [server.go:2774]  |            ::1|[42m 200 [0m|      182.6µs|   match|[44m GET     [0m /v1/token/token/noreply@my-gpi.io   r:/v1/token/:email
+2019/10/16 13:45:26.452 [D] [server.go:2774]  |            ::1|[42m 200 [0m|      872.9µs|   match|[44m GET     [0m /v1/token/token/noreply@my-gpi.io   r:/v1/token/:email
+2019/10/16 13:47:31.054 [D] [server.go:2774]  |            ::1|[42m 200 [0m|      1.058ms|   match|[44m GET     [0m /v1/token/token/noreply@my-gpi.io   r:/v1/token/:email
+2019/10/16 13:49:49.957 [D] [server.go:2774]  |            ::1|[42m 200 [0m|        305µs|   match|[44m GET     [0m /v1/token/token/noreply@my-gpi.io   r:/v1/token/:email
+2019/10/16 13:50:36.509 [D] [server.go:2774]  |            ::1|[42m 200 [0m|      815.5µs| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/16 13:50:36.843 [D] [server.go:2774]  |            ::1|[42m 200 [0m|   160.1849ms|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/16 13:50:58.841 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s|   match|[44m GET     [0m /v1/token/token/noreply@my-gpi.io   r:/v1/token/:email
+2019/10/16 13:50:59.280 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/16 13:50:59.590 [D] [server.go:2774]  |            ::1|[42m 200 [0m|   136.4548ms|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/16 13:53:28.117 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/16 13:53:28.423 [D] [server.go:2774]  |            ::1|[42m 200 [0m|   128.8801ms|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/16 13:56:34.234 [D] [server.go:2774]  |            ::1|[42m 200 [0m|      168.9µs| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/16 13:56:34.558 [D] [server.go:2774]  |            ::1|[42m 200 [0m|   118.3512ms|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/16 13:58:40.808 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/16 13:58:41.021 [D] [server.go:2774]  |            ::1|[42m 200 [0m|    65.0732ms|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/16 13:58:46.081 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/16 13:58:46.688 [D] [server.go:2774]  |            ::1|[42m 200 [0m|    447.137ms|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/16 13:59:18.397 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/16 13:59:19.343 [D] [server.go:2774]  |            ::1|[42m 200 [0m|   791.5522ms|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/16 13:59:37.290 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/16 13:59:37.562 [D] [server.go:2774]  |            ::1|[42m 200 [0m|    49.0151ms|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/16 13:59:46.575 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/16 13:59:46.786 [D] [server.go:2774]  |            ::1|[42m 200 [0m|    48.3292ms|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/16 14:01:52.330 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/16 14:01:52.625 [D] [server.go:2774]  |            ::1|[42m 200 [0m|   137.2882ms|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/16 14:01:59.459 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/16 14:01:59.616 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     85.767ms|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/16 14:02:43.012 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/16 14:02:43.304 [D] [server.go:2774]  |            ::1|[42m 200 [0m|   129.2385ms|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/16 14:04:53.988 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/16 14:04:54.268 [D] [server.go:2774]  |            ::1|[42m 200 [0m|   124.6693ms|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/16 14:11:11.466 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/16 14:11:11.706 [D] [server.go:2774]  |            ::1|[42m 200 [0m|    72.7854ms|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/16 14:11:17.179 [D] [server.go:2774]  |            ::1|[42m 200 [0m|      996.8µs| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/16 14:11:17.499 [D] [server.go:2774]  |            ::1|[42m 200 [0m|   141.9717ms|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/16 14:11:34.036 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/16 14:11:35.131 [D] [server.go:2774]  |            ::1|[42m 200 [0m|   945.8352ms|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/16 14:11:50.183 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/16 14:11:51.305 [D] [server.go:2774]  |            ::1|[42m 200 [0m|   934.3532ms|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/16 14:12:16.409 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/16 14:12:16.619 [D] [server.go:2774]  |            ::1|[42m 200 [0m|   145.7313ms|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/16 14:13:53.779 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/16 14:13:53.914 [D] [server.go:2774]  |            ::1|[42m 200 [0m|    53.8697ms|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/16 14:14:09.913 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/16 14:14:10.292 [D] [server.go:2774]  |            ::1|[42m 200 [0m|   315.4957ms|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/16 14:14:37.926 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/16 14:14:38.221 [D] [server.go:2774]  |            ::1|[42m 200 [0m|   127.5588ms|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/16 16:37:07.422 [I] [asm_amd64.s:1337]  http server Running on http://:2253
+2019/10/16 16:37:09.905 [I] [asm_amd64.s:1337]  http server Running on http://:2253
+2019/10/16 16:37:13.034 [I] [asm_amd64.s:1337]  http server Running on http://:2253
+2019/10/16 16:38:43.609 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     1.0073ms|   match|[44m GET     [0m /v1/token/token/noreply@my-gpi.io   r:/v1/token/:email
+2019/10/16 16:38:44.836 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/16 16:38:45.011 [D] [server.go:2774]  |            ::1|[42m 200 [0m|   102.6595ms|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/16 16:40:13.981 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/16 16:40:14.386 [D] [server.go:2774]  |            ::1|[42m 200 [0m|   339.3178ms|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/16 17:05:06.411 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/16 17:05:06.578 [D] [server.go:2774]  |            ::1|[42m 200 [0m|   108.7344ms|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/16 17:05:16.203 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/16 17:05:16.431 [D] [server.go:2774]  |            ::1|[42m 200 [0m|   117.9849ms|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/16 17:05:42.266 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/16 17:05:42.957 [D] [server.go:2774]  |            ::1|[42m 200 [0m|   586.5307ms|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/16 17:05:47.969 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/16 17:05:48.377 [D] [server.go:2774]  |            ::1|[42m 200 [0m|   305.8905ms|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/16 17:06:24.382 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s|   match|[44m GET     [0m /v1/token/token/noreply@my-gpi.io   r:/v1/token/:email
+2019/10/16 17:06:24.658 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/16 17:06:24.779 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     69.887ms|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/16 17:06:28.549 [D] [server.go:2774]  |            ::1|[42m 200 [0m|   139.0123ms|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/16 17:06:58.624 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/16 17:06:58.843 [D] [server.go:2774]  |            ::1|[42m 200 [0m|    99.2574ms|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/16 17:07:18.596 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/16 17:07:18.811 [D] [server.go:2774]  |            ::1|[42m 200 [0m|   132.2547ms|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/16 17:07:47.573 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/16 17:07:47.821 [D] [server.go:2774]  |            ::1|[42m 200 [0m|   156.1156ms|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/16 17:07:49.230 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/16 17:07:49.465 [D] [server.go:2774]  |            ::1|[42m 200 [0m|   158.5781ms|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/16 17:09:26.501 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/16 17:09:26.719 [D] [server.go:2774]  |            ::1|[42m 200 [0m|   124.6644ms|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/16 17:10:27.643 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/16 17:10:27.897 [D] [server.go:2774]  |            ::1|[42m 200 [0m|   135.3777ms|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/16 17:10:56.711 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/16 17:10:56.930 [D] [server.go:2774]  |            ::1|[42m 200 [0m|   128.2346ms|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/16 17:11:37.258 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/16 17:11:37.986 [D] [server.go:2774]  |            ::1|[42m 200 [0m|   629.7966ms|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/16 17:14:54.740 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/16 17:14:54.874 [D] [server.go:2774]  |            ::1|[42m 200 [0m|    48.8682ms|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/16 17:15:10.070 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/16 17:15:10.237 [D] [server.go:2774]  |            ::1|[42m 200 [0m|    64.8214ms|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/16 17:16:00.717 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/16 17:16:01.308 [D] [server.go:2774]  |            ::1|[42m 200 [0m|   499.2037ms|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/16 17:16:49.744 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/16 17:16:50.793 [D] [server.go:2774]  |            ::1|[42m 200 [0m|   964.1593ms|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/16 17:17:20.812 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/16 17:17:22.049 [D] [server.go:2774]  |            ::1|[42m 200 [0m|   1.1436224s|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/16 17:17:26.425 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/16 17:17:26.851 [D] [server.go:2774]  |            ::1|[42m 200 [0m|   311.1766ms|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/16 17:18:00.985 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/16 17:18:01.917 [D] [server.go:2774]  |            ::1|[42m 200 [0m|   836.6742ms|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/16 17:18:06.175 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/16 17:18:06.653 [D] [server.go:2774]  |            ::1|[42m 200 [0m|    385.578ms|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/16 17:18:20.382 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/16 17:18:20.554 [D] [server.go:2774]  |            ::1|[42m 200 [0m|    55.3629ms|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/16 17:18:31.757 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/16 17:18:31.936 [D] [server.go:2774]  |            ::1|[42m 200 [0m|    77.7921ms|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/16 17:18:43.501 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/16 17:18:43.652 [D] [server.go:2774]  |            ::1|[42m 200 [0m|    47.8678ms|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/16 17:26:14.719 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/16 17:26:14.928 [D] [server.go:2774]  |            ::1|[42m 200 [0m|   128.6545ms|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/16 17:27:22.807 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/16 17:27:23.977 [D] [server.go:2774]  |            ::1|[42m 200 [0m|   1.0641974s|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/16 17:32:23.683 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/16 17:32:23.914 [D] [server.go:2774]  |            ::1|[42m 200 [0m|   133.6393ms|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/16 17:32:34.710 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/16 17:32:34.991 [D] [server.go:2774]  |            ::1|[42m 200 [0m|   129.5743ms|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/16 17:32:46.715 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/16 17:32:46.863 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     58.832ms|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/16 17:36:57.616 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/16 17:36:57.707 [D] [server.go:2774]  |            ::1|[42m 200 [0m|    60.2487ms|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/16 17:41:57.165 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/16 17:41:57.289 [D] [server.go:2774]  |            ::1|[42m 200 [0m|   101.7268ms|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/16 17:42:13.428 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/16 17:42:13.641 [D] [server.go:2774]  |            ::1|[42m 200 [0m|   135.2534ms|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/16 17:42:24.734 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/16 17:42:25.826 [D] [server.go:2774]  |            ::1|[42m 200 [0m|   1.0049805s|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/16 17:42:38.475 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/16 17:42:38.818 [D] [server.go:2774]  |            ::1|[42m 200 [0m|   255.1596ms|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/16 17:42:55.256 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/16 17:42:55.816 [D] [server.go:2774]  |            ::1|[42m 200 [0m|   462.2928ms|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/16 17:43:04.154 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/16 17:43:04.900 [D] [server.go:2774]  |            ::1|[42m 200 [0m|   657.3195ms|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/16 17:43:13.028 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     1.0003ms| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/16 17:43:13.191 [D] [server.go:2774]  |            ::1|[42m 200 [0m|    65.8238ms|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/16 17:43:28.776 [D] [server.go:2774]  |            ::1|[42m 200 [0m|      971.4µs| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/16 17:43:28.891 [D] [server.go:2774]  |            ::1|[42m 200 [0m|    82.9077ms|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/16 17:44:12.088 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s|   match|[44m GET     [0m /v1/token/token/test@my-gpi.io   r:/v1/token/:email
+2019/10/16 17:44:12.230 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/16 17:44:12.268 [D] [server.go:2774]  |            ::1|[42m 200 [0m|      995.9µs|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/16 17:45:10.163 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/16 17:45:10.200 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     1.0053ms|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/16 17:46:15.471 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/16 17:46:15.497 [D] [server.go:2774]  |            ::1|[42m 200 [0m|      996.2µs|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/16 17:46:31.043 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/16 17:46:31.077 [D] [server.go:2774]  |            ::1|[42m 200 [0m|      992.5µs|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/16 17:46:40.713 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/16 17:46:40.757 [D] [server.go:2774]  |            ::1|[42m 200 [0m|      435.3µs|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/16 17:48:47.572 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/16 17:48:47.604 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     2.0164ms|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/16 17:49:47.970 [D] [server.go:2774]  |            ::1|[42m 200 [0m|        998µs| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/16 17:49:48.003 [D] [server.go:2774]  |            ::1|[42m 200 [0m|      995.2µs|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/16 17:49:54.574 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/16 17:49:54.620 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     1.9946ms|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/16 17:51:57.352 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/16 17:51:57.402 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/16 17:52:02.956 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/16 17:52:02.983 [D] [server.go:2774]  |            ::1|[42m 200 [0m|      996.9µs|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/16 17:52:16.228 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/16 17:52:16.269 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     1.0059ms|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/16 17:53:42.934 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/16 17:53:42.954 [D] [server.go:2774]  |            ::1|[42m 200 [0m|        980µs|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/16 17:55:20.767 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s|   match|[44m GET     [0m /v1/token/token/apinaendy@gmail.com   r:/v1/token/:email
+2019/10/16 17:55:21.400 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/16 17:55:21.511 [D] [server.go:2774]  |            ::1|[42m 200 [0m|    71.7904ms|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/16 17:55:23.646 [D] [server.go:2774]  |            ::1|[42m 200 [0m|    78.9349ms|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/16 17:55:45.362 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/16 17:55:45.819 [D] [server.go:2774]  |            ::1|[42m 200 [0m|   423.6913ms|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/16 17:56:05.438 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/16 17:56:05.534 [D] [server.go:2774]  |            ::1|[42m 200 [0m|    35.9238ms|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/16 17:56:07.023 [D] [server.go:2774]  |            ::1|[42m 200 [0m|    69.8143ms|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/16 17:56:32.749 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/16 17:56:32.917 [D] [server.go:2774]  |            ::1|[42m 200 [0m|   147.0399ms|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/16 17:56:36.489 [D] [server.go:2774]  |            ::1|[42m 200 [0m|   970.7589ms|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/16 17:56:36.695 [D] [server.go:2774]  |            ::1|[42m 200 [0m|    81.2093ms|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/16 18:07:56.038 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/16 18:07:56.435 [D] [server.go:2774]  |            ::1|[42m 200 [0m|   383.5492ms|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/16 18:08:34.320 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/16 18:08:34.450 [D] [server.go:2774]  |            ::1|[42m 200 [0m|    64.8217ms|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/16 18:09:01.833 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/16 18:09:02.054 [D] [server.go:2774]  |            ::1|[42m 200 [0m|    147.598ms|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/16 18:09:58.852 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/16 18:09:59.037 [D] [server.go:2774]  |            ::1|[42m 200 [0m|   136.6275ms|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/16 18:11:14.937 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/16 18:11:15.125 [D] [server.go:2774]  |            ::1|[42m 200 [0m|   125.9947ms|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/16 18:11:17.594 [D] [server.go:2774]  |            ::1|[42m 200 [0m|    53.8518ms|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/16 18:11:19.965 [D] [server.go:2774]  |            ::1|[42m 200 [0m|    34.9012ms|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/16 18:11:21.696 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/16 18:11:21.788 [D] [server.go:2774]  |            ::1|[42m 200 [0m|    46.8709ms|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/16 18:11:23.293 [D] [server.go:2774]  |            ::1|[42m 200 [0m|    76.7937ms|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/16 18:11:24.340 [D] [server.go:2774]  |            ::1|[42m 200 [0m|    76.7945ms|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/16 18:11:27.658 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/16 18:11:27.815 [D] [server.go:2774]  |            ::1|[42m 200 [0m|    95.7312ms|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/16 18:11:29.230 [D] [server.go:2774]  |            ::1|[42m 200 [0m|    127.135ms|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/16 18:11:31.298 [D] [server.go:2774]  |            ::1|[42m 200 [0m|   212.7059ms|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/16 18:11:31.502 [D] [server.go:2774]  |            ::1|[42m 200 [0m|    94.7483ms|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/16 18:11:32.450 [D] [server.go:2774]  |            ::1|[42m 200 [0m|    78.8118ms|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/16 18:14:26.969 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/16 18:14:27.897 [D] [server.go:2774]  |            ::1|[42m 200 [0m|   887.2779ms|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/16 18:14:41.668 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/16 18:14:41.774 [D] [server.go:2774]  |            ::1|[42m 200 [0m|    55.3908ms|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/16 18:14:45.969 [D] [server.go:2774]  |            ::1|[42m 200 [0m|    99.2789ms|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/16 18:14:53.036 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/16 18:14:53.165 [D] [server.go:2774]  |            ::1|[42m 200 [0m|    87.7667ms|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/16 18:15:25.613 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/16 18:15:25.771 [D] [server.go:2774]  |            ::1|[42m 200 [0m|    98.7419ms|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/16 18:15:53.410 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/16 18:15:53.629 [D] [server.go:2774]  |            ::1|[42m 200 [0m|   183.5379ms|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/16 18:16:03.849 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/16 18:16:04.037 [D] [server.go:2774]  |            ::1|[42m 200 [0m|   142.1113ms|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/16 18:20:29.303 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/16 18:20:29.670 [D] [server.go:2774]  |            ::1|[42m 200 [0m|   323.0827ms|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/16 18:20:31.681 [D] [server.go:2774]  |            ::1|[42m 200 [0m|    56.8486ms|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/16 18:22:46.088 [I] [asm_amd64.s:1337]  http server Running on http://:2253
+2019/10/16 18:50:42.534 [I] [asm_amd64.s:1337]  http server Running on http://:2253
+2019/10/16 20:05:25.821 [I] [asm_amd64.s:1337]  http server Running on http://:2253
+2019/10/16 20:05:35.339 [I] [asm_amd64.s:1337]  http server Running on http://:2253
+2019/10/16 20:06:06.889 [I] [asm_amd64.s:1337]  http server Running on http://:2253
+2019/10/16 20:09:22.282 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/16 20:09:22.449 [D] [server.go:2774]  |            ::1|[42m 200 [0m|   124.1796ms|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/16 20:09:29.737 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/16 20:09:29.841 [D] [server.go:2774]  |            ::1|[42m 200 [0m|    71.8061ms|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/16 20:11:41.236 [D] [server.go:2774]  |            ::1|[42m 200 [0m|      997.1µs| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/16 20:11:41.381 [D] [server.go:2774]  |            ::1|[42m 200 [0m|    66.8136ms|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/16 20:12:24.221 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/16 20:12:24.333 [D] [server.go:2774]  |            ::1|[42m 200 [0m|    64.8076ms|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/16 20:12:42.958 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/16 20:12:43.147 [D] [server.go:2774]  |            ::1|[42m 200 [0m|   141.6159ms|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/16 20:14:04.219 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/16 20:14:04.905 [D] [server.go:2774]  |            ::1|[42m 200 [0m|   639.5693ms|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/16 20:14:21.883 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/16 20:14:22.276 [D] [server.go:2774]  |            ::1|[42m 200 [0m|   334.9885ms|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/16 20:14:40.720 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/16 20:14:40.810 [D] [server.go:2774]  |            ::1|[42m 200 [0m|    35.2442ms|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/16 20:20:51.332 [I] [asm_amd64.s:1337]  http server Running on http://:2253
+2019/10/16 20:35:03.467 [I] [asm_amd64.s:1337]  http server Running on http://:2253
+2019/10/16 20:45:26.078 [I] [asm_amd64.s:1337]  http server Running on http://:2253
+2019/10/16 20:45:55.101 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/16 20:45:55.296 [D] [server.go:2774]  |            ::1|[42m 200 [0m|    73.8343ms|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/16 20:46:02.399 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/16 20:46:02.606 [D] [server.go:2774]  |            ::1|[42m 200 [0m|   148.4015ms|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/16 20:46:20.702 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/16 20:46:21.116 [D] [server.go:2774]  |            ::1|[42m 200 [0m|   276.2589ms|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/16 20:46:39.352 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/16 20:46:40.517 [D] [server.go:2774]  |            ::1|[42m 200 [0m|   1.0542629s|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/16 20:47:57.393 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/16 20:47:57.984 [D] [server.go:2774]  |            ::1|[42m 200 [0m|   495.4496ms|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/16 20:48:43.014 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/16 20:48:43.267 [D] [server.go:2774]  |            ::1|[42m 200 [0m|   143.6079ms|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/16 20:49:15.322 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/16 20:49:15.778 [D] [server.go:2774]  |            ::1|[42m 200 [0m|   316.8101ms|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/16 20:52:24.035 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/16 20:52:24.211 [D] [server.go:2774]  |            ::1|[42m 200 [0m|    60.8411ms|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/16 20:52:35.911 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/16 20:52:36.132 [D] [server.go:2774]  |            ::1|[42m 200 [0m|   119.6602ms|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/16 20:52:56.027 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/16 20:52:56.246 [D] [server.go:2774]  |            ::1|[42m 200 [0m|   128.6553ms|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/16 20:54:11.539 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/16 20:54:12.488 [D] [server.go:2774]  |            ::1|[42m 200 [0m|   877.0018ms|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/16 20:55:45.937 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s|   match|[44m GET     [0m /v1/token/token/apinaendy@gmail.com   r:/v1/token/:email
+2019/10/16 20:55:46.330 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/16 20:55:46.469 [D] [server.go:2774]  |            ::1|[42m 200 [0m|    54.0006ms|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/16 20:55:50.755 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/16 20:55:50.975 [D] [server.go:2774]  |            ::1|[42m 200 [0m|   135.3487ms|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/16 21:01:52.971 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/16 21:01:53.435 [D] [server.go:2774]  |            ::1|[42m 200 [0m|   363.5473ms|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/16 21:02:15.666 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/16 21:02:15.912 [D] [server.go:2774]  |            ::1|[42m 200 [0m|   145.6109ms|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/16 21:03:03.288 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/16 21:03:03.542 [D] [server.go:2774]  |            ::1|[42m 200 [0m|   133.1527ms|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/16 21:03:27.647 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/lead/team/
+2019/10/16 21:03:27.669 [D] [server.go:2774]  |            ::1|[42m 200 [0m|    16.9605ms|   match|[46m POST    [0m /v1/lead/team/   r:/v1/lead/team/
+2019/10/16 21:07:37.307 [I] [asm_amd64.s:1337]  http server Running on http://:2253
+2019/10/16 21:08:06.418 [I] [asm_amd64.s:1337]  http server Running on http://:2253
+2019/10/16 21:10:29.907 [I] [asm_amd64.s:1337]  http server Running on http://:2253
+2019/10/16 21:10:35.876 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/lead/team/
+2019/10/16 21:10:35.893 [D] [server.go:2774]  |            ::1|[42m 200 [0m|    10.9759ms|   match|[46m POST    [0m /v1/lead/team/   r:/v1/lead/team/
+2019/10/16 21:11:24.559 [I] [asm_amd64.s:1337]  http server Running on http://:2253
+2019/10/16 21:11:37.034 [I] [asm_amd64.s:1337]  http server Running on http://:2253
+2019/10/16 21:11:41.199 [I] [asm_amd64.s:1337]  http server Running on http://:2253
+2019/10/16 21:12:18.570 [D] [server.go:2774]  |            ::1|[42m 200 [0m|      998.5µs| nomatch|[47m OPTIONS [0m /v1/lead/team/
+2019/10/16 21:12:18.586 [D] [server.go:2774]  |            ::1|[42m 200 [0m|    10.9706ms|   match|[46m POST    [0m /v1/lead/team/   r:/v1/lead/team/
+2019/10/16 21:12:50.520 [I] [asm_amd64.s:1337]  http server Running on http://:2253
+2019/10/16 21:17:09.795 [I] [asm_amd64.s:1337]  http server Running on http://:2253
+2019/10/16 21:17:11.852 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/lead/team/
+2019/10/16 21:17:11.866 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     6.9786ms|   match|[46m POST    [0m /v1/lead/team/   r:/v1/lead/team/
+2019/10/16 21:17:38.348 [I] [asm_amd64.s:1337]  http server Running on http://:2253
+2019/10/16 21:17:43.942 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/lead/team/
+2019/10/16 21:17:43.957 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     9.9739ms|   match|[46m POST    [0m /v1/lead/team/   r:/v1/lead/team/
+2019/10/16 21:20:02.710 [I] [asm_amd64.s:1337]  http server Running on http://:2253
+2019/10/16 21:22:16.625 [I] [asm_amd64.s:1337]  http server Running on http://:2253
+2019/10/16 21:22:26.832 [D] [server.go:2774]  |            ::1|[42m 200 [0m|      996.8µs| nomatch|[47m OPTIONS [0m /v1/lead/team/
+2019/10/16 21:22:26.844 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     8.2195ms|   match|[46m POST    [0m /v1/lead/team/   r:/v1/lead/team/
+2019/10/16 21:22:40.685 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/16 21:22:40.977 [D] [server.go:2774]  |            ::1|[42m 200 [0m|    161.565ms|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/16 21:22:56.297 [I] [asm_amd64.s:1337]  http server Running on http://:2253
+2019/10/16 21:28:57.058 [I] [asm_amd64.s:1337]  http server Running on http://:2253
+2019/10/16 21:29:11.943 [I] [asm_amd64.s:1337]  http server Running on http://:2253
+2019/10/16 21:32:01.544 [I] [asm_amd64.s:1337]  http server Running on http://:2253
+2019/10/16 21:32:13.365 [D] [server.go:2774]  |            ::1|[42m 200 [0m|      1.015ms| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/16 21:32:13.732 [D] [server.go:2774]  |            ::1|[42m 200 [0m|   272.4467ms|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/16 21:32:21.967 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/lead/team/
+2019/10/16 21:32:22.253 [D] [server.go:2774]  |            ::1|[42m 200 [0m|   281.5919ms|   match|[46m POST    [0m /v1/lead/team/   r:/v1/lead/team/
+2019/10/16 21:35:19.459 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/16 21:35:19.881 [D] [server.go:2774]  |            ::1|[42m 200 [0m|   320.9578ms|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/

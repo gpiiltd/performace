@@ -1,6 +1,10 @@
 package models
 
 import (
+	"bytes"
+	"encoding/json"
+	"io/ioutil"
+	"net/http"
 	"time"
 
 	"github.com/astaxie/beego"
@@ -44,4 +48,28 @@ func ErrorResponse(code int, message string) interface{} {
 	response.Status = message
 
 	return response
+}
+
+//ValidateUserRoleAPI calls the api to check if a user role claim is valid
+func ValidateUserRoleAPI(teamLeadID uint64, roleCode uint64) (bool, string) {
+	requestBody, err := json.Marshal(map[string]uint64{
+		"user_id":   teamLeadID,
+		"role_code": roleCode,
+	})
+	if err != nil {
+		return false, "Unable to get API data"
+	}
+	resp, err := http.Post(beego.AppConfig.String("validateroleendpoint"), "application/json", bytes.NewBuffer(requestBody))
+	if err != nil {
+		return false, "Unable to call POST API"
+	}
+
+	defer resp.Body.Close()
+
+	body, err := ioutil.ReadAll(resp.Body)
+	if err != nil {
+		return false, "Unable to read response body"
+	}
+
+	return true, string(body)
 }
