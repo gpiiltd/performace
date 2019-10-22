@@ -46,6 +46,7 @@ func CreateTables() {
 	Conn.AutoMigrate(&User{})
 	Conn.AutoMigrate(&Team{})
 	Conn.AutoMigrate(&Members{})
+	Conn.AutoMigrate(&TeamInvitation{})
 	return
 }
 
@@ -97,4 +98,31 @@ type Members struct {
 	TeamLeadID uint64 `gorm:"type:int(10)" json:"team_lead_id"`
 	Member     string `gorm:"type:varchar(100)" json:"member"`
 	MemberID   uint64 `gorm:"type:int(10)" json:"member_id"`
+}
+
+//TeamInvitation holds data needed to send an invitation to join a team
+type TeamInvitation struct {
+	Model
+	TeamName    string `gorm:"varchar(100)" json:"team_name"`
+	TeamID      uint64 `gorm:"int(10)" json:"team_id"`
+	InviteeName string `gorm:"varchar(100)" json:"invitee_name"`
+	InviteeID   uint64 `gorm:"int(10)" json:"invitee_id"`
+	Status      string `gorm:"varchar(100)" json:"status"`
+}
+
+//KPI holds data needed to create a Kpi
+type KPI struct {
+	Model
+	KPI             string `gorm:"varchar(100)" json:"kpi"`
+	Employee        string `gorm:"varchar(100)" json:"employee"`
+	EmployeeID      uint64 `gorm:"int(10)" json:"employee_id"`
+	TeamLead        string `gorm:"varchar(100)" json:"team_lead"`
+	TeamLeadID      uint64 `gorm:"int(10)" json:"team_lead_id"`
+	StartDate       string `gorm:"varchar(100)" json:"start_date"`
+	EndDate         string `gorm:"varchar(100)" json:"end_date"`
+	Weight          string `gorm:"varchar(100)" json:"weight"`
+	Status          string `gorm:"varchar(100)" json:"status"`
+	TeamLeadScore   uint64 `gorm:"int(10)" json:"team_lead_score"`
+	TeamLeadComment string `gorm:"varchar(250)" json:"team_lead_comment"`
+	EmployeeComment string `gorm:"varchar(250)" json:"employee_comment"`
 }

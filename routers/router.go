@@ -30,6 +30,16 @@ func init() {
 				&controllers.TokenController{},
 			),
 		),
+		beego.NSNamespace("/team",
+			beego.NSInclude(
+				&controllers.TeamController{},
+			),
+		),
+		beego.NSNamespace("/kpi",
+			beego.NSInclude(
+				&controllers.KPIController{},
+			),
+		),
 	)
 	beego.AddNamespace(ns)
 }

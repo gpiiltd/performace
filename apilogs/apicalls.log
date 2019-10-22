@@ -1,0 +1,684 @@
+2019/10/22 00:02:35.929 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     1.9925ms|   match|[44m GET     [0m /v1/token/token/tombara.akulasah@ceslintlgroup.com   r:/v1/token/:email
+2019/10/22 00:02:40.593 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/22 00:02:40.690 [D] [server.go:2774]  |            ::1|[42m 200 [0m|    35.2612ms|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/22 00:03:57.561 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/22 00:03:57.637 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     1.3499ms|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/22 00:04:09.807 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/22 00:04:09.890 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     2.5539ms|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/22 00:04:12.683 [D] [server.go:2774]  |            ::1|[42m 200 [0m|      543.2µs|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/22 00:04:13.163 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/lead/validate/
+2019/10/22 00:04:13.165 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/lead/pending
+2019/10/22 00:04:13.257 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     14.065ms|   match|[44m GET     [0m /v1/lead/validate/   r:/v1/lead/validate
+2019/10/22 00:04:13.292 [D] [server.go:2774]  |            ::1|[42m 200 [0m|    47.7298ms|   match|[44m GET     [0m /v1/lead/pending   r:/v1/lead/pending
+2019/10/22 00:07:19.802 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/22 00:07:19.856 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     2.4424ms|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/22 00:07:20.170 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/lead/validate/
+2019/10/22 00:07:20.171 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/lead/pending
+2019/10/22 00:07:20.252 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     2.3622ms|   match|[44m GET     [0m /v1/lead/validate/   r:/v1/lead/validate
+2019/10/22 00:07:20.254 [D] [server.go:2774]  |            ::1|[42m 200 [0m|      3.777ms|   match|[44m GET     [0m /v1/lead/pending   r:/v1/lead/pending
+2019/10/22 00:08:04.430 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/22 00:08:04.490 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     1.7206ms|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/22 00:08:04.839 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/lead/validate/
+2019/10/22 00:08:04.840 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/lead/pending
+2019/10/22 00:08:04.888 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     2.7787ms|   match|[44m GET     [0m /v1/lead/validate/   r:/v1/lead/validate
+2019/10/22 00:08:04.889 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     2.9827ms|   match|[44m GET     [0m /v1/lead/pending   r:/v1/lead/pending
+2019/10/22 00:09:08.720 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/22 00:09:08.811 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     2.2026ms|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/22 00:09:09.043 [D] [server.go:2774]  |            ::1|[42m 200 [0m|      999.9µs| nomatch|[47m OPTIONS [0m /v1/lead/validate/
+2019/10/22 00:09:09.044 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/lead/pending
+2019/10/22 00:09:09.079 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     2.0963ms|   match|[44m GET     [0m /v1/lead/validate/   r:/v1/lead/validate
+2019/10/22 00:09:09.080 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     1.9611ms|   match|[44m GET     [0m /v1/lead/pending   r:/v1/lead/pending
+2019/10/22 00:27:37.653 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/22 00:27:37.723 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     1.9956ms|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/22 00:27:37.992 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/lead/validate/
+2019/10/22 00:27:37.994 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/lead/pending
+2019/10/22 00:27:38.026 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     1.9958ms|   match|[44m GET     [0m /v1/lead/validate/   r:/v1/lead/validate
+2019/10/22 00:27:38.028 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     3.8429ms|   match|[44m GET     [0m /v1/lead/pending   r:/v1/lead/pending
+2019/10/22 00:27:59.976 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/22 00:28:00.065 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     1.6482ms|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/22 00:28:00.319 [D] [server.go:2774]  |            ::1|[42m 200 [0m|      854.8µs| nomatch|[47m OPTIONS [0m /v1/lead/validate/
+2019/10/22 00:28:00.321 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/lead/pending
+2019/10/22 00:28:00.366 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     1.9823ms|   match|[44m GET     [0m /v1/lead/validate/   r:/v1/lead/validate
+2019/10/22 00:28:00.368 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     2.9896ms|   match|[44m GET     [0m /v1/lead/pending   r:/v1/lead/pending
+2019/10/22 00:28:13.452 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/22 00:28:13.540 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     2.6421ms|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/22 00:28:25.813 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/22 00:28:25.905 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     1.9926ms|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/22 00:28:26.141 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/lead/validate/
+2019/10/22 00:28:26.143 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/lead/pending
+2019/10/22 00:28:26.190 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     3.2397ms|   match|[44m GET     [0m /v1/lead/validate/   r:/v1/lead/validate
+2019/10/22 00:28:26.193 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     5.9244ms|   match|[44m GET     [0m /v1/lead/pending   r:/v1/lead/pending
+2019/10/22 00:33:43.548 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/22 00:33:43.623 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     1.9752ms|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/22 00:33:43.882 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/lead/validate/
+2019/10/22 00:33:43.884 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/lead/pending
+2019/10/22 00:33:43.934 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     1.5233ms|   match|[44m GET     [0m /v1/lead/validate/   r:/v1/lead/validate
+2019/10/22 00:33:43.935 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     1.9979ms|   match|[44m GET     [0m /v1/lead/pending   r:/v1/lead/pending
+2019/10/22 00:33:45.261 [D] [server.go:2774]  |            ::1|[42m 200 [0m|      995.9µs|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/22 00:33:45.441 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     3.0136ms|   match|[44m GET     [0m /v1/lead/validate/   r:/v1/lead/validate
+2019/10/22 00:33:45.443 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     3.0029ms|   match|[44m GET     [0m /v1/lead/pending   r:/v1/lead/pending
+2019/10/22 00:34:20.289 [D] [server.go:2774]  |            ::1|[42m 200 [0m|      363.5µs| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/22 00:34:20.379 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     1.4729ms|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/22 00:34:20.633 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/lead/validate/
+2019/10/22 00:34:20.635 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/lead/pending
+2019/10/22 00:34:20.677 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     1.2085ms|   match|[44m GET     [0m /v1/lead/validate/   r:/v1/lead/validate
+2019/10/22 00:34:20.678 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     2.1995ms|   match|[44m GET     [0m /v1/lead/pending   r:/v1/lead/pending
+2019/10/22 00:34:22.212 [D] [server.go:2774]  |            ::1|[42m 200 [0m|      413.3µs|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/22 00:34:22.426 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     1.9969ms|   match|[44m GET     [0m /v1/lead/validate/   r:/v1/lead/validate
+2019/10/22 00:34:22.430 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     4.9873ms|   match|[44m GET     [0m /v1/lead/pending   r:/v1/lead/pending
+2019/10/22 00:35:43.351 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/22 00:35:43.437 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     2.0068ms|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/22 00:47:32.104 [I] [asm_amd64.s:1337]  http server Running on http://:2253
+2019/10/22 00:47:36.289 [I] [asm_amd64.s:1337]  http server Running on http://:2253
+2019/10/22 00:48:08.399 [I] [asm_amd64.s:1337]  http server Running on http://:2253
+2019/10/22 00:48:12.209 [I] [asm_amd64.s:1337]  http server Running on http://:2253
+2019/10/22 08:41:29.975 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     5.0062ms| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/22 08:41:30.077 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     7.9725ms|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/22 08:41:30.350 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/team/myTeam/
+2019/10/22 08:41:30.407 [D] [server.go:2774]  |            ::1|[43m 404 [0m|     4.9793ms| nomatch|[44m GET     [0m /v1/team/myTeam/
+2019/10/22 08:41:40.789 [I] [asm_amd64.s:1337]  http server Running on http://:2253
+2019/10/22 08:41:42.176 [I] [asm_amd64.s:1337]  http server Running on http://:2253
+2019/10/22 08:41:43.420 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/22 08:41:43.539 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     2.9923ms|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/22 08:41:43.756 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/team/myTeam/
+2019/10/22 08:41:43.787 [D] [server.go:2774]  |            ::1|[43m 404 [0m|           0s| nomatch|[44m GET     [0m /v1/team/myTeam/
+2019/10/22 08:42:02.315 [I] [asm_amd64.s:1337]  http server Running on http://:2253
+2019/10/22 08:42:03.402 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/22 08:42:03.513 [D] [server.go:2774]  |            ::1|[42m 200 [0m|      994.4µs|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/22 08:42:03.675 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/team/myTeam/
+2019/10/22 08:42:03.713 [D] [server.go:2774]  |            ::1|[43m 404 [0m|      999.9µs| nomatch|[44m GET     [0m /v1/team/myTeam/
+2019/10/22 08:42:14.030 [I] [asm_amd64.s:1337]  http server Running on http://:2253
+2019/10/22 08:42:20.156 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/22 08:42:20.252 [D] [server.go:2774]  |            ::1|[42m 200 [0m|      988.1µs|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/22 08:42:20.416 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/team/myTeam
+2019/10/22 08:42:20.450 [D] [server.go:2774]  |            ::1|[43m 404 [0m|           0s| nomatch|[44m GET     [0m /v1/team/myTeam
+2019/10/22 08:44:06.514 [I] [asm_amd64.s:1337]  http server Running on http://:2253
+2019/10/22 08:44:09.924 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/22 08:44:10.065 [D] [server.go:2774]  |            ::1|[42m 200 [0m|      996.6µs|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/22 08:44:10.279 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/team/myTeam
+2019/10/22 08:44:10.313 [D] [server.go:2774]  |            ::1|[43m 404 [0m|           0s| nomatch|[44m GET     [0m /v1/team/myTeam
+2019/10/22 08:44:29.465 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/22 08:44:29.564 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     1.0129ms|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/22 08:44:29.736 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/team/myteam
+2019/10/22 08:44:29.867 [D] [server.go:2774]  |            ::1|[42m 200 [0m|    92.7508ms|   match|[44m GET     [0m /v1/team/myteam   r:/v1/team/myteam
+2019/10/22 08:53:37.235 [D] [server.go:2774]  |            ::1|[42m 200 [0m|      999.1µs| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/22 08:53:37.339 [D] [server.go:2774]  |            ::1|[42m 200 [0m|      995.5µs|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/22 08:53:37.500 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/team/myteam
+2019/10/22 08:53:37.541 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     1.0254ms|   match|[44m GET     [0m /v1/team/myteam   r:/v1/team/myteam
+2019/10/22 08:53:46.260 [D] [server.go:2774]  |            ::1|[42m 200 [0m|      996.8µs| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/22 08:53:46.396 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     1.0013ms|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/22 08:53:46.589 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/team/myteam
+2019/10/22 08:53:46.624 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     2.0093ms|   match|[44m GET     [0m /v1/team/myteam   r:/v1/team/myteam
+2019/10/22 10:14:50.178 [I] [asm_amd64.s:1337]  http server Running on http://:2253
+2019/10/22 10:14:51.620 [I] [asm_amd64.s:1337]  http server Running on http://:2253
+2019/10/22 10:14:53.087 [I] [asm_amd64.s:1337]  http server Running on http://:2253
+2019/10/22 10:14:54.453 [I] [asm_amd64.s:1337]  http server Running on http://:2253
+2019/10/22 10:14:55.816 [I] [asm_amd64.s:1337]  http server Running on http://:2253
+2019/10/22 10:14:57.647 [I] [asm_amd64.s:1337]  http server Running on http://:2253
+2019/10/22 10:14:58.591 [I] [asm_amd64.s:1337]  http server Running on http://:2253
+2019/10/22 10:14:59.976 [I] [asm_amd64.s:1337]  http server Running on http://:2253
+2019/10/22 10:15:01.915 [I] [asm_amd64.s:1337]  http server Running on http://:2253
+2019/10/22 10:15:03.470 [I] [asm_amd64.s:1337]  http server Running on http://:2253
+2019/10/22 10:15:04.245 [I] [asm_amd64.s:1337]  http server Running on http://:2253
+2019/10/22 10:20:05.610 [I] [asm_amd64.s:1337]  http server Running on http://:2253
+2019/10/22 10:21:42.301 [D] [server.go:2774]  |            ::1|[42m 200 [0m|      996.8µs| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/22 10:21:42.403 [D] [server.go:2774]  |            ::1|[42m 200 [0m|       2.01ms|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/22 10:21:42.563 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/team/myteam
+2019/10/22 10:21:42.564 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/invitations/pending
+2019/10/22 10:21:42.592 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     1.9953ms|   match|[44m GET     [0m /v1/team/myteam   r:/v1/team/myteam
+2019/10/22 10:21:42.592 [D] [server.go:2774]  |            ::1|[43m 404 [0m|           0s| nomatch|[44m GET     [0m /v1/invitations/pending
+2019/10/22 10:22:09.868 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/22 10:22:09.973 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     1.0029ms|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/22 10:22:10.145 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/team/myteam
+2019/10/22 10:22:10.146 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/team/invitations/pending
+2019/10/22 10:22:10.180 [D] [server.go:2774]  |            ::1|[43m 404 [0m|      997.6µs| nomatch|[44m GET     [0m /v1/team/invitations/pending
+2019/10/22 10:22:10.180 [D] [server.go:2774]  |            ::1|[42m 200 [0m|      997.6µs|   match|[44m GET     [0m /v1/team/myteam   r:/v1/team/myteam
+2019/10/22 10:22:39.362 [I] [asm_amd64.s:1337]  http server Running on http://:2253
+2019/10/22 10:22:39.436 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|      998.3µs| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/22 10:22:39.437 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/team/myteam
+2019/10/22 10:22:39.439 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/team/invitations/pending
+2019/10/22 10:22:39.444 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|     1.9955ms|   match|[44m GET     [0m /v1/team/myteam   r:/v1/team/myteam
+2019/10/22 10:22:39.444 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     3.9891ms|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/22 10:22:39.445 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     1.0041ms|   match|[44m GET     [0m /v1/team/invitations/pending   r:/v1/team/invitations/pending
+2019/10/22 10:27:45.675 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/22 10:27:45.777 [D] [server.go:2774]  |            ::1|[42m 200 [0m|      999.9µs|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/22 10:27:45.952 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/team/myteam
+2019/10/22 10:27:45.953 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/team/invitations/pending
+2019/10/22 10:27:45.980 [D] [server.go:2774]  |            ::1|[42m 200 [0m|      993.4µs|   match|[44m GET     [0m /v1/team/myteam   r:/v1/team/myteam
+2019/10/22 10:27:45.980 [D] [server.go:2774]  |            ::1|[42m 200 [0m|      993.4µs|   match|[44m GET     [0m /v1/team/invitations/pending   r:/v1/team/invitations/pending
+2019/10/22 10:29:19.498 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/22 10:29:19.595 [D] [server.go:2774]  |            ::1|[42m 200 [0m|      998.4µs|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/22 10:29:19.758 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/team/myteam
+2019/10/22 10:29:19.758 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/team/invitations/pending
+2019/10/22 10:29:19.786 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     1.9959ms|   match|[44m GET     [0m /v1/team/myteam   r:/v1/team/myteam
+2019/10/22 10:29:19.786 [D] [server.go:2774]  |            ::1|[42m 200 [0m|      997.3µs|   match|[44m GET     [0m /v1/team/invitations/pending   r:/v1/team/invitations/pending
+2019/10/22 10:29:50.763 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/22 10:29:50.863 [D] [server.go:2774]  |            ::1|[42m 200 [0m|      995.9µs|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/22 10:29:51.029 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/team/myteam
+2019/10/22 10:29:51.030 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/team/invitations/pending
+2019/10/22 10:29:51.065 [D] [server.go:2774]  |            ::1|[42m 200 [0m|      997.6µs|   match|[44m GET     [0m /v1/team/myteam   r:/v1/team/myteam
+2019/10/22 10:29:51.070 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     1.9946ms|   match|[44m GET     [0m /v1/team/invitations/pending   r:/v1/team/invitations/pending
+2019/10/22 10:30:21.078 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/22 10:30:21.203 [D] [server.go:2774]  |            ::1|[42m 200 [0m|          2ms|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/22 10:30:21.391 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/team/myteam
+2019/10/22 10:30:21.391 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/team/invitations/pending
+2019/10/22 10:30:21.417 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     1.0005ms|   match|[44m GET     [0m /v1/team/myteam   r:/v1/team/myteam
+2019/10/22 10:30:21.417 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     1.0005ms|   match|[44m GET     [0m /v1/team/invitations/pending   r:/v1/team/invitations/pending
+2019/10/22 10:35:14.312 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/22 10:35:14.381 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     2.9604ms|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/22 10:35:14.580 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/team/myteam
+2019/10/22 10:35:14.580 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/team/invitations/pending
+2019/10/22 10:35:14.607 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     2.9795ms|   match|[44m GET     [0m /v1/team/myteam   r:/v1/team/myteam
+2019/10/22 10:35:14.607 [D] [server.go:2774]  |            ::1|[42m 200 [0m|      1.988ms|   match|[44m GET     [0m /v1/team/invitations/pending   r:/v1/team/invitations/pending
+2019/10/22 11:23:55.091 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/22 11:23:55.239 [D] [server.go:2774]  |            ::1|[42m 200 [0m|      997.1µs|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/22 11:23:55.449 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/team/myteam
+2019/10/22 11:23:55.450 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/team/invitations/pending
+2019/10/22 11:23:55.486 [D] [server.go:2774]  |            ::1|[42m 200 [0m|      999.4µs|   match|[44m GET     [0m /v1/team/myteam   r:/v1/team/myteam
+2019/10/22 11:23:55.486 [D] [server.go:2774]  |            ::1|[42m 200 [0m|      999.4µs|   match|[44m GET     [0m /v1/team/invitations/pending   r:/v1/team/invitations/pending
+2019/10/22 11:31:58.688 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/22 11:31:58.817 [D] [server.go:2774]  |            ::1|[42m 200 [0m|      994.1µs|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/22 11:31:58.998 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/team/myteam
+2019/10/22 11:31:58.999 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/team/invitations/pending
+2019/10/22 11:31:59.039 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     2.9904ms|   match|[44m GET     [0m /v1/team/myteam   r:/v1/team/myteam
+2019/10/22 11:31:59.039 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     1.9945ms|   match|[44m GET     [0m /v1/team/invitations/pending   r:/v1/team/invitations/pending
+2019/10/22 11:32:32.794 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/22 11:32:32.914 [D] [server.go:2774]  |            ::1|[42m 200 [0m|      994.5µs|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/22 11:32:33.075 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/team/myteam
+2019/10/22 11:32:33.075 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/team/invitations/pending
+2019/10/22 11:32:33.122 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s|   match|[44m GET     [0m /v1/team/myteam   r:/v1/team/myteam
+2019/10/22 11:32:33.123 [D] [server.go:2774]  |            ::1|[42m 200 [0m|      992.2µs|   match|[44m GET     [0m /v1/team/invitations/pending   r:/v1/team/invitations/pending
+2019/10/22 11:32:49.276 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/22 11:32:49.390 [D] [server.go:2774]  |            ::1|[42m 200 [0m|        995µs|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/22 11:32:49.569 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/team/myteam
+2019/10/22 11:32:49.569 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/team/invitations/pending
+2019/10/22 11:32:49.621 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     1.9955ms|   match|[44m GET     [0m /v1/team/myteam   r:/v1/team/myteam
+2019/10/22 11:32:49.621 [D] [server.go:2774]  |            ::1|[42m 200 [0m|      997.1µs|   match|[44m GET     [0m /v1/team/invitations/pending   r:/v1/team/invitations/pending
+2019/10/22 11:33:28.484 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/22 11:33:28.613 [D] [server.go:2774]  |            ::1|[42m 200 [0m|      994.5µs|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/22 11:33:28.834 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/team/myteam
+2019/10/22 11:33:28.834 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/team/invitations/pending
+2019/10/22 11:33:28.884 [D] [server.go:2774]  |            ::1|[42m 200 [0m|      995.4µs|   match|[44m GET     [0m /v1/team/myteam   r:/v1/team/myteam
+2019/10/22 11:33:28.884 [D] [server.go:2774]  |            ::1|[42m 200 [0m|      995.4µs|   match|[44m GET     [0m /v1/team/invitations/pending   r:/v1/team/invitations/pending
+2019/10/22 11:37:21.254 [I] [asm_amd64.s:1337]  http server Running on http://:2253
+2019/10/22 11:37:23.463 [I] [asm_amd64.s:1337]  http server Running on http://:2253
+2019/10/22 11:37:26.088 [I] [asm_amd64.s:1337]  http server Running on http://:2253
+2019/10/22 11:37:26.692 [I] [asm_amd64.s:1337]  http server Running on http://:2253
+2019/10/22 11:37:28.237 [I] [asm_amd64.s:1337]  http server Running on http://:2253
+2019/10/22 11:37:29.902 [I] [asm_amd64.s:1337]  http server Running on http://:2253
+2019/10/22 11:37:31.226 [I] [asm_amd64.s:1337]  http server Running on http://:2253
+2019/10/22 11:37:32.886 [I] [asm_amd64.s:1337]  http server Running on http://:2253
+2019/10/22 11:37:34.888 [I] [asm_amd64.s:1337]  http server Running on http://:2253
+2019/10/22 11:37:35.908 [I] [asm_amd64.s:1337]  http server Running on http://:2253
+2019/10/22 11:37:37.535 [I] [asm_amd64.s:1337]  http server Running on http://:2253
+2019/10/22 11:51:35.781 [I] [asm_amd64.s:1337]  http server Running on http://:2253
+2019/10/22 11:51:42.837 [I] [asm_amd64.s:1337]  http server Running on http://:2253
+2019/10/22 11:57:09.133 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/22 11:57:09.285 [D] [server.go:2774]  |            ::1|[42m 200 [0m|      995.6µs|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/22 11:57:09.534 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/team/myteam
+2019/10/22 11:57:09.535 [D] [server.go:2774]  |            ::1|[42m 200 [0m|      995.3µs| nomatch|[47m OPTIONS [0m /v1/team/invitations/pending
+2019/10/22 11:57:09.565 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     2.0046ms|   match|[44m GET     [0m /v1/team/myteam   r:/v1/team/myteam
+2019/10/22 11:57:09.566 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     2.9737ms|   match|[44m GET     [0m /v1/team/invitations/pending   r:/v1/team/invitations/pending
+2019/10/22 11:57:28.941 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/22 11:57:29.097 [D] [server.go:2774]  |            ::1|[42m 200 [0m|      997.2µs|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/22 11:57:29.299 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/team/myteam
+2019/10/22 11:57:29.299 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/team/invitations/pending
+2019/10/22 11:57:29.360 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     1.9947ms|   match|[44m GET     [0m /v1/team/myteam   r:/v1/team/myteam
+2019/10/22 11:57:29.361 [D] [server.go:2774]  |            ::1|[42m 200 [0m|        996µs|   match|[44m GET     [0m /v1/team/invitations/pending   r:/v1/team/invitations/pending
+2019/10/22 11:57:52.900 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/22 11:57:53.012 [D] [server.go:2774]  |            ::1|[42m 200 [0m|      990.7µs|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/22 11:57:53.186 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/team/myteam
+2019/10/22 11:57:53.187 [D] [server.go:2774]  |            ::1|[42m 200 [0m|      998.6µs| nomatch|[47m OPTIONS [0m /v1/team/invitations/pending
+2019/10/22 11:57:53.220 [D] [server.go:2774]  |            ::1|[42m 200 [0m|      997.3µs|   match|[44m GET     [0m /v1/team/myteam   r:/v1/team/myteam
+2019/10/22 11:57:53.220 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s|   match|[44m GET     [0m /v1/team/invitations/pending   r:/v1/team/invitations/pending
+2019/10/22 11:58:33.781 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/22 11:58:33.922 [D] [server.go:2774]  |            ::1|[42m 200 [0m|      991.9µs|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/22 11:58:34.109 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/team/myteam
+2019/10/22 11:58:34.109 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/team/invitations/pending
+2019/10/22 11:58:34.141 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     1.9865ms|   match|[44m GET     [0m /v1/team/myteam   r:/v1/team/myteam
+2019/10/22 11:58:34.141 [D] [server.go:2774]  |            ::1|[42m 200 [0m|      995.8µs|   match|[44m GET     [0m /v1/team/invitations/pending   r:/v1/team/invitations/pending
+2019/10/22 11:58:38.129 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/team/First
+2019/10/22 11:58:38.135 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[46m POST    [0m /v1/team/First
+2019/10/22 11:59:20.015 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/22 11:59:20.123 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     2.7241ms|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/22 11:59:20.302 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/team/myteam
+2019/10/22 11:59:20.302 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/team/invitations/pending
+2019/10/22 11:59:20.376 [D] [server.go:2774]  |            ::1|[42m 200 [0m|      997.7µs|   match|[44m GET     [0m /v1/team/myteam   r:/v1/team/myteam
+2019/10/22 11:59:20.377 [D] [server.go:2774]  |            ::1|[42m 200 [0m|      1.996ms|   match|[44m GET     [0m /v1/team/invitations/pending   r:/v1/team/invitations/pending
+2019/10/22 11:59:24.206 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/team/First
+2019/10/22 11:59:24.210 [D] [server.go:2774]  |            ::1|[43m 404 [0m|      997.6µs| nomatch|[46m POST    [0m /v1/team/First
+2019/10/22 12:00:03.165 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/22 12:00:03.284 [D] [server.go:2774]  |            ::1|[42m 200 [0m|      997.5µs|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/22 12:00:03.495 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/team/myteam
+2019/10/22 12:00:03.496 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/team/invitations/pending
+2019/10/22 12:00:03.535 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     1.9936ms|   match|[44m GET     [0m /v1/team/myteam   r:/v1/team/myteam
+2019/10/22 12:00:03.535 [D] [server.go:2774]  |            ::1|[42m 200 [0m|        995µs|   match|[44m GET     [0m /v1/team/invitations/pending   r:/v1/team/invitations/pending
+2019/10/22 12:00:08.161 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/team/1
+2019/10/22 12:00:08.165 [D] [server.go:2774]  |            ::1|[43m 404 [0m|        998µs| nomatch|[46m POST    [0m /v1/team/1
+2019/10/22 12:00:37.008 [I] [asm_amd64.s:1337]  http server Running on http://:2253
+2019/10/22 12:00:46.469 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/team/1
+2019/10/22 12:00:46.473 [D] [server.go:2774]  |            ::1|[43m 404 [0m|        995µs| nomatch|[46m POST    [0m /v1/team/1
+2019/10/22 12:01:08.828 [I] [asm_amd64.s:1337]  http server Running on http://:2253
+2019/10/22 12:01:45.557 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/22 12:01:45.669 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     1.9949ms|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/22 12:01:45.833 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/team/myteam
+2019/10/22 12:01:45.834 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/team/invitations/pending
+2019/10/22 12:01:45.872 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     2.9912ms|   match|[44m GET     [0m /v1/team/myteam   r:/v1/team/myteam
+2019/10/22 12:01:45.873 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     3.0148ms|   match|[44m GET     [0m /v1/team/invitations/pending   r:/v1/team/invitations/pending
+2019/10/22 12:01:50.526 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/accept/team/1
+2019/10/22 12:01:50.533 [D] [server.go:2774]  |            ::1|[43m 404 [0m|      997.4µs| nomatch|[46m POST    [0m /v1/accept/team/1
+2019/10/22 12:02:10.857 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/22 12:02:10.966 [D] [server.go:2774]  |            ::1|[42m 200 [0m|      992.5µs|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/22 12:02:11.124 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/team/myteam
+2019/10/22 12:02:11.124 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/team/invitations/pending
+2019/10/22 12:02:11.168 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     1.0116ms|   match|[44m GET     [0m /v1/team/myteam   r:/v1/team/myteam
+2019/10/22 12:02:11.170 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     1.9804ms|   match|[44m GET     [0m /v1/team/invitations/pending   r:/v1/team/invitations/pending
+2019/10/22 12:02:15.791 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/team/accept/1
+2019/10/22 12:02:15.795 [D] [server.go:2774]  |            ::1|[43m 404 [0m|           0s| nomatch|[46m POST    [0m /v1/team/accept/1
+2019/10/22 12:02:56.968 [I] [asm_amd64.s:1337]  http server Running on http://:2253
+2019/10/22 12:03:06.565 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/team/accept/1
+2019/10/22 12:03:06.709 [D] [server.go:2774]  |            ::1|[42m 200 [0m|   140.0435ms|   match|[46m POST    [0m /v1/team/accept/1   r:/v1/team/accept/:teamid
+2019/10/22 12:03:09.158 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/22 12:03:09.274 [D] [server.go:2774]  |            ::1|[42m 200 [0m|      995.6µs|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/22 12:03:09.433 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/team/myteam
+2019/10/22 12:03:09.434 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/team/invitations/pending
+2019/10/22 12:03:09.474 [D] [server.go:2774]  |            ::1|[42m 200 [0m|      992.1µs|   match|[44m GET     [0m /v1/team/invitations/pending   r:/v1/team/invitations/pending
+2019/10/22 12:03:10.155 [D] [server.go:2774]  |            ::1|[42m 200 [0m|   682.8389ms|   match|[44m GET     [0m /v1/team/myteam   r:/v1/team/myteam
+2019/10/22 12:07:55.915 [I] [asm_amd64.s:1337]  http server Running on http://:2253
+2019/10/22 12:08:20.779 [D] [server.go:2774]  |            ::1|[42m 200 [0m|        994µs| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/22 12:08:20.874 [D] [server.go:2774]  |            ::1|[42m 200 [0m|      998.9µs|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/22 12:08:21.052 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/team/myteam
+2019/10/22 12:08:21.053 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/team/invitations/pending
+2019/10/22 12:08:21.083 [D] [server.go:2774]  |            ::1|[42m 200 [0m|      994.8µs|   match|[44m GET     [0m /v1/team/myteam   r:/v1/team/myteam
+2019/10/22 12:08:21.085 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     2.9925ms|   match|[44m GET     [0m /v1/team/invitations/pending   r:/v1/team/invitations/pending
+2019/10/22 12:08:24.501 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/team/accept/1
+2019/10/22 12:08:24.913 [D] [server.go:2774]  |            ::1|[42m 200 [0m|   408.6312ms|   match|[46m POST    [0m /v1/team/accept/1   r:/v1/team/accept/:teamid
+2019/10/22 12:08:26.434 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/22 12:08:26.537 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     1.0001ms|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/22 12:08:26.710 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/team/myteam
+2019/10/22 12:08:26.711 [D] [server.go:2774]  |            ::1|[42m 200 [0m|      998.7µs| nomatch|[47m OPTIONS [0m /v1/team/invitations/pending
+2019/10/22 12:08:26.741 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s|   match|[44m GET     [0m /v1/team/invitations/pending   r:/v1/team/invitations/pending
+2019/10/22 12:08:26.742 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     1.9926ms|   match|[44m GET     [0m /v1/team/myteam   r:/v1/team/myteam
+2019/10/22 12:08:57.539 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/22 12:08:57.672 [D] [server.go:2774]  |            ::1|[42m 200 [0m|      996.6µs|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/22 12:08:57.873 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/team/myteam
+2019/10/22 12:08:57.874 [D] [server.go:2774]  |            ::1|[42m 200 [0m|      996.9µs| nomatch|[47m OPTIONS [0m /v1/team/invitations/pending
+2019/10/22 12:08:57.908 [D] [server.go:2774]  |            ::1|[42m 200 [0m|      997.8µs|   match|[44m GET     [0m /v1/team/invitations/pending   r:/v1/team/invitations/pending
+2019/10/22 12:08:57.908 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     1.9959ms|   match|[44m GET     [0m /v1/team/myteam   r:/v1/team/myteam
+2019/10/22 12:09:37.940 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/22 12:09:38.042 [D] [server.go:2774]  |            ::1|[42m 200 [0m|      1.995ms|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/22 12:09:38.205 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/team/myteam
+2019/10/22 12:09:38.205 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/team/invitations/pending
+2019/10/22 12:09:38.241 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     1.0082ms|   match|[44m GET     [0m /v1/team/invitations/pending   r:/v1/team/invitations/pending
+2019/10/22 12:09:38.242 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     3.0281ms|   match|[44m GET     [0m /v1/team/myteam   r:/v1/team/myteam
+2019/10/22 12:10:07.082 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s|   match|[44m GET     [0m /v1/token/token/apinaendy@gmail.com   r:/v1/token/:email
+2019/10/22 12:10:07.267 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/22 12:10:08.243 [D] [server.go:2774]  |            ::1|[42m 200 [0m|   895.8727ms|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/22 12:10:11.099 [D] [server.go:2774]  |            ::1|[42m 200 [0m|    38.9287ms|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/22 12:10:11.246 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/team/myteam
+2019/10/22 12:10:11.247 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/team/invitations/pending
+2019/10/22 12:10:11.270 [D] [server.go:2774]  |            ::1|[42m 200 [0m|        998µs|   match|[44m GET     [0m /v1/team/invitations/pending   r:/v1/team/invitations/pending
+2019/10/22 12:10:11.270 [D] [server.go:2774]  |            ::1|[42m 200 [0m|        998µs|   match|[44m GET     [0m /v1/team/myteam   r:/v1/team/myteam
+2019/10/22 12:10:12.725 [D] [server.go:2774]  |            ::1|[42m 200 [0m|      997.6µs| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/22 12:10:12.849 [D] [server.go:2774]  |            ::1|[42m 200 [0m|    54.8519ms|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/22 12:10:12.920 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/lead/validate/
+2019/10/22 12:10:12.920 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/lead/pending
+2019/10/22 12:10:12.943 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     1.9963ms|   match|[44m GET     [0m /v1/lead/validate/   r:/v1/lead/validate
+2019/10/22 12:10:12.944 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     1.9959ms|   match|[44m GET     [0m /v1/lead/pending   r:/v1/lead/pending
+2019/10/22 12:10:12.950 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/lead/myteam/
+2019/10/22 12:10:12.960 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     2.0063ms|   match|[44m GET     [0m /v1/lead/myteam/   r:/v1/lead/myteam/
+2019/10/22 12:11:00.509 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/22 12:11:00.657 [D] [server.go:2774]  |            ::1|[42m 200 [0m|    31.9174ms|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/22 12:11:00.860 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/lead/validate/
+2019/10/22 12:11:00.861 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/lead/pending
+2019/10/22 12:11:00.929 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     1.9941ms|   match|[44m GET     [0m /v1/lead/validate/   r:/v1/lead/validate
+2019/10/22 12:11:00.932 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     3.9909ms|   match|[44m GET     [0m /v1/lead/pending   r:/v1/lead/pending
+2019/10/22 12:11:00.962 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/lead/myteam/
+2019/10/22 12:11:00.978 [D] [server.go:2774]  |            ::1|[42m 200 [0m|      999.7µs|   match|[44m GET     [0m /v1/lead/myteam/   r:/v1/lead/myteam/
+2019/10/22 12:11:38.779 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/22 12:11:39.065 [D] [server.go:2774]  |            ::1|[42m 200 [0m|   144.6146ms|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/22 12:11:39.134 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/lead/validate/
+2019/10/22 12:11:39.135 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/lead/pending
+2019/10/22 12:11:39.198 [D] [server.go:2774]  |            ::1|[42m 200 [0m|      3.991ms|   match|[44m GET     [0m /v1/lead/validate/   r:/v1/lead/validate
+2019/10/22 12:11:39.200 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     3.9896ms|   match|[44m GET     [0m /v1/lead/pending   r:/v1/lead/pending
+2019/10/22 12:11:39.228 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/lead/myteam/
+2019/10/22 12:11:39.240 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     1.9946ms|   match|[44m GET     [0m /v1/lead/myteam/   r:/v1/lead/myteam/
+2019/10/22 12:12:36.950 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/22 12:12:37.267 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/lead/validate/
+2019/10/22 12:12:37.268 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/lead/pending
+2019/10/22 12:12:37.337 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     1.9957ms|   match|[44m GET     [0m /v1/lead/validate/   r:/v1/lead/validate
+2019/10/22 12:12:37.337 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     1.9957ms|   match|[44m GET     [0m /v1/lead/pending   r:/v1/lead/pending
+2019/10/22 12:12:37.341 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/lead/myteam/
+2019/10/22 12:12:37.427 [D] [server.go:2774]  |            ::1|[42m 200 [0m|      998.5µs|   match|[44m GET     [0m /v1/lead/myteam/   r:/v1/lead/myteam/
+2019/10/22 12:12:38.034 [D] [server.go:2774]  |            ::1|[42m 200 [0m|   963.8914ms|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/22 12:13:15.546 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/22 12:13:15.782 [D] [server.go:2774]  |            ::1|[42m 200 [0m|   130.6485ms|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/22 12:13:15.852 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/team/myteam
+2019/10/22 12:13:15.852 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/team/invitations/pending
+2019/10/22 12:13:15.896 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     1.9946ms|   match|[44m GET     [0m /v1/team/myteam   r:/v1/team/myteam
+2019/10/22 12:13:15.896 [D] [server.go:2774]  |            ::1|[42m 200 [0m|      998.1µs|   match|[44m GET     [0m /v1/team/invitations/pending   r:/v1/team/invitations/pending
+2019/10/22 12:13:22.197 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/22 12:13:22.438 [D] [server.go:2774]  |            ::1|[42m 200 [0m|   143.6148ms|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/22 12:13:22.481 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/lead/validate/
+2019/10/22 12:13:22.481 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/lead/pending
+2019/10/22 12:13:22.542 [D] [server.go:2774]  |            ::1|[42m 200 [0m|        999µs|   match|[44m GET     [0m /v1/lead/validate/   r:/v1/lead/validate
+2019/10/22 12:13:22.543 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     1.9933ms|   match|[44m GET     [0m /v1/lead/pending   r:/v1/lead/pending
+2019/10/22 12:13:22.558 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/lead/myteam/
+2019/10/22 12:13:22.578 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     2.9913ms|   match|[44m GET     [0m /v1/lead/myteam/   r:/v1/lead/myteam/
+2019/10/22 12:17:26.132 [I] [asm_amd64.s:1337]  http server Running on http://:2253
+2019/10/22 12:17:28.021 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/22 12:17:28.279 [D] [server.go:2774]  |            ::1|[42m 200 [0m|   162.6585ms|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/22 12:17:28.305 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/lead/validate/
+2019/10/22 12:17:28.306 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/lead/pending
+2019/10/22 12:17:28.364 [D] [server.go:2774]  |            ::1|[42m 200 [0m|      2.005ms|   match|[44m GET     [0m /v1/lead/validate/   r:/v1/lead/validate
+2019/10/22 12:17:28.366 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     2.9945ms|   match|[44m GET     [0m /v1/lead/pending   r:/v1/lead/pending
+2019/10/22 12:17:28.369 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/lead/myteam/
+2019/10/22 12:17:28.451 [D] [server.go:2774]  |            ::1|[42m 200 [0m|      997.5µs|   match|[44m GET     [0m /v1/lead/myteam/   r:/v1/lead/myteam/
+2019/10/22 12:22:27.971 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/22 12:22:28.265 [D] [server.go:2774]  |            ::1|[42m 200 [0m|   167.7736ms|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/22 12:22:28.332 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/lead/validate/
+2019/10/22 12:22:28.332 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/lead/pending
+2019/10/22 12:22:28.374 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     2.0002ms|   match|[44m GET     [0m /v1/lead/validate/   r:/v1/lead/validate
+2019/10/22 12:22:28.377 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     4.9877ms|   match|[44m GET     [0m /v1/lead/pending   r:/v1/lead/pending
+2019/10/22 12:22:28.403 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/lead/myteam/
+2019/10/22 12:22:28.498 [D] [server.go:2774]  |            ::1|[42m 200 [0m|      995.7µs|   match|[44m GET     [0m /v1/lead/myteam/   r:/v1/lead/myteam/
+2019/10/22 12:22:38.217 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/22 12:22:38.412 [D] [server.go:2774]  |            ::1|[42m 200 [0m|    51.8637ms|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/22 12:22:38.577 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/lead/validate/
+2019/10/22 12:22:38.577 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/lead/pending
+2019/10/22 12:22:38.639 [D] [server.go:2774]  |            ::1|[42m 200 [0m|      998.7µs|   match|[44m GET     [0m /v1/lead/validate/   r:/v1/lead/validate
+2019/10/22 12:22:38.651 [D] [server.go:2774]  |            ::1|[42m 200 [0m|      3.989ms|   match|[44m GET     [0m /v1/lead/pending   r:/v1/lead/pending
+2019/10/22 12:22:38.663 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/lead/myteam/
+2019/10/22 12:22:38.677 [D] [server.go:2774]  |            ::1|[42m 200 [0m|      994.4µs|   match|[44m GET     [0m /v1/lead/myteam/   r:/v1/lead/myteam/
+2019/10/22 12:22:56.736 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/22 12:22:57.005 [D] [server.go:2774]  |            ::1|[42m 200 [0m|   141.1305ms|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/22 12:22:57.073 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/lead/validate/
+2019/10/22 12:22:57.073 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/lead/pending
+2019/10/22 12:22:57.118 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s|   match|[44m GET     [0m /v1/lead/validate/   r:/v1/lead/validate
+2019/10/22 12:22:57.119 [D] [server.go:2774]  |            ::1|[42m 200 [0m|      997.6µs|   match|[44m GET     [0m /v1/lead/pending   r:/v1/lead/pending
+2019/10/22 12:22:57.121 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/lead/myteam/
+2019/10/22 12:22:57.188 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     1.5305ms|   match|[44m GET     [0m /v1/lead/myteam/   r:/v1/lead/myteam/
+2019/10/22 12:23:19.006 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/22 12:23:19.257 [D] [server.go:2774]  |            ::1|[42m 200 [0m|   114.6929ms|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/22 12:23:19.362 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/lead/validate/
+2019/10/22 12:23:19.363 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/lead/pending
+2019/10/22 12:23:19.428 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     1.9959ms|   match|[44m GET     [0m /v1/lead/validate/   r:/v1/lead/validate
+2019/10/22 12:23:19.429 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     1.9971ms|   match|[44m GET     [0m /v1/lead/pending   r:/v1/lead/pending
+2019/10/22 12:23:19.452 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/lead/myteam/
+2019/10/22 12:23:19.464 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     1.9938ms|   match|[44m GET     [0m /v1/lead/myteam/   r:/v1/lead/myteam/
+2019/10/22 12:24:10.163 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/22 12:24:10.486 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/lead/validate/
+2019/10/22 12:24:10.487 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/lead/pending
+2019/10/22 12:24:10.488 [D] [server.go:2774]  |            ::1|[42m 200 [0m|   188.4936ms|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/22 12:24:10.560 [D] [server.go:2774]  |            ::1|[42m 200 [0m|      999.3µs|   match|[44m GET     [0m /v1/lead/validate/   r:/v1/lead/validate
+2019/10/22 12:24:10.561 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     1.0015ms|   match|[44m GET     [0m /v1/lead/pending   r:/v1/lead/pending
+2019/10/22 12:24:10.565 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/lead/myteam/
+2019/10/22 12:24:10.655 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     1.9922ms|   match|[44m GET     [0m /v1/lead/myteam/   r:/v1/lead/myteam/
+2019/10/22 12:25:01.634 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/22 12:25:01.824 [D] [server.go:2774]  |            ::1|[42m 200 [0m|    70.3557ms|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/22 12:25:01.978 [D] [server.go:2774]  |            ::1|[42m 200 [0m|      973.9µs| nomatch|[47m OPTIONS [0m /v1/lead/validate/
+2019/10/22 12:25:01.978 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/lead/pending
+2019/10/22 12:25:02.043 [D] [server.go:2774]  |            ::1|[42m 200 [0m|    27.9489ms|   match|[44m GET     [0m /v1/lead/validate/   r:/v1/lead/validate
+2019/10/22 12:25:02.044 [D] [server.go:2774]  |            ::1|[42m 200 [0m|    28.9424ms|   match|[44m GET     [0m /v1/lead/pending   r:/v1/lead/pending
+2019/10/22 12:25:02.049 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/lead/myteam/
+2019/10/22 12:25:02.114 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     1.9965ms|   match|[44m GET     [0m /v1/lead/myteam/   r:/v1/lead/myteam/
+2019/10/22 12:25:04.567 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/22 12:25:04.834 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/lead/validate/
+2019/10/22 12:25:04.834 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/lead/pending
+2019/10/22 12:25:04.889 [D] [server.go:2774]  |            ::1|[42m 200 [0m|      998.3µs|   match|[44m GET     [0m /v1/lead/validate/   r:/v1/lead/validate
+2019/10/22 12:25:04.890 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     1.9949ms|   match|[44m GET     [0m /v1/lead/pending   r:/v1/lead/pending
+2019/10/22 12:25:04.905 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/lead/myteam/
+2019/10/22 12:25:04.914 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     2.0207ms|   match|[44m GET     [0m /v1/lead/myteam/   r:/v1/lead/myteam/
+2019/10/22 12:25:05.055 [D] [server.go:2774]  |            ::1|[42m 200 [0m|   395.1587ms|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/22 12:25:34.101 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/22 12:25:34.346 [D] [server.go:2774]  |            ::1|[42m 200 [0m|   130.6682ms|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/22 12:25:34.420 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/lead/validate/
+2019/10/22 12:25:34.420 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/lead/pending
+2019/10/22 12:25:34.474 [D] [server.go:2774]  |            ::1|[42m 200 [0m|      997.2µs|   match|[44m GET     [0m /v1/lead/validate/   r:/v1/lead/validate
+2019/10/22 12:25:34.474 [D] [server.go:2774]  |            ::1|[42m 200 [0m|      997.2µs|   match|[44m GET     [0m /v1/lead/pending   r:/v1/lead/pending
+2019/10/22 12:25:34.478 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/lead/myteam/
+2019/10/22 12:25:34.554 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     1.9945ms|   match|[44m GET     [0m /v1/lead/myteam/   r:/v1/lead/myteam/
+2019/10/22 12:26:00.794 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/22 12:26:01.105 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/lead/validate/
+2019/10/22 12:26:01.107 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/lead/pending
+2019/10/22 12:26:01.168 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     2.9906ms|   match|[44m GET     [0m /v1/lead/validate/   r:/v1/lead/validate
+2019/10/22 12:26:01.170 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     3.9903ms|   match|[44m GET     [0m /v1/lead/pending   r:/v1/lead/pending
+2019/10/22 12:26:01.194 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/lead/myteam/
+2019/10/22 12:26:01.310 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     1.9973ms|   match|[44m GET     [0m /v1/lead/myteam/   r:/v1/lead/myteam/
+2019/10/22 12:26:01.578 [D] [server.go:2774]  |            ::1|[42m 200 [0m|   661.2482ms|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/22 12:29:48.239 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/22 12:29:48.404 [D] [server.go:2774]  |            ::1|[42m 200 [0m|    64.5813ms|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/22 12:29:48.515 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/team/myteam
+2019/10/22 12:29:48.515 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/team/invitations/pending
+2019/10/22 12:29:48.569 [D] [server.go:2774]  |            ::1|[42m 200 [0m|        997µs|   match|[44m GET     [0m /v1/team/myteam   r:/v1/team/myteam
+2019/10/22 12:29:48.569 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s|   match|[44m GET     [0m /v1/team/invitations/pending   r:/v1/team/invitations/pending
+2019/10/22 12:30:00.847 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/22 12:30:00.947 [D] [server.go:2774]  |            ::1|[42m 200 [0m|    52.8934ms|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/22 12:30:01.056 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/lead/validate/
+2019/10/22 12:30:01.056 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/lead/pending
+2019/10/22 12:30:01.074 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     1.9951ms|   match|[44m GET     [0m /v1/lead/validate/   r:/v1/lead/validate
+2019/10/22 12:30:01.074 [D] [server.go:2774]  |            ::1|[42m 200 [0m|      996.9µs|   match|[44m GET     [0m /v1/lead/pending   r:/v1/lead/pending
+2019/10/22 12:30:01.077 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/lead/myteam/
+2019/10/22 12:30:01.133 [D] [server.go:2774]  |            ::1|[42m 200 [0m|      992.5µs|   match|[44m GET     [0m /v1/lead/myteam/   r:/v1/lead/myteam/
+2019/10/22 12:30:33.727 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s|   match|[44m GET     [0m /v1/token/token/tombara.akulasah@ceslintlgroup.com   r:/v1/token/:email
+2019/10/22 12:30:33.883 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/22 12:30:33.931 [D] [server.go:2774]  |            ::1|[42m 200 [0m|      990.2µs|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/22 12:30:43.717 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/22 12:30:43.771 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     1.9938ms|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/22 12:30:43.914 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/team/myteam
+2019/10/22 12:30:43.914 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/team/invitations/pending
+2019/10/22 12:30:43.938 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s|   match|[44m GET     [0m /v1/team/invitations/pending   r:/v1/team/invitations/pending
+2019/10/22 12:30:43.939 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     1.9932ms|   match|[44m GET     [0m /v1/team/myteam   r:/v1/team/myteam
+2019/10/22 12:30:47.162 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/22 12:30:47.209 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     1.0165ms|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/22 12:30:47.336 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/team/myteam
+2019/10/22 12:30:47.336 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/team/invitations/pending
+2019/10/22 12:30:47.356 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     1.0024ms|   match|[44m GET     [0m /v1/team/invitations/pending   r:/v1/team/invitations/pending
+2019/10/22 12:30:47.357 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     2.0063ms|   match|[44m GET     [0m /v1/team/myteam   r:/v1/team/myteam
+2019/10/22 12:34:18.280 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s|   match|[44m GET     [0m /v1/token/token/tombara.akulasah@ceslintlgroup.com   r:/v1/token/:email
+2019/10/22 12:34:43.661 [D] [server.go:2774]  |            ::1|[42m 200 [0m|      994.4µs|   match|[44m GET     [0m /v1/token/token/apinaendy@gmail.com   r:/v1/token/:email
+2019/10/22 12:34:43.819 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/22 12:34:43.955 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     82.778ms|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/22 12:34:56.801 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/22 12:34:56.928 [D] [server.go:2774]  |            ::1|[42m 200 [0m|    47.8696ms|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/22 12:34:57.008 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/lead/validate/
+2019/10/22 12:34:57.008 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/lead/pending
+2019/10/22 12:34:57.030 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     1.0025ms|   match|[44m GET     [0m /v1/lead/validate/   r:/v1/lead/validate
+2019/10/22 12:34:57.031 [D] [server.go:2774]  |            ::1|[42m 200 [0m|      1.962ms|   match|[44m GET     [0m /v1/lead/pending   r:/v1/lead/pending
+2019/10/22 12:34:57.034 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/lead/myteam/
+2019/10/22 12:34:57.102 [D] [server.go:2774]  |            ::1|[42m 200 [0m|      999.6µs|   match|[44m GET     [0m /v1/lead/myteam/   r:/v1/lead/myteam/
+2019/10/22 12:35:30.082 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/22 12:35:30.272 [D] [server.go:2774]  |            ::1|[42m 200 [0m|    140.623ms|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/22 12:35:30.291 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/lead/validate/
+2019/10/22 12:35:30.291 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/lead/pending
+2019/10/22 12:35:30.332 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     1.9935ms|   match|[44m GET     [0m /v1/lead/validate/   r:/v1/lead/validate
+2019/10/22 12:35:30.333 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     2.0013ms|   match|[44m GET     [0m /v1/lead/pending   r:/v1/lead/pending
+2019/10/22 12:35:30.344 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/lead/myteam/
+2019/10/22 12:35:30.399 [D] [server.go:2774]  |            ::1|[42m 200 [0m|      995.8µs|   match|[44m GET     [0m /v1/lead/myteam/   r:/v1/lead/myteam/
+2019/10/22 12:37:30.574 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/22 12:37:30.750 [D] [server.go:2774]  |            ::1|[42m 200 [0m|    81.1812ms|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/22 12:37:30.856 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/team/myteam
+2019/10/22 12:37:30.856 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/team/invitations/pending
+2019/10/22 12:37:30.903 [D] [server.go:2774]  |            ::1|[42m 200 [0m|      997.5µs|   match|[44m GET     [0m /v1/team/invitations/pending   r:/v1/team/invitations/pending
+2019/10/22 12:37:30.903 [D] [server.go:2774]  |            ::1|[42m 200 [0m|      997.5µs|   match|[44m GET     [0m /v1/team/myteam   r:/v1/team/myteam
+2019/10/22 12:38:54.781 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s|   match|[44m GET     [0m /v1/token/token/tombara.akulasah@ceslintlgroup.com   r:/v1/token/:email
+2019/10/22 12:38:55.204 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/22 12:38:55.217 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     7.9862ms|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/22 12:39:04.223 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/22 12:39:04.228 [D] [server.go:2774]  |            ::1|[42m 200 [0m|      999.9µs|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/22 12:39:04.543 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/team/invitations/pending
+2019/10/22 12:39:04.543 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/team/myteam
+2019/10/22 12:39:04.550 [D] [server.go:2774]  |            ::1|[42m 200 [0m|      998.2µs|   match|[44m GET     [0m /v1/team/invitations/pending   r:/v1/team/invitations/pending
+2019/10/22 12:39:04.551 [D] [server.go:2774]  |            ::1|[42m 200 [0m|      996.8µs|   match|[44m GET     [0m /v1/team/myteam   r:/v1/team/myteam
+2019/10/22 12:54:47.768 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/22 12:54:47.942 [D] [server.go:2774]  |            ::1|[42m 200 [0m|    85.2802ms|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/22 14:58:12.877 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/22 14:58:13.117 [D] [server.go:2774]  |            ::1|[42m 200 [0m|   144.6414ms|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/22 15:01:11.027 [I] [asm_amd64.s:1337]  http server Running on http://:2253
+2019/10/22 15:01:12.205 [I] [asm_amd64.s:1337]  http server Running on http://:2253
+2019/10/22 15:01:13.660 [I] [asm_amd64.s:1337]  http server Running on http://:2253
+2019/10/22 15:01:15.515 [I] [asm_amd64.s:1337]  http server Running on http://:2253
+2019/10/22 15:01:16.702 [I] [asm_amd64.s:1337]  http server Running on http://:2253
+2019/10/22 15:01:18.064 [I] [asm_amd64.s:1337]  http server Running on http://:2253
+2019/10/22 15:01:19.590 [I] [asm_amd64.s:1337]  http server Running on http://:2253
+2019/10/22 15:01:21.119 [I] [asm_amd64.s:1337]  http server Running on http://:2253
+2019/10/22 15:01:23.040 [I] [asm_amd64.s:1337]  http server Running on http://:2253
+2019/10/22 15:05:43.859 [I] [asm_amd64.s:1337]  http server Running on http://:2253
+2019/10/22 15:05:53.589 [I] [asm_amd64.s:1337]  http server Running on http://:2253
+2019/10/22 15:11:27.215 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/22 15:11:27.393 [D] [server.go:2774]  |            ::1|[42m 200 [0m|    144.663ms|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/22 15:12:16.394 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/22 15:12:16.548 [D] [server.go:2774]  |            ::1|[42m 200 [0m|    59.8381ms|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/22 15:12:50.281 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/22 15:12:50.442 [D] [server.go:2774]  |            ::1|[42m 200 [0m|    109.705ms|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/22 15:13:40.708 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/22 15:13:40.939 [D] [server.go:2774]  |            ::1|[42m 200 [0m|   131.6462ms|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/22 15:13:40.993 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/team/myteam
+2019/10/22 15:13:40.994 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/team/invitations/pending
+2019/10/22 15:13:41.043 [D] [server.go:2774]  |            ::1|[42m 200 [0m|      997.7µs|   match|[44m GET     [0m /v1/team/myteam   r:/v1/team/myteam
+2019/10/22 15:13:41.044 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     1.9967ms|   match|[44m GET     [0m /v1/team/invitations/pending   r:/v1/team/invitations/pending
+2019/10/22 15:14:08.602 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/22 15:14:08.824 [D] [server.go:2774]  |            ::1|[42m 200 [0m|   118.6708ms|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/22 15:14:08.895 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/lead/validate/
+2019/10/22 15:14:08.895 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/lead/pending
+2019/10/22 15:14:08.959 [D] [server.go:2774]  |            ::1|[42m 200 [0m|      996.8µs|   match|[44m GET     [0m /v1/lead/validate/   r:/v1/lead/validate
+2019/10/22 15:14:08.960 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     1.9939ms|   match|[44m GET     [0m /v1/lead/pending   r:/v1/lead/pending
+2019/10/22 15:14:08.974 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/lead/myteam/
+2019/10/22 15:14:09.045 [D] [server.go:2774]  |            ::1|[42m 200 [0m|        997µs|   match|[44m GET     [0m /v1/lead/myteam/   r:/v1/lead/myteam/
+2019/10/22 15:18:38.505 [D] [server.go:2774]  |            ::1|[42m 200 [0m|      995.9µs| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/22 15:18:38.711 [D] [server.go:2774]  |            ::1|[42m 200 [0m|    79.7974ms|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/22 15:18:38.731 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/lead/myteam/
+2019/10/22 15:18:38.784 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     1.9943ms|   match|[44m GET     [0m /v1/lead/myteam/   r:/v1/lead/myteam/
+2019/10/22 15:20:10.445 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/22 15:20:10.621 [D] [server.go:2774]  |            ::1|[42m 200 [0m|    75.3384ms|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/22 15:20:10.654 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/lead/myteam/
+2019/10/22 15:20:10.709 [D] [server.go:2774]  |            ::1|[42m 200 [0m|      997.8µs|   match|[44m GET     [0m /v1/lead/myteam/   r:/v1/lead/myteam/
+2019/10/22 15:21:01.233 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/22 15:21:01.401 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/lead/myteam/
+2019/10/22 15:21:01.427 [D] [server.go:2774]  |            ::1|[42m 200 [0m|   148.5987ms|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/22 15:21:01.440 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     1.9938ms|   match|[44m GET     [0m /v1/lead/myteam/   r:/v1/lead/myteam/
+2019/10/22 15:21:40.483 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/22 15:21:40.628 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/lead/myteam/
+2019/10/22 15:21:40.673 [D] [server.go:2774]  |            ::1|[42m 200 [0m|      995.4µs|   match|[44m GET     [0m /v1/lead/myteam/   r:/v1/lead/myteam/
+2019/10/22 15:21:40.674 [D] [server.go:2774]  |            ::1|[42m 200 [0m|   152.5869ms|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/22 15:23:25.923 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/22 15:23:26.110 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/lead/myteam/
+2019/10/22 15:23:26.164 [D] [server.go:2774]  |            ::1|[42m 200 [0m|   141.6179ms|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/22 15:23:26.172 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     3.9896ms|   match|[44m GET     [0m /v1/lead/myteam/   r:/v1/lead/myteam/
+2019/10/22 15:24:04.909 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/22 15:24:05.087 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/lead/myteam/
+2019/10/22 15:24:05.304 [D] [server.go:2774]  |            ::1|[42m 200 [0m|   168.1808ms|   match|[44m GET     [0m /v1/lead/myteam/   r:/v1/lead/myteam/
+2019/10/22 15:24:05.349 [D] [server.go:2774]  |            ::1|[42m 200 [0m|   352.5803ms|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/22 15:25:25.139 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/22 15:25:25.308 [D] [server.go:2774]  |            ::1|[42m 200 [0m|    70.8298ms|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/22 15:25:25.366 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/lead/myteam/
+2019/10/22 15:25:25.412 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     1.9928ms|   match|[44m GET     [0m /v1/lead/myteam/   r:/v1/lead/myteam/
+2019/10/22 15:26:00.525 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/22 15:26:00.659 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     41.911ms|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/22 15:26:00.706 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/lead/myteam/
+2019/10/22 15:26:00.762 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     1.9954ms|   match|[44m GET     [0m /v1/lead/myteam/   r:/v1/lead/myteam/
+2019/10/22 15:30:31.032 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/22 15:30:31.214 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/lead/myteam/
+2019/10/22 15:30:31.267 [D] [server.go:2774]  |            ::1|[42m 200 [0m|   138.6327ms|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/22 15:30:31.288 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     2.0388ms|   match|[44m GET     [0m /v1/lead/myteam/   r:/v1/lead/myteam/
+2019/10/22 15:36:43.588 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/22 15:36:43.594 [D] [server.go:2774]  |            ::1|[42m 200 [0m|      998.4µs|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/22 15:36:50.808 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/22 15:36:50.904 [D] [server.go:2774]  |            ::1|[42m 200 [0m|    55.8447ms|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/22 15:36:50.973 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/lead/validate/
+2019/10/22 15:36:51.021 [D] [server.go:2774]  |            ::1|[42m 200 [0m|      997.6µs|   match|[44m GET     [0m /v1/lead/validate/   r:/v1/lead/validate
+2019/10/22 15:36:51.037 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/lead/myteam/
+2019/10/22 15:36:51.045 [D] [server.go:2774]  |            ::1|[42m 200 [0m|      1.996ms|   match|[44m GET     [0m /v1/lead/myteam/   r:/v1/lead/myteam/
+2019/10/22 15:36:53.328 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/22 15:36:53.332 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/22 15:37:00.519 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/22 15:37:00.524 [D] [server.go:2774]  |            ::1|[42m 200 [0m|      995.6µs|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/22 15:37:54.608 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s|   match|[44m GET     [0m /v1/token/token/tombara.akulasah@ceslintlgroup.com   r:/v1/token/:email
+2019/10/22 15:38:08.826 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/22 15:38:08.829 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/22 15:39:23.578 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/22 15:39:23.582 [D] [server.go:2774]  |            ::1|[42m 200 [0m|      998.3µs|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/22 15:39:34.148 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/22 15:39:34.151 [D] [server.go:2774]  |            ::1|[42m 200 [0m|      998.4µs|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/22 15:39:34.265 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/lead/validate/
+2019/10/22 15:39:34.268 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s|   match|[44m GET     [0m /v1/lead/validate/   r:/v1/lead/validate
+2019/10/22 15:41:03.497 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/22 15:41:03.686 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/lead/validate/
+2019/10/22 15:41:03.721 [D] [server.go:2774]  |            ::1|[42m 200 [0m|   128.6469ms|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/22 15:41:03.740 [D] [server.go:2774]  |            ::1|[42m 200 [0m|      999.1µs|   match|[44m GET     [0m /v1/lead/validate/   r:/v1/lead/validate
+2019/10/22 15:41:03.771 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/lead/myteam/
+2019/10/22 15:41:03.779 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     1.9926ms|   match|[44m GET     [0m /v1/lead/myteam/   r:/v1/lead/myteam/
+2019/10/22 15:43:50.471 [D] [server.go:2774]  |            ::1|[42m 200 [0m|      997.7µs| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/22 15:43:50.580 [D] [server.go:2774]  |            ::1|[42m 200 [0m|    63.8513ms|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/22 15:43:50.609 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/lead/validate/
+2019/10/22 15:43:50.636 [D] [server.go:2774]  |            ::1|[42m 200 [0m|      997.6µs|   match|[44m GET     [0m /v1/lead/validate/   r:/v1/lead/validate
+2019/10/22 15:43:50.658 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/lead/myteam/
+2019/10/22 15:43:50.666 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     1.9901ms|   match|[44m GET     [0m /v1/lead/myteam/   r:/v1/lead/myteam/
+2019/10/22 15:46:08.851 [D] [server.go:2774]  |            ::1|[42m 200 [0m|      997.7µs| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/22 15:46:09.018 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/lead/validate/
+2019/10/22 15:46:09.221 [D] [server.go:2774]  |            ::1|[42m 200 [0m|   178.7464ms|   match|[44m GET     [0m /v1/lead/validate/   r:/v1/lead/validate
+2019/10/22 15:46:09.230 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/lead/myteam/
+2019/10/22 15:46:09.239 [D] [server.go:2774]  |            ::1|[42m 200 [0m|      997.9µs|   match|[44m GET     [0m /v1/lead/myteam/   r:/v1/lead/myteam/
+2019/10/22 15:46:09.262 [D] [server.go:2774]  |            ::1|[42m 200 [0m|   336.4568ms|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/22 15:46:10.030 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/22 15:46:10.243 [D] [server.go:2774]  |            ::1|[42m 200 [0m|   118.1968ms|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/22 15:46:16.761 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/lead/validate/
+2019/10/22 15:46:16.848 [D] [server.go:2774]  |            ::1|[42m 200 [0m|    42.8841ms|   match|[44m GET     [0m /v1/lead/validate/   r:/v1/lead/validate
+2019/10/22 15:46:16.854 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/lead/myteam/
+2019/10/22 15:46:16.891 [D] [server.go:2774]  |            ::1|[42m 200 [0m|    24.9313ms|   match|[44m GET     [0m /v1/lead/myteam/   r:/v1/lead/myteam/
+2019/10/22 15:49:19.369 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/22 15:49:19.563 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/lead/validate/
+2019/10/22 15:49:19.585 [D] [server.go:2774]  |            ::1|[42m 200 [0m|   116.7176ms|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/22 15:49:19.613 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     1.9898ms|   match|[44m GET     [0m /v1/lead/validate/   r:/v1/lead/validate
+2019/10/22 15:49:19.632 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/lead/myteam/
+2019/10/22 15:49:19.636 [D] [server.go:2774]  |            ::1|[42m 200 [0m|      998.1µs|   match|[44m GET     [0m /v1/lead/myteam/   r:/v1/lead/myteam/
+2019/10/22 15:50:59.105 [D] [server.go:2774]  |            ::1|[42m 200 [0m|      996.7µs| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/22 15:50:59.295 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/lead/validate/
+2019/10/22 15:50:59.362 [D] [server.go:2774]  |            ::1|[42m 200 [0m|      998.9µs|   match|[44m GET     [0m /v1/lead/validate/   r:/v1/lead/validate
+2019/10/22 15:50:59.370 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/lead/myteam/
+2019/10/22 15:50:59.376 [D] [server.go:2774]  |            ::1|[42m 200 [0m|      1.995ms|   match|[44m GET     [0m /v1/lead/myteam/   r:/v1/lead/myteam/
+2019/10/22 15:50:59.459 [D] [server.go:2774]  |            ::1|[42m 200 [0m|   252.4164ms|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/22 15:51:24.372 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/22 15:51:24.574 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/lead/validate/
+2019/10/22 15:51:24.886 [D] [server.go:2774]  |            ::1|[42m 200 [0m|   259.9462ms|   match|[44m GET     [0m /v1/lead/validate/   r:/v1/lead/validate
+2019/10/22 15:51:24.890 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/lead/myteam/
+2019/10/22 15:51:24.894 [D] [server.go:2774]  |            ::1|[42m 200 [0m|      997.1µs|   match|[44m GET     [0m /v1/lead/myteam/   r:/v1/lead/myteam/
+2019/10/22 15:51:24.933 [D] [server.go:2774]  |            ::1|[42m 200 [0m|   445.5779ms|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/22 15:51:46.864 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/22 15:51:47.083 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/lead/validate/
+2019/10/22 15:51:47.116 [D] [server.go:2774]  |            ::1|[42m 200 [0m|   116.2096ms|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/22 15:51:47.168 [D] [server.go:2774]  |            ::1|[42m 200 [0m|      997.5µs|   match|[44m GET     [0m /v1/lead/validate/   r:/v1/lead/validate
+2019/10/22 15:51:47.189 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/lead/myteam/
+2019/10/22 15:51:47.195 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     1.9945ms|   match|[44m GET     [0m /v1/lead/myteam/   r:/v1/lead/myteam/
+2019/10/22 15:51:56.178 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/22 15:51:56.385 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/lead/validate/
+2019/10/22 15:51:56.473 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     3.9889ms|   match|[44m GET     [0m /v1/lead/validate/   r:/v1/lead/validate
+2019/10/22 15:51:56.485 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/lead/myteam/
+2019/10/22 15:51:56.497 [D] [server.go:2774]  |            ::1|[42m 200 [0m|      997.1µs|   match|[44m GET     [0m /v1/lead/myteam/   r:/v1/lead/myteam/
+2019/10/22 15:51:56.518 [D] [server.go:2774]  |            ::1|[42m 200 [0m|    224.405ms|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/22 15:52:48.645 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/22 15:52:48.848 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/lead/validate/
+2019/10/22 15:52:48.894 [D] [server.go:2774]  |            ::1|[42m 200 [0m|      997.6µs|   match|[44m GET     [0m /v1/lead/validate/   r:/v1/lead/validate
+2019/10/22 15:52:48.912 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/lead/myteam/
+2019/10/22 15:52:48.916 [D] [server.go:2774]  |            ::1|[42m 200 [0m|      997.5µs|   match|[44m GET     [0m /v1/lead/myteam/   r:/v1/lead/myteam/
+2019/10/22 15:52:49.880 [D] [server.go:2774]  |            ::1|[42m 200 [0m|   1.1227247s|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/22 15:55:10.057 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/22 15:55:10.244 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/lead/validate/
+2019/10/22 15:55:10.294 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     1.9969ms|   match|[44m GET     [0m /v1/lead/validate/   r:/v1/lead/validate
+2019/10/22 15:55:10.316 [D] [server.go:2774]  |            ::1|[42m 200 [0m|   148.6093ms|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/22 15:55:10.316 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/lead/myteam/
+2019/10/22 15:55:10.324 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     1.9958ms|   match|[44m GET     [0m /v1/lead/myteam/   r:/v1/lead/myteam/
+2019/10/22 15:56:40.839 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/22 15:56:41.008 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     70.143ms|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/22 15:56:41.025 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/lead/validate/
+2019/10/22 15:56:41.093 [D] [server.go:2774]  |            ::1|[42m 200 [0m|      997.4µs|   match|[44m GET     [0m /v1/lead/validate/   r:/v1/lead/validate
+2019/10/22 15:56:41.119 [D] [server.go:2774]  |            ::1|[42m 200 [0m|        997µs| nomatch|[47m OPTIONS [0m /v1/lead/myteam/
+2019/10/22 15:56:41.129 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     2.9917ms|   match|[44m GET     [0m /v1/lead/myteam/   r:/v1/lead/myteam/
+2019/10/22 15:56:55.742 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/user/update/
+2019/10/22 15:56:55.936 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/lead/validate/
+2019/10/22 15:56:55.971 [D] [server.go:2774]  |            ::1|[42m 200 [0m|   115.7941ms|   match|[46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/10/22 15:56:55.990 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     1.9953ms|   match|[44m GET     [0m /v1/lead/validate/   r:/v1/lead/validate
+2019/10/22 15:56:56.010 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     1.0018ms| nomatch|[47m OPTIONS [0m /v1/lead/myteam/
+2019/10/22 15:56:56.017 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     2.9913ms|   match|[44m GET     [0m /v1/lead/myteam/   r:/v1/lead/myteam/
+2019/10/22 16:27:16.049 [I] [asm_amd64.s:1337]  http server Running on http://:2253
+2019/10/22 16:41:30.388 [I] [asm_amd64.s:1337]  http server Running on http://:2253

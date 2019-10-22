@@ -2,25 +2,44 @@ package models
 
 import (
 	"encoding/json"
-	"net/http"
-
-	"github.com/astaxie/beego"
 )
 
 //AddNewTeamMember adds a new member to the team
-func AddNewTeamMember(member User) interface{} {
-	isTeamLead, err := http.Get(beego.AppConfig.String("coreapi"))
-	if err != nil {
-		return ErrorResponse(200, "User is not a team lead: %s"+err.Error())
+func AddNewTeamMember(member User, teamLead User) interface{} {
+	var team Team
+	hasTeam, team := MyTeam(teamLead)
+	if hasTeam != true {
+		return ErrorResponse(403, "User does not have a team")
 	}
 
-	var teamMember Members
-	teamMember.Member = member.FullName
-	teamMember.MemberID = member.ID
+	var invitation TeamInvitation
+	invitation.TeamName = team.Name
+	invitation.TeamID = team.ID
+	invitation.InviteeID = member.ID
+	invitation.InviteeName = member.FullName
+	invitation.Status = "pending"
 
-	Conn.Find(&teamMember)
+	Conn.Create(&invitation)
 
-	return ValidResponse(200, isTeamLead, "success")
+	return ValidResponse(200, teamLead, "success")
+}
+
+//MyTeam checks if i have a team and return my team if true
+func MyTeam(user User) (bool, Team) {
+	var myTeam Team
+	if findTeam := Conn.Where("lead_id = ?", user.ID).Find(&myTeam); findTeam.Error != nil {
+		return false, myTeam
+	}
+	return true, myTeam
+}
+
+//LeadHasTeam checks if a team Lead has a team
+func LeadHasTeam(teamLead User) (bool, string) {
+	var team Team
+	if findTeam := Conn.Where("lead_id = ?", teamLead.ID).Find(&team); findTeam.Error != nil {
+		return false, "No team created"
+	}
+	return true, team.Name
 }
 
 //AddNewTeam adds a new member to the team
@@ -75,9 +94,65 @@ func VerifiTeamRoleStatus(body string) (uint64, bool) {
 
 //GetTeamInfo gets a user team information
 func GetTeamInfo(teamLead User) interface{} {
-	var team Team
-	if findTeam := Conn.Where("lead_id = ?", teamLead.ID).Find(&team); findTeam.Error != nil {
-		return ErrorResponse(404, "Team not Found")
+	var teamMembers []Members
+	if findMembers := Conn.Where("team_lead_id = ?", teamLead.ID).Find(&teamMembers); findMembers.Error != nil {
+		return ValidResponse(401, nil, "No Members in Team")
 	}
-	return ValidResponse(200, team, "success")
+
+	var allUsers []User
+	Conn.Find(&allUsers)
+
+	var allMembersArray []User
+
+	for _, user := range allUsers {
+		for _, member := range teamMembers {
+			if user.ID == member.MemberID {
+				allMembersArray = append(allMembersArray, user)
+			}
+		}
+	}
+
+	return ValidResponse(200, allMembersArray, "success")
+}
+
+//MyPendingTeamInfo retrieves all information for pending team members
+func MyPendingTeamInfo(teamLead User) interface{} {
+	var myTeam Team
+	Conn.Where("lead_id = ?", teamLead.ID).Find(&myTeam)
+
+	var invitations []TeamInvitation
+	if findInvitation := Conn.Where("team_id = ?", myTeam.ID).Find(&invitations); findInvitation.Error != nil {
+		return ValidResponse(200, nil, "success")
+	}
+
+	type invitationResponse struct {
+		User             User   `json:"user"`
+		InvitationStatus string `json:"status"`
+	}
+	var inviteStatus invitationResponse
+	var inviteStatusArray []invitationResponse
+
+	var allUsers []User
+	Conn.Find(&allUsers)
+
+	for _, user := range allUsers {
+		for _, invite := range invitations {
+			if invite.InviteeID == user.ID {
+				inviteStatus.User = user
+				inviteStatus.InvitationStatus = invite.Status
+
+				inviteStatusArray = append(inviteStatusArray, inviteStatus)
+			}
+		}
+	}
+
+	return ValidResponse(200, inviteStatusArray, "success")
+}
+
+//DeletePendingTeamMember deletes pending member from the system
+func DeletePendingTeamMember(uid string) interface{} {
+	if deleteInvitation := Conn.Where("invitee_id = ?", uid).Delete(&TeamInvitation{}); deleteInvitation.Error != nil {
+		return ErrorResponse(401, "Unable to delete Team Invitation record")
+	}
+	return ValidResponse(200, "Delete Successful", "success")
 }

@@ -15,6 +15,37 @@
     },
     "basePath": "/v1",
     "paths": {
+        "/kpi/assign/": {
+            "post": {
+                "tags": [
+                    "kpi"
+                ],
+                "description": "assigns new KPI information to a member of the team",
+                "operationId": "KPIController.AssignKPI",
+                "parameters": [
+                    {
+                        "in": "KPIObject",
+                        "name": "object",
+                        "description": "the KPI object",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/models.KPI"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/models.ValidResponse"
+                        }
+                    },
+                    "403": {
+                        "description": "body is empty"
+                    }
+                }
+            }
+        },
         "/lead/member/{id}": {
             "post": {
                 "tags": [
@@ -61,6 +92,43 @@
                 }
             }
         },
+        "/lead/pending": {
+            "get": {
+                "tags": [
+                    "lead"
+                ],
+                "description": "gets a team's pending member information",
+                "operationId": "TeamLeadController.GetMyPendingTeam",
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/models.ValidResponse"
+                        }
+                    },
+                    "403": {
+                        "description": "body is empty"
+                    }
+                }
+            }
+        },
+        "/lead/pending/{id}": {
+            "delete": {
+                "tags": [
+                    "lead"
+                ],
+                "description": "deletes a team invitation using the user ID",
+                "operationId": "TeamLeadController.Delete",
+                "responses": {
+                    "200": {
+                        "description": "{string} id of the user"
+                    },
+                    "403": {
+                        "description": "body is empty"
+                    }
+                }
+            }
+        },
         "/lead/team/": {
             "post": {
                 "tags": [
@@ -82,6 +150,92 @@
                 "responses": {
                     "200": {
                         "description": "{string} id of the user"
+                    },
+                    "403": {
+                        "description": "body is empty"
+                    }
+                }
+            }
+        },
+        "/lead/validate": {
+            "get": {
+                "tags": [
+                    "lead"
+                ],
+                "description": "checks if a user has created a team",
+                "operationId": "TeamLeadController.VerifiHasTeam",
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/models.ValidResponse"
+                        }
+                    },
+                    "403": {
+                        "description": "body is empty"
+                    }
+                }
+            }
+        },
+        "/team/accept/{teamid}": {
+            "post": {
+                "tags": [
+                    "team"
+                ],
+                "description": "accepts a new team invitation",
+                "operationId": "TeamController.AcceptTeamInvitation",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "teamid",
+                        "description": "the team object",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "{string} id of the user"
+                    },
+                    "403": {
+                        "description": "body is empty"
+                    }
+                }
+            }
+        },
+        "/team/invitations/pending": {
+            "get": {
+                "tags": [
+                    "team"
+                ],
+                "description": "gets a team pending team requests",
+                "operationId": "TeamController.GetMyPendingTeam",
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/models.ValidResponse"
+                        }
+                    },
+                    "403": {
+                        "description": "body is empty"
+                    }
+                }
+            }
+        },
+        "/team/myteam": {
+            "get": {
+                "tags": [
+                    "team"
+                ],
+                "description": "gets a team information",
+                "operationId": "TeamController.GetMyTeamInfo",
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/models.ValidResponse"
+                        }
                     },
                     "403": {
                         "description": "body is empty"
@@ -161,6 +315,67 @@
         }
     },
     "definitions": {
+        "models.KPI": {
+            "title": "KPI",
+            "type": "object",
+            "properties": {
+                "created_at": {
+                    "type": "string",
+                    "format": "datetime"
+                },
+                "deleted_at": {
+                    "type": "string",
+                    "format": "datetime"
+                },
+                "employee": {
+                    "type": "string"
+                },
+                "employee_comment": {
+                    "type": "string"
+                },
+                "employee_id": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "end_date": {
+                    "type": "string"
+                },
+                "id": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "kpi": {
+                    "type": "string"
+                },
+                "start_date": {
+                    "type": "string"
+                },
+                "status": {
+                    "type": "string"
+                },
+                "team_lead": {
+                    "type": "string"
+                },
+                "team_lead_comment": {
+                    "type": "string"
+                },
+                "team_lead_id": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "team_lead_score": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "updated_at": {
+                    "type": "string",
+                    "format": "datetime"
+                },
+                "weight": {
+                    "type": "string"
+                }
+            }
+        },
         "models.Model": {
             "title": "Model",
             "type": "object",
@@ -297,6 +512,14 @@
         {
             "name": "token",
             "description": "TokenController handles all about token\n"
+        },
+        {
+            "name": "team",
+            "description": "TeamController handles all team RELATED MATTERS\n"
+        },
+        {
+            "name": "kpi",
+            "description": "KPIController controls all KPI related activities\n"
         }
     ]
 }

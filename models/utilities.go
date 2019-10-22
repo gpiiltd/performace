@@ -73,3 +73,17 @@ func ValidateUserRoleAPI(teamLeadID uint64, roleCode uint64) (bool, string) {
 
 	return true, string(body)
 }
+
+//ValidationResponse returns responses for validation purposes
+func ValidationResponse(code int, body bool) interface{} {
+	type validationResponseData struct {
+		Code int  `json:"code"`
+		Body bool `json:"body"`
+	}
+
+	var response validationResponseData
+	response.Code = code
+	response.Body = body
+
+	return response
+}
