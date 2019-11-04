@@ -49,3 +49,10 @@ func AcceptInvitation(user User, teamID string) interface{} {
 
 	return ValidResponse(200, createTeam, "Successfully joined team")
 }
+
+//GetTeamReport gets a list of all team
+func GetTeamReport() []Team {
+	var teams []Team
+	Conn.Find(&teams)
+	return teams
+}

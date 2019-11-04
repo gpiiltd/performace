@@ -66,3 +66,15 @@ func (t *TeamController) AcceptTeamInvitation() {
 	t.Data["json"] = models.AcceptInvitation(user, teamID)
 	t.ServeJSON()
 }
+
+//GetTeamReport gets all team report for the head of HR
+// @Title GetTeamReport
+// @Description gets a team list report
+// @Success 200 {object} models.ValidResponse
+// @Failure 403 body is empty
+// @router /report [get]
+func (t *TeamController) GetTeamReport() {
+	allTeam := models.GetTeamReport()
+	t.Data["json"] = models.ValidResponse(200, allTeam, "success")
+	t.ServeJSON()
+}

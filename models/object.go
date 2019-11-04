@@ -47,6 +47,7 @@ func CreateTables() {
 	Conn.AutoMigrate(&Team{})
 	Conn.AutoMigrate(&Members{})
 	Conn.AutoMigrate(&TeamInvitation{})
+	Conn.AutoMigrate(&KPI{})
 	return
 }
 
@@ -125,4 +126,10 @@ type KPI struct {
 	TeamLeadScore   uint64 `gorm:"int(10)" json:"team_lead_score"`
 	TeamLeadComment string `gorm:"varchar(250)" json:"team_lead_comment"`
 	EmployeeComment string `gorm:"varchar(250)" json:"employee_comment"`
+}
+
+//KPIRequest holds the data for kpi request.
+type KPIRequest struct {
+	Month  uint64 `json:"month"`
+	UserID uint64 `json:"user_id"`
 }

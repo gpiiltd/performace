@@ -156,3 +156,12 @@ func DeletePendingTeamMember(uid string) interface{} {
 	}
 	return ValidResponse(200, "Delete Successful", "success")
 }
+
+//IsMyTeamLead checks if a member is a team lead
+func IsMyTeamLead(member User, teamLead User) bool {
+	var members Members
+	if isMyTeamLead := Conn.Where("member_id = ? AND team_lead_id = ?", member.ID, teamLead.ID).Find(&members); isMyTeamLead.Error != nil {
+		return false
+	}
+	return true
+}

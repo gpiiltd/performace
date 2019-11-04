@@ -159,6 +159,19 @@ paths:
             $ref: '#/definitions/models.ValidResponse'
         "403":
           description: body is empty
+  /team/report:
+    get:
+      tags:
+      - team
+      description: gets a team list report
+      operationId: TeamController.GetTeamReport
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.ValidResponse'
+        "403":
+          description: body is empty
   /token/token/{email}:
     get:
       tags:

@@ -30,10 +30,35 @@ func (kpi *KPIController) AssignKPI() {
 	var kpiInfo models.KPI
 	err := json.Unmarshal(kpi.Ctx.Input.RequestBody, &kpiInfo)
 	if err != nil {
-		kpi.Data["json"] = models.ErrorResponse(405, "Method not allowed")
+		kpi.Data["json"] = models.ErrorResponse(405, err.Error())
 		kpi.ServeJSON()
 		return
 	}
 	kpi.Data["json"] = models.AssignNewKPI(kpiInfo, user)
 	kpi.ServeJSON()
 }
+
+//GetMonthKPI get the kpi of the specified user id and month
+// @Title GetMonthKPI
+// @Description gets a kpi for the month
+// @Success 200 {object} models.ValidResponse
+// @Failure 403 body is empty
+// @router /kpi/ [get]
+// func (kpi *KPIController) GetMonthKPI() {
+// 	var user models.User
+// 	resCode, user := models.GetUserFromTokenString(kpi.Ctx.Input.Header("authorization"))
+// 	if resCode != 200 {
+// 		kpi.Data["json"] = models.ErrorResponse(403, "Unable to get token string")
+// 		kpi.ServeJSON()
+// 		return
+// 	}
+// 	var kpiRequest models.KPIRequest
+// 	err := json.Unmarshal(kpi.Ctx.Input.RequestBody, &kpiRequest)
+// 	if err != nil {
+// 		kpi.Data["json"] = models.ErrorResponse(405, err.Error())
+// 		kpi.ServeJSON()
+// 		return
+// 	}
+// 	kpi.Data["json"] = models.GetKPIForTheMonth(kpiRequest, user)
+// 	kpi.ServeJSON()
+// }

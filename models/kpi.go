@@ -12,3 +12,8 @@ func AssignNewKPI(kpi KPI, user User) interface{} {
 	Conn.Create(&kpi)
 	return ValidResponse(200, kpi, "Successfully assigned KPI")
 }
+
+//GetKPIForTheMonth gets the kpi information for a particular month
+// func GetKPIForTheMonth(kpiRequest KPIRequest, authenticatedUser User) interface{} {
+// 	myTeamLead := IsMyTeamLead()
+// }
