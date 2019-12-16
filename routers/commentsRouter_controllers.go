@@ -16,6 +16,15 @@ func init() {
             Filters: nil,
             Params: nil})
 
+    beego.GlobalControllerRouter["performance/controllers:KPIController"] = append(beego.GlobalControllerRouter["performance/controllers:KPIController"],
+        beego.ControllerComments{
+            Method: "GetMemberKPIReport",
+            Router: `/report/:userid/:month`,
+            AllowHTTPMethods: []string{"get"},
+            MethodParams: param.Make(),
+            Filters: nil,
+            Params: nil})
+
     beego.GlobalControllerRouter["performance/controllers:TeamController"] = append(beego.GlobalControllerRouter["performance/controllers:TeamController"],
         beego.ControllerComments{
             Method: "AcceptTeamInvitation",

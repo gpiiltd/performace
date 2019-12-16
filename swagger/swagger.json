@@ -46,6 +46,26 @@
                 }
             }
         },
+        "/kpi/report/{userid}/{month}": {
+            "get": {
+                "tags": [
+                    "kpi"
+                ],
+                "description": "gets a team member kpi information for the month",
+                "operationId": "KPIController.GetMemberKPIReport",
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/models.ValidResponse"
+                        }
+                    },
+                    "403": {
+                        "description": "body is empty"
+                    }
+                }
+            }
+        },
         "/lead/member/{id}": {
             "post": {
                 "tags": [
@@ -337,86 +357,7 @@
     "definitions": {
         "models.KPI": {
             "title": "KPI",
-            "type": "object",
-            "properties": {
-                "created_at": {
-                    "type": "string",
-                    "format": "datetime"
-                },
-                "deleted_at": {
-                    "type": "string",
-                    "format": "datetime"
-                },
-                "employee": {
-                    "type": "string"
-                },
-                "employee_comment": {
-                    "type": "string"
-                },
-                "employee_id": {
-                    "type": "integer",
-                    "format": "int64"
-                },
-                "end_date": {
-                    "type": "string"
-                },
-                "id": {
-                    "type": "integer",
-                    "format": "int64"
-                },
-                "kpi": {
-                    "type": "string"
-                },
-                "start_date": {
-                    "type": "string"
-                },
-                "status": {
-                    "type": "string"
-                },
-                "team_lead": {
-                    "type": "string"
-                },
-                "team_lead_comment": {
-                    "type": "string"
-                },
-                "team_lead_id": {
-                    "type": "integer",
-                    "format": "int64"
-                },
-                "team_lead_score": {
-                    "type": "integer",
-                    "format": "int64"
-                },
-                "updated_at": {
-                    "type": "string",
-                    "format": "datetime"
-                },
-                "weight": {
-                    "type": "string"
-                }
-            }
-        },
-        "models.Model": {
-            "title": "Model",
-            "type": "object",
-            "properties": {
-                "created_at": {
-                    "type": "string",
-                    "format": "datetime"
-                },
-                "deleted_at": {
-                    "type": "string",
-                    "format": "datetime"
-                },
-                "id": {
-                    "type": "integer",
-                    "format": "int64"
-                },
-                "updated_at": {
-                    "type": "string",
-                    "format": "datetime"
-                }
-            }
+            "type": "object"
         },
         "models.Success": {
             "title": "Success",
@@ -424,96 +365,11 @@
         },
         "models.Team": {
             "title": "Team",
-            "type": "object",
-            "properties": {
-                "created_at": {
-                    "type": "string",
-                    "format": "datetime"
-                },
-                "deleted_at": {
-                    "type": "string",
-                    "format": "datetime"
-                },
-                "department": {
-                    "type": "string"
-                },
-                "department_id": {
-                    "type": "integer",
-                    "format": "int64"
-                },
-                "id": {
-                    "type": "integer",
-                    "format": "int64"
-                },
-                "lead": {
-                    "type": "string"
-                },
-                "lead_id": {
-                    "type": "integer",
-                    "format": "int64"
-                },
-                "name": {
-                    "type": "string"
-                },
-                "updated_at": {
-                    "type": "string",
-                    "format": "datetime"
-                }
-            }
+            "type": "object"
         },
         "models.User": {
             "title": "User",
-            "type": "object",
-            "properties": {
-                "created_at": {
-                    "type": "string",
-                    "format": "datetime"
-                },
-                "deleted_at": {
-                    "type": "string",
-                    "format": "datetime"
-                },
-                "department": {
-                    "type": "string"
-                },
-                "department_id": {
-                    "type": "integer",
-                    "format": "int64"
-                },
-                "email": {
-                    "type": "string"
-                },
-                "full_name": {
-                    "type": "string"
-                },
-                "gender": {
-                    "type": "string"
-                },
-                "id": {
-                    "type": "integer",
-                    "format": "int64"
-                },
-                "image": {
-                    "type": "string"
-                },
-                "job_title": {
-                    "type": "string"
-                },
-                "location": {
-                    "type": "string"
-                },
-                "number": {
-                    "type": "string"
-                },
-                "role": {
-                    "type": "integer",
-                    "format": "int64"
-                },
-                "updated_at": {
-                    "type": "string",
-                    "format": "datetime"
-                }
-            }
+            "type": "object"
         },
         "models.ValidResponse": {
             "title": "ValidResponse",
@@ -523,7 +379,7 @@
     "tags": [
         {
             "name": "user",
-            "description": "Operations about Users\n"
+            "description": "UserController Operations about Users\n"
         },
         {
             "name": "lead",
