@@ -9,6 +9,24 @@ func init() {
 
     beego.GlobalControllerRouter["performance/controllers:KPIController"] = append(beego.GlobalControllerRouter["performance/controllers:KPIController"],
         beego.ControllerComments{
+            Method: "DeleteKPI",
+            Router: `/:kpiid`,
+            AllowHTTPMethods: []string{"delete"},
+            MethodParams: param.Make(),
+            Filters: nil,
+            Params: nil})
+
+    beego.GlobalControllerRouter["performance/controllers:KPIController"] = append(beego.GlobalControllerRouter["performance/controllers:KPIController"],
+        beego.ControllerComments{
+            Method: "GetKPIFromID",
+            Router: `/:kpiid`,
+            AllowHTTPMethods: []string{"get"},
+            MethodParams: param.Make(),
+            Filters: nil,
+            Params: nil})
+
+    beego.GlobalControllerRouter["performance/controllers:KPIController"] = append(beego.GlobalControllerRouter["performance/controllers:KPIController"],
+        beego.ControllerComments{
             Method: "AssignKPI",
             Router: `/assign/`,
             AllowHTTPMethods: []string{"post"},
@@ -25,10 +43,64 @@ func init() {
             Filters: nil,
             Params: nil})
 
+    beego.GlobalControllerRouter["performance/controllers:KPIController"] = append(beego.GlobalControllerRouter["performance/controllers:KPIController"],
+        beego.ControllerComments{
+            Method: "ScoreKPI",
+            Router: `/score/`,
+            AllowHTTPMethods: []string{"post"},
+            MethodParams: param.Make(),
+            Filters: nil,
+            Params: nil})
+
+    beego.GlobalControllerRouter["performance/controllers:KPIController"] = append(beego.GlobalControllerRouter["performance/controllers:KPIController"],
+        beego.ControllerComments{
+            Method: "GetAllTasks",
+            Router: `/task/`,
+            AllowHTTPMethods: []string{"get"},
+            MethodParams: param.Make(),
+            Filters: nil,
+            Params: nil})
+
+    beego.GlobalControllerRouter["performance/controllers:KPIController"] = append(beego.GlobalControllerRouter["performance/controllers:KPIController"],
+        beego.ControllerComments{
+            Method: "CreateTask",
+            Router: `/task/`,
+            AllowHTTPMethods: []string{"post"},
+            MethodParams: param.Make(),
+            Filters: nil,
+            Params: nil})
+
+    beego.GlobalControllerRouter["performance/controllers:KPIController"] = append(beego.GlobalControllerRouter["performance/controllers:KPIController"],
+        beego.ControllerComments{
+            Method: "GetAllKPITasks",
+            Router: `/task/:kpiid`,
+            AllowHTTPMethods: []string{"get"},
+            MethodParams: param.Make(),
+            Filters: nil,
+            Params: nil})
+
+    beego.GlobalControllerRouter["performance/controllers:KPIController"] = append(beego.GlobalControllerRouter["performance/controllers:KPIController"],
+        beego.ControllerComments{
+            Method: "MarkTaskComplete",
+            Router: `/task/complete/:tid`,
+            AllowHTTPMethods: []string{"GET"},
+            MethodParams: param.Make(),
+            Filters: nil,
+            Params: nil})
+
     beego.GlobalControllerRouter["performance/controllers:TeamController"] = append(beego.GlobalControllerRouter["performance/controllers:TeamController"],
         beego.ControllerComments{
             Method: "AcceptTeamInvitation",
             Router: `/accept/:teamid`,
+            AllowHTTPMethods: []string{"post"},
+            MethodParams: param.Make(),
+            Filters: nil,
+            Params: nil})
+
+    beego.GlobalControllerRouter["performance/controllers:TeamController"] = append(beego.GlobalControllerRouter["performance/controllers:TeamController"],
+        beego.ControllerComments{
+            Method: "TakeBehaviourTest",
+            Router: `/behaviour/`,
             AllowHTTPMethods: []string{"post"},
             MethodParams: param.Make(),
             Filters: nil,

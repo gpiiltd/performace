@@ -11,6 +11,35 @@ info:
     url: http://www.apache.org/licenses/LICENSE-2.0.html
 basePath: /v1
 paths:
+  /kpi/{kpiid}:
+    get:
+      tags:
+      - kpi
+      description: gets a kpi information from ID
+      operationId: KPIController.GetKPIFromID
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.ValidResponse'
+        "403":
+          description: body is empty
+    delete:
+      tags:
+      - kpi
+      description: delete a user kpi information
+      operationId: KPIController.DeleteKPI
+      parameters:
+      - in: path
+        name: uid
+        description: The uid you want to delete
+        required: true
+        type: string
+      responses:
+        "200":
+          description: '{string} delete success!'
+        "403":
+          description: uid is empty
   /kpi/assign/:
     post:
       tags:
@@ -42,6 +71,85 @@ paths:
           description: ""
           schema:
             $ref: '#/definitions/models.ValidResponse'
+        "403":
+          description: body is empty
+  /kpi/score/:
+    post:
+      tags:
+      - kpi
+      description: create score and supervisor comment for a KPI
+      operationId: KPIController.ScoreKPI
+      parameters:
+      - in: body
+        name: body
+        description: The kpi data
+        required: true
+        schema:
+          $ref: '#/definitions/models.KPI'
+      responses:
+        "200":
+          description: '{string} "Success"'
+        "403":
+          description: body is empty
+  /kpi/task/:
+    get:
+      tags:
+      - kpi
+      description: gets all tasks belonging to a KPI
+      operationId: KPIController.GetAllTasks
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.ValidResponse'
+        "403":
+          description: body is empty
+    post:
+      tags:
+      - kpi
+      description: create object
+      operationId: KPIController.CreateTask
+      parameters:
+      - in: body
+        name: body
+        description: The task data
+        required: true
+        schema:
+          $ref: '#/definitions/models.Visit'
+      responses:
+        "200":
+          description: '{string} "Success"'
+        "403":
+          description: body is empty
+  /kpi/task/{kpiid}:
+    get:
+      tags:
+      - kpi
+      description: gets all tasks belonging to a KPI
+      operationId: KPIController.GetAllKPITasks
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.ValidResponse'
+        "403":
+          description: body is empty
+  /kpi/task/complete/{tid}:
+    get:
+      tags:
+      - kpi
+      description: mark task as complete
+      operationId: KPIController.MarkTaskComplete
+      parameters:
+      - in: body
+        name: body
+        description: The task data
+        required: true
+        schema:
+          $ref: '#/definitions/models.Visit'
+      responses:
+        "200":
+          description: '{string} "Success"'
         "403":
           description: body is empty
   /lead/member/{id}:
@@ -146,6 +254,26 @@ paths:
           description: '{string} id of the user'
         "403":
           description: body is empty
+  /team/behaviour/:
+    post:
+      tags:
+      - team
+      description: takes a team behavioural tests
+      operationId: TeamController.TakeBehaviourTest
+      parameters:
+      - in: path
+        name: models.BehaviourTest
+        description: the test result
+        required: true
+        schema:
+          $ref: '#/definitions/object'
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.ValidResponse'
+        "403":
+          description: body is empty
   /team/invitations/pending:
     get:
       tags:
@@ -235,17 +363,142 @@ definitions:
   models.KPI:
     title: KPI
     type: object
+    properties:
+      created_at:
+        type: string
+        format: datetime
+      deleted_at:
+        type: string
+        format: datetime
+      employee:
+        type: string
+      employee_comment:
+        type: string
+      employee_id:
+        type: integer
+        format: int64
+      end_date:
+        type: string
+      id:
+        type: integer
+        format: int64
+      kpi:
+        type: string
+      recurring:
+        type: boolean
+      start_date:
+        type: string
+      status:
+        type: string
+      team_lead:
+        type: string
+      team_lead_comment:
+        type: string
+      team_lead_id:
+        type: integer
+        format: int64
+      team_lead_score:
+        type: integer
+        format: int64
+      updated_at:
+        type: string
+        format: datetime
+      weight:
+        type: integer
+        format: int64
+  models.Model:
+    title: Model
+    type: object
+    properties:
+      created_at:
+        type: string
+        format: datetime
+      deleted_at:
+        type: string
+        format: datetime
+      id:
+        type: integer
+        format: int64
+      updated_at:
+        type: string
+        format: datetime
   models.Success:
     title: Success
     type: object
   models.Team:
     title: Team
     type: object
+    properties:
+      created_at:
+        type: string
+        format: datetime
+      deleted_at:
+        type: string
+        format: datetime
+      department:
+        type: string
+      department_id:
+        type: integer
+        format: int64
+      id:
+        type: integer
+        format: int64
+      lead:
+        type: string
+      lead_id:
+        type: integer
+        format: int64
+      name:
+        type: string
+      updated_at:
+        type: string
+        format: datetime
   models.User:
     title: User
     type: object
+    properties:
+      created_at:
+        type: string
+        format: datetime
+      deleted_at:
+        type: string
+        format: datetime
+      department:
+        type: string
+      department_id:
+        type: integer
+        format: int64
+      email:
+        type: string
+      full_name:
+        type: string
+      gender:
+        type: string
+      id:
+        type: integer
+        format: int64
+      image:
+        type: string
+      job_title:
+        type: string
+      location:
+        type: string
+      number:
+        type: string
+      role:
+        type: integer
+        format: int64
+      updated_at:
+        type: string
+        format: datetime
   models.ValidResponse:
     title: ValidResponse
+    type: object
+  models.Visit:
+    title: Visit
+    type: object
+  object:
+    title: object
     type: object
 tags:
 - name: user

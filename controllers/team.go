@@ -1,6 +1,7 @@
 package controllers
 
 import (
+	"encoding/json"
 	"performance/models"
 
 	"github.com/astaxie/beego"
@@ -64,6 +65,32 @@ func (t *TeamController) AcceptTeamInvitation() {
 		return
 	}
 	t.Data["json"] = models.AcceptInvitation(user, teamID)
+	t.ServeJSON()
+}
+
+//TakeBehaviourTest takes a team behavioural tests
+// @Title TakeBehaviourTest
+// @Description takes a team behavioural tests
+// @Param	models.BehaviourTest		path 	object	true		"the test result"
+// @Success 200 {object} models.ValidResponse
+// @Failure 403 body is empty
+// @router /behaviour/ [post]
+func (t *TeamController) TakeBehaviourTest() {
+	var behaviour models.BehaviourTest
+	err := json.Unmarshal(t.Ctx.Input.RequestBody, &behaviour)
+	if err != nil {
+		t.Data["json"] = models.ErrorResponse(405, err.Error())
+		t.ServeJSON()
+		return
+	}
+	var teamLead models.User
+	resCode, teamLead := models.GetUserFromTokenString(t.Ctx.Input.Header("authorization"))
+	if resCode != 200 {
+		t.Data["json"] = models.ErrorResponse(403, "Unable to get token string")
+		t.ServeJSON()
+		return
+	}
+	t.Data["json"] = models.BehaviourTestResults(teamLead, behaviour)
 	t.ServeJSON()
 }
 

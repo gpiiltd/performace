@@ -15,6 +15,8 @@ func AddNewTeamMember(member User, teamLead User) interface{} {
 	var invitation TeamInvitation
 	invitation.TeamName = team.Name
 	invitation.TeamID = team.ID
+	invitation.TeamLead = teamLead.FullName
+	invitation.TeamLeadID = teamLead.ID
 	invitation.InviteeID = member.ID
 	invitation.InviteeName = member.FullName
 	invitation.Status = "pending"

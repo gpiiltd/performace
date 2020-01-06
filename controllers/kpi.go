@@ -88,39 +88,158 @@ func (kpi *KPIController) DeleteKPI() {
 		kpi.ServeJSON()
 		return
 	}
-	var kpi models.KPI
-	kpi, err := models.GetKPIFromIDString(kpiID)
+	var kpiInfo models.KPI
+	kpiInfo, err := models.GetKPIFromIDString(kpiID)
 	if err != nil {
 		kpi.Data["json"] = models.ErrorResponse(403, "Error Retrieving kpi from kpiID")
 		kpi.ServeJSON()
 		return
 	}
-	deleteKPI := 
-	kpi.Data["json"] = ideas.DeleteIdea(uid, mentee)
+	kpi.Data["json"] = models.DeleteKPI(kpiInfo, teamLead)
 	kpi.ServeJSON()
 }
 
-//GetMonthKPI get the kpi of the specified user id and month
-// @Title GetMonthKPI
-// @Description gets a kpi for the month
+//GetKPIFromID gets the kpi information for a kpi ID
+// @Title GetKPIFromID
+// @Description gets a kpi information from ID
 // @Success 200 {object} models.ValidResponse
 // @Failure 403 body is empty
-// @router /kpi/ [get]
-// func (kpi *KPIController) GetMonthKPI() {
-// 	var user models.User
-// 	resCode, user := models.GetUserFromTokenString(kpi.Ctx.Input.Header("authorization"))
-// 	if resCode != 200 {
-// 		kpi.Data["json"] = models.ErrorResponse(403, "Unable to get token string")
-// 		kpi.ServeJSON()
-// 		return
-// 	}
-// 	var kpiRequest models.KPIRequest
-// 	err := json.Unmarshal(kpi.Ctx.Input.RequestBody, &kpiRequest)
-// 	if err != nil {
-// 		kpi.Data["json"] = models.ErrorResponse(405, err.Error())
-// 		kpi.ServeJSON()
-// 		return
-// 	}
-// 	kpi.Data["json"] = models.GetKPIForTheMonth(kpiRequest, user)
-// 	kpi.ServeJSON()
-// }
+// @router /:kpiid [get]
+func (kpi *KPIController) GetKPIFromID() {
+	kpiID := kpi.GetString(":kpiid")
+	kpiIDint, err := strconv.Atoi(kpiID)
+	if err != nil {
+		kpi.Data["json"] = models.ErrorResponse(403, err.Error())
+		kpi.ServeJSON()
+		return
+	}
+	kpi.Data["json"] = models.GetKPIInfo(kpiIDint)
+	kpi.ServeJSON()
+}
+
+//GetAllTasks gets all tasks on the system
+// @Title GetAllTasks
+// @Description gets all tasks belonging to a KPI
+// @Success 200 {object} models.ValidResponse
+// @Failure 403 body is empty
+// @router /task/ [get]
+func (kpi *KPIController) GetAllTasks() {
+	getTask := models.GetAllTask()
+	kpi.Data["json"] = models.ValidResponse(200, getTask, "success")
+	kpi.ServeJSON()
+}
+
+//GetAllKPITasks gets all tasks belonging to a KPI
+// @Title GetAllKPITasks
+// @Description gets all tasks belonging to a KPI
+// @Success 200 {object} models.ValidResponse
+// @Failure 403 body is empty
+// @router /task/:kpiid [get]
+func (kpi *KPIController) GetAllKPITasks() {
+	kpiID := kpi.GetString(":kpiid")
+	kpiInt, err := strconv.Atoi(kpiID)
+	if err != nil {
+		kpi.Data["json"] = models.ErrorResponse(403, "Invalid kpi_id string.")
+		kpi.ServeJSON()
+		return
+	}
+	getTask, err := models.GetKPITasks(kpiInt)
+	if err != nil {
+		kpi.Data["json"] = models.ErrorResponse(403, "Invalid kpi_id string when getting tasks.")
+		kpi.ServeJSON()
+		return
+	}
+	kpi.Data["json"] = models.ValidResponse(200, getTask, "success")
+	kpi.ServeJSON()
+}
+
+//CreateTask creates a new task on the system
+// @Title CreateTask
+// @Description create object
+// @Param	body		body 	models.Visit	true		"The task data"
+// @Success 200 {string} "Success"
+// @Failure 403 body is empty
+// @router /task/ [post]
+func (kpi *KPIController) CreateTask() {
+	task := models.Task{}
+	err := json.Unmarshal(kpi.Ctx.Input.RequestBody, &task)
+	if err != nil {
+		response := models.ErrorResponse(405, err.Error())
+		kpi.Data["json"] = response
+		kpi.ServeJSON()
+	}
+	var user models.User
+	code, user := models.GetUserFromTokenString(kpi.Ctx.Input.Header("authorization"))
+	if code != 200 {
+		kpi.Data["json"] = models.ErrorResponse(403, "Invalid token string")
+		kpi.ServeJSON()
+		return
+	}
+	createTask, status := models.CreateKPITask(task, user)
+	if status != true {
+		response := models.ErrorResponse(405, "Unable to create KPI task")
+		kpi.Data["json"] = response
+		kpi.ServeJSON()
+	}
+	kpi.Data["json"] = models.ValidResponse(200, createTask, "success")
+	kpi.ServeJSON()
+}
+
+//MarkTaskComplete marks a task as completed
+// @Title MarkTaskComplete
+// @Description mark task as complete
+// @Param	body		body 	models.Visit	true		"The task data"
+// @Success 200 {string} "Success"
+// @Failure 403 body is empty
+// @router /task/complete/:tid [GET]
+func (kpi *KPIController) MarkTaskComplete() {
+	taskID := kpi.GetString(":tid")
+	taskIDint, err := strconv.Atoi(taskID)
+	if err != nil {
+		kpi.Data["json"] = models.ErrorResponse(403, err.Error())
+		kpi.ServeJSON()
+		return
+	}
+	var task models.Task
+	task, err = models.GetTaskFromID(taskIDint)
+	if err != nil {
+		response := models.ErrorResponse(405, "Unable to get task from task_id")
+		kpi.Data["json"] = response
+		kpi.ServeJSON()
+	}
+	var user models.User
+	code, user := models.GetUserFromTokenString(kpi.Ctx.Input.Header("authorization"))
+	if code != 200 {
+		kpi.Data["json"] = models.ErrorResponse(403, "Invalid token string")
+		kpi.ServeJSON()
+		return
+	}
+	kpi.Data["json"] = models.MarkTaskAsComplete(user, task)
+	kpi.ServeJSON()
+}
+
+//ScoreKPI scores a kpi
+// @Title ScoreKPI
+// @Description create score and supervisor comment for a KPI
+// @Param	body		body 	models.KPI	true		"The kpi data"
+// @Success 200 {string} "Success"
+// @Failure 403 body is empty
+// @router /score/ [post]
+func (kpi *KPIController) ScoreKPI() {
+	kpiObject := models.KPI{}
+	err := json.Unmarshal(kpi.Ctx.Input.RequestBody, &kpiObject)
+	if err != nil {
+		response := models.ErrorResponse(405, err.Error())
+		kpi.Data["json"] = response
+		kpi.ServeJSON()
+	}
+	var user models.User
+	code, user := models.GetUserFromTokenString(kpi.Ctx.Input.Header("authorization"))
+	if code != 200 {
+		kpi.Data["json"] = models.ErrorResponse(403, "Invalid token string")
+		kpi.ServeJSON()
+		return
+	}
+	kpi.Data["json"] = models.ScoreKPComment(kpiObject, user)
+	kpi.ServeJSON()
+}

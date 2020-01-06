@@ -1,0 +1,17 @@
+2019/12/25 09:55:22.731 [I] [asm_amd64.s:1357]  http server Running on http://:2253
+2019/12/25 09:56:42.703 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|    488.622µs|   match|[97;44m GET     [0m /v1/token/token/endy.apina@my-gpi.io   r:/v1/token/:email
+2019/12/25 09:56:42.918 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|     71.824µs| nomatch|[90;47m OPTIONS [0m /v1/user/update/
+2019/12/25 09:56:43.645 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m| 595.862012ms|   match|[97;46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/12/25 09:56:45.338 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|   1.338667ms|   match|[97;46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/12/25 09:56:47.007 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|     97.774µs| nomatch|[90;47m OPTIONS [0m /v1/lead/validate/
+2019/12/25 09:56:47.141 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|  34.335755ms|   match|[97;44m GET     [0m /v1/lead/validate/   r:/v1/lead/validate
+2019/12/25 09:56:47.148 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|     82.532µs| nomatch|[90;47m OPTIONS [0m /v1/lead/myteam/
+2019/12/25 09:56:47.169 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|  15.839782ms|   match|[97;44m GET     [0m /v1/lead/myteam/   r:/v1/lead/myteam/
+2019/12/25 09:56:48.491 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|      48.19µs| nomatch|[90;47m OPTIONS [0m /v1/kpi/report/1/12
+2019/12/25 09:56:48.709 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m| 175.703505ms|   match|[97;44m GET     [0m /v1/kpi/report/1/12   r:/v1/kpi/report/:userid/:month
+2019/12/25 09:56:52.818 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|     42.394µs| nomatch|[90;47m OPTIONS [0m /v1/user/update/
+2019/12/25 09:56:52.904 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|   2.303506ms|   match|[97;46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2019/12/25 09:56:53.091 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|     58.846µs| nomatch|[90;47m OPTIONS [0m /v1/kpi/1
+2019/12/25 09:56:53.093 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|     81.247µs| nomatch|[90;47m OPTIONS [0m /v1/kpi/task/1
+2019/12/25 09:56:53.132 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|   2.038775ms|   match|[97;44m GET     [0m /v1/kpi/1   r:/v1/kpi/:kpiid
+2019/12/25 09:56:53.182 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|  51.510725ms|   match|[97;44m GET     [0m /v1/kpi/task/1   r:/v1/kpi/task/:kpiid

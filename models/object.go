@@ -48,6 +48,8 @@ func CreateTables() {
 	Conn.AutoMigrate(&Members{})
 	Conn.AutoMigrate(&TeamInvitation{})
 	Conn.AutoMigrate(&KPI{})
+	Conn.AutoMigrate(&Task{})
+	Conn.AutoMigrate(&BehaviourTest{})
 	return
 }
 
@@ -105,6 +107,8 @@ type Members struct {
 type TeamInvitation struct {
 	Model
 	TeamName    string `gorm:"varchar(100)" json:"team_name"`
+	TeamLead    string `gorm:"varchar(100)" json:"team_lead"`
+	TeamLeadID  uint64 `gorm:"int(10)" json:"team_lead_id"`
 	TeamID      uint64 `gorm:"int(10)" json:"team_id"`
 	InviteeName string `gorm:"varchar(100)" json:"invitee_name"`
 	InviteeID   uint64 `gorm:"int(10)" json:"invitee_id"`
@@ -121,11 +125,44 @@ type KPI struct {
 	TeamLeadID      uint64 `gorm:"int(10)" json:"team_lead_id"`
 	StartDate       string `gorm:"varchar(100)" json:"start_date"`
 	EndDate         string `gorm:"varchar(100)" json:"end_date"`
-	Weight          string `gorm:"varchar(100)" json:"weight"`
+	Weight          uint64 `gorm:"int(10)" json:"weight"`
 	Status          string `gorm:"varchar(100)" json:"status"`
 	TeamLeadScore   uint64 `gorm:"int(10)" json:"team_lead_score"`
 	TeamLeadComment string `gorm:"varchar(250)" json:"team_lead_comment"`
 	EmployeeComment string `gorm:"varchar(250)" json:"employee_comment"`
+	Recurring       bool   `json:"recurring"`
+}
+
+//Task holds the data needed to create KPI tasks
+type Task struct {
+	Model
+	Task            string `gorm:"varchar(100)" json:"task"`
+	KPIID           uint64 `gorm:"int(10)" json:"kpi_id"`
+	User            string `gorm:"varchar(100)" json:"user"`
+	UserID          uint64 `gorm:"int(10)" json:"user_id"`
+	Status          string `gorm:"varchar(100)" json:"status"`
+	TeamLeadComment string `gorm:"varchar(100)" json:"team_lead_comments"`
+}
+
+//BehaviourTest holds score for users monthly behaviour
+type BehaviourTest struct {
+	Model
+	SupervisorID       uint64 `gorm:"int(10)" json:"supervisor_id"`
+	SubordinateID      uint64 `gorm:"int(10)" json:"subordinate_id"`
+	Month              uint64 `gorm:"int(10)" json:"month"`
+	Year               uint64 `gorm:"int(10)" json:"year"`
+	ProactiveScoreA    uint64 `gorm:"int(10)" json:"proactive_score_a"`
+	ProactiveScoreB    uint64 `gorm:"int(10)" json:"proactive_score_b"`
+	Proactive          uint64 `gorm:"int(10)" json:"proactive"`
+	ResultOrientScoreA uint64 `gorm:"int(10)" json:"result_orient_score_a"`
+	ResultOrientScoreB uint64 `gorm:"int(10)" json:"result_orient_score_b"`
+	ResultOrient       uint64 `gorm:"int(10)" json:"result_orient"`
+	TeamOrientScoreA   uint64 `gorm:"int(10)" json:"team_orient_score_a"`
+	TeamOrientScoreB   uint64 `gorm:"int(10)" json:"team_orient_score_b"`
+	TeamOrient         uint64 `gorm:"int(10)" json:"team_orient"`
+	WalkScoreA         uint64 `gorm:"int(10)" json:"walk_score_a"`
+	WalkScoreB         uint64 `gorm:"int(10)" json:"walk_score_b"`
+	Walk               uint64 `json:"int(10)" json:"walk"`
 }
 
 //KPIRequest holds the data for kpi request.

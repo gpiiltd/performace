@@ -56,3 +56,22 @@ func GetTeamReport() []Team {
 	Conn.Find(&teams)
 	return teams
 }
+
+//ValidateTeamLead checks if a team lead is actually the subordinate's team lead
+func ValidateTeamLead(teamLeadID uint64, subordinateID uint64) bool {
+	var team Members
+	if findTeam := Conn.Where("team_lead_id = ? AND member_id = ?", teamLeadID, subordinateID).Find(&team); findTeam.Error != nil {
+		return false
+	}
+	return true
+}
+
+//BehaviourTestResults gets and saves the behaviour tests results
+func BehaviourTestResults(teamLead User, tests BehaviourTest) interface{} {
+	validateTeamLead := ValidateTeamLead(teamLead.ID, tests.SubordinateID)
+	if validateTeamLead != true {
+		return ErrorResponse(403, "Unauthorized team lead. I don't know how you got here.")
+	}
+	Conn.Create(&tests)
+	return ValidResponse(200, tests, "success")
+}
