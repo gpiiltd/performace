@@ -106,8 +106,8 @@ func GetTeamInfo(teamLead User) interface{} {
 
 	var allMembersArray []User
 
-	for _, user := range allUsers {
-		for _, member := range teamMembers {
+	for _, member := range teamMembers {
+		for _, user := range allUsers {
 			if user.ID == member.MemberID {
 				allMembersArray = append(allMembersArray, user)
 			}
