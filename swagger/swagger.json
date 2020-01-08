@@ -363,6 +363,35 @@
                 }
             }
         },
+        "/team/": {
+            "delete": {
+                "tags": [
+                    "team"
+                ],
+                "description": "deletes a team using the team id",
+                "operationId": "TeamController.Delete",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "teamid",
+                        "description": "the id of the team you want to delete",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/models.ValidResponse"
+                        }
+                    },
+                    "403": {
+                        "description": "body is empty"
+                    }
+                }
+            }
+        },
         "/team/accept/{teamid}": {
             "post": {
                 "tags": [
@@ -467,6 +496,35 @@
                 ],
                 "description": "gets a team list report",
                 "operationId": "TeamController.GetTeamReport",
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/models.ValidResponse"
+                        }
+                    },
+                    "403": {
+                        "description": "body is empty"
+                    }
+                }
+            }
+        },
+        "/team/verifi/{userid}": {
+            "get": {
+                "tags": [
+                    "team"
+                ],
+                "description": "checks if a user has a team",
+                "operationId": "TeamController.VerifyHasTeam",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "teamid",
+                        "description": "the user id",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
                 "responses": {
                     "200": {
                         "description": "",

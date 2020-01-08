@@ -75,3 +75,27 @@ func BehaviourTestResults(teamLead User, tests BehaviourTest) interface{} {
 	Conn.Create(&tests)
 	return ValidResponse(200, tests, "success")
 }
+
+//TeamLeadHasTeam checks if a user has a team
+func TeamLeadHasTeam(teamLead User) ValidationResponseData {
+	var team Team
+	if findMyTeam := Conn.Where("lead_id = ?", teamLead.ID).Find(&team); findMyTeam.Error != nil {
+		return ValidationResponse(200, false)
+	}
+	return ValidationResponse(200, true)
+}
+
+//DeleteTeamFunc deletes a particular team from the system using the team id
+func DeleteTeamFunc(teamLead User) ValidResponseData {
+	var team Team
+	if findMyTeam := Conn.Where("lead_id = ?", teamLead.ID).Find(&team); findMyTeam.Error != nil {
+		return ValidResponse(403, findMyTeam.Error.Error(), "error")
+	}
+	var teamMembers []Members
+	Conn.Where("team_id = ?", team.ID).Find(&teamMembers)
+	if len(teamMembers) > 0 {
+		return ValidResponse(403, "Team still has members in it. Delete Members", "error")
+	}
+	Conn.Where("lead_id = ?", teamLead.ID).Delete(&Team{})
+	return ValidResponse(200, "Successfully deleted team.", "success")
+}

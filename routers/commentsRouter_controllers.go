@@ -90,6 +90,15 @@ func init() {
 
     beego.GlobalControllerRouter["performance/controllers:TeamController"] = append(beego.GlobalControllerRouter["performance/controllers:TeamController"],
         beego.ControllerComments{
+            Method: "DeleteTeam",
+            Router: `/`,
+            AllowHTTPMethods: []string{"delete"},
+            MethodParams: param.Make(),
+            Filters: nil,
+            Params: nil})
+
+    beego.GlobalControllerRouter["performance/controllers:TeamController"] = append(beego.GlobalControllerRouter["performance/controllers:TeamController"],
+        beego.ControllerComments{
             Method: "AcceptTeamInvitation",
             Router: `/accept/:teamid`,
             AllowHTTPMethods: []string{"post"},
@@ -128,6 +137,15 @@ func init() {
         beego.ControllerComments{
             Method: "GetTeamReport",
             Router: `/report`,
+            AllowHTTPMethods: []string{"get"},
+            MethodParams: param.Make(),
+            Filters: nil,
+            Params: nil})
+
+    beego.GlobalControllerRouter["performance/controllers:TeamController"] = append(beego.GlobalControllerRouter["performance/controllers:TeamController"],
+        beego.ControllerComments{
+            Method: "VerifyHasTeam",
+            Router: `/verifi/:userid`,
             AllowHTTPMethods: []string{"get"},
             MethodParams: param.Make(),
             Filters: nil,

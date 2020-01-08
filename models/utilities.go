@@ -26,14 +26,16 @@ func GetTokenString(email string) string {
 	return tokenString
 }
 
+//ValidResponseData holds exported data for valid response function.
+type ValidResponseData struct {
+	Code    int         `json:"code"`
+	Body    interface{} `json:"body"`
+	Message string      `json:"message"`
+}
+
 //ValidResponse structures the data for all API response.
-func ValidResponse(code int, body interface{}, message string) interface{} {
-	type validResponseData struct {
-		Code    int         `json:"code"`
-		Body    interface{} `json:"body"`
-		Message string      `json:"message"`
-	}
-	var response validResponseData
+func ValidResponse(code int, body interface{}, message string) ValidResponseData {
+	var response ValidResponseData
 	response.Code = code
 	response.Body = body
 	response.Message = message
@@ -74,16 +76,26 @@ func ValidateUserRoleAPI(teamLeadID uint64, roleCode uint64) (bool, string) {
 	return true, string(body)
 }
 
-//ValidationResponse returns responses for validation purposes
-func ValidationResponse(code int, body bool) interface{} {
-	type validationResponseData struct {
-		Code int  `json:"code"`
-		Body bool `json:"body"`
-	}
+//ValidationResponseData holds data that needs a true or false response
+type ValidationResponseData struct {
+	Code int  `json:"code"`
+	Body bool `json:"body"`
+}
 
-	var response validationResponseData
+//ValidationResponse returns responses for validation purposes
+func ValidationResponse(code int, body bool) ValidationResponseData {
+	var response ValidationResponseData
 	response.Code = code
 	response.Body = body
 
 	return response
+}
+
+//GetUserDataFromID gets a user information from the id provided
+func GetUserDataFromID(userID int) (User, error) {
+	var userData User
+	if findUser := Conn.Where("id = ?", userID).Find(&userData); findUser.Error != nil {
+		return userData, findUser.Error
+	}
+	return userData, nil
 }

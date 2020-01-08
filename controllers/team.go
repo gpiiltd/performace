@@ -3,6 +3,7 @@ package controllers
 import (
 	"encoding/json"
 	"performance/models"
+	"strconv"
 
 	"github.com/astaxie/beego"
 )
@@ -68,6 +69,32 @@ func (t *TeamController) AcceptTeamInvitation() {
 	t.ServeJSON()
 }
 
+//VerifyHasTeam checks if a user has a team
+// @Title VerifyHasTeam
+// @Description checks if a user has a team
+// @Param	teamid		path 	string	true		"the user id"
+// @Success 200 {object} models.ValidResponse
+// @Failure 403 body is empty
+// @router /verifi/:userid [get]
+func (t *TeamController) VerifyHasTeam() {
+	teamID := t.GetString(":userid")
+	teamIDint, err := strconv.Atoi(teamID)
+	if err != nil {
+		t.Data["json"] = models.ErrorResponse(403, err.Error())
+		t.ServeJSON()
+		return
+	}
+	var teamLead models.User
+	teamLead, err = models.GetUserDataFromID(teamIDint)
+	if err != nil {
+		t.Data["json"] = models.ErrorResponse(403, "Unable to get user Data")
+		t.ServeJSON()
+		return
+	}
+	t.Data["json"] = models.TeamLeadHasTeam(teamLead)
+	t.ServeJSON()
+}
+
 //TakeBehaviourTest takes a team behavioural tests
 // @Title TakeBehaviourTest
 // @Description takes a team behavioural tests
@@ -103,5 +130,24 @@ func (t *TeamController) TakeBehaviourTest() {
 func (t *TeamController) GetTeamReport() {
 	allTeam := models.GetTeamReport()
 	t.Data["json"] = models.ValidResponse(200, allTeam, "success")
+	t.ServeJSON()
+}
+
+//DeleteTeam deletes a team
+// @Title Delete
+// @Description deletes a team using the team id
+// @Param	teamid		path 	string	true		"the id of the team you want to delete"
+// @Success 200 {object} models.ValidResponse
+// @Failure 403 body is empty
+// @router / [delete]
+func (t *TeamController) DeleteTeam() {
+	var teamLead models.User
+	resCode, teamLead := models.GetUserFromTokenString(t.Ctx.Input.Header("authorization"))
+	if resCode != 200 {
+		t.Data["json"] = models.ErrorResponse(403, "Unable to get user from token string")
+		t.ServeJSON()
+		return
+	}
+	t.Data["json"] = models.DeleteTeamFunc(teamLead)
 	t.ServeJSON()
 }
