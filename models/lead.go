@@ -54,7 +54,7 @@ func AddNewTeam(teamLead User, team Team) interface{} {
 
 	code, status := VerifiTeamRoleStatus(message)
 	if code != 200 {
-		return ErrorResponse(501, "Error verifying API response")
+		return ErrorResponse(501, "Error verifying API response at: "+message)
 	}
 
 	if status != true {

@@ -204,3 +204,12 @@
 2020/01/10 16:23:51.971 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|     18.268µs| nomatch|[90;47m OPTIONS [0m /v1/lead/myteam/
 2020/01/10 16:23:52.035 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|   1.280716ms|   match|[97;44m GET     [0m /v1/lead/myteam/   r:/v1/lead/myteam/
 2020/01/10 16:59:23.711 [I] [asm_amd64.s:1357]  http server Running on http://:2253
+2020/01/10 17:01:09.324 [I] [asm_amd64.s:1357]  http server Running on http://:2254
+2020/01/10 17:01:09.325 [I] [asm_amd64.s:1357]  https server Running on https://:2253
+2020/01/10 17:01:09.325 [C] [asm_amd64.s:1357]  ListenAndServeTLS:  listen tcp :2253: bind: address already in use
+2020/01/10 17:02:01.147 [I] [asm_amd64.s:1357]  http server Running on http://:2253
+2020/01/10 17:02:01.344 [I] [asm_amd64.s:1357]  http server Running on http://:2253
+2020/01/10 17:02:01.344 [C] [asm_amd64.s:1357]  ListenAndServe:  listen tcp :2253: bind: address already in use
+2020/01/10 17:34:45.304 [I] [asm_amd64.s:1357]  http server Running on http://:2253
+2020/01/10 17:34:45.337 [I] [asm_amd64.s:1357]  http server Running on http://:2253
+2020/01/10 17:34:45.337 [C] [asm_amd64.s:1357]  ListenAndServe:  listen tcp :2253: bind: address already in use
