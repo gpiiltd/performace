@@ -63,7 +63,7 @@ func ValidateUserRoleAPI(teamLeadID uint64, roleCode uint64) (bool, string) {
 	}
 	resp, err := http.Post(beego.AppConfig.String("validateroleendpoint"), "application/json", bytes.NewBuffer(requestBody))
 	if err != nil {
-		return false, "Unable to call POST API"
+		return false, "Unable to call POST API because: " + err.Error()
 	}
 
 	defer resp.Body.Close()
