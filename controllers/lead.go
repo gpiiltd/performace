@@ -131,6 +131,7 @@ func (t *TeamLeadController) VerifiHasTeam() {
 	if verifiLead != true {
 		t.Data["json"] = models.ValidResponse(404, teamName, "false")
 		t.ServeJSON()
+		return
 	}
 	t.Data["json"] = models.ValidResponse(200, teamName, "true")
 	t.ServeJSON()
