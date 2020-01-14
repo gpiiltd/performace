@@ -40,6 +40,11 @@ func init() {
 				&controllers.KPIController{},
 			),
 		),
+		beego.NSNamespace("/objectives",
+			beego.NSInclude(
+				&controllers.ObjectiveController{},
+			),
+		),
 	)
 	beego.AddNamespace(ns)
 }

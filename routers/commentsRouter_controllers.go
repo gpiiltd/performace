@@ -88,6 +88,33 @@ func init() {
             Filters: nil,
             Params: nil})
 
+    beego.GlobalControllerRouter["performance/controllers:ObjectiveController"] = append(beego.GlobalControllerRouter["performance/controllers:ObjectiveController"],
+        beego.ControllerComments{
+            Method: "CreateObjective",
+            Router: `/`,
+            AllowHTTPMethods: []string{"post"},
+            MethodParams: param.Make(),
+            Filters: nil,
+            Params: nil})
+
+    beego.GlobalControllerRouter["performance/controllers:ObjectiveController"] = append(beego.GlobalControllerRouter["performance/controllers:ObjectiveController"],
+        beego.ControllerComments{
+            Method: "GetTeamStrategiveObjectives",
+            Router: `/lead/`,
+            AllowHTTPMethods: []string{"get"},
+            MethodParams: param.Make(),
+            Filters: nil,
+            Params: nil})
+
+    beego.GlobalControllerRouter["performance/controllers:ObjectiveController"] = append(beego.GlobalControllerRouter["performance/controllers:ObjectiveController"],
+        beego.ControllerComments{
+            Method: "GetMemberStrategiveObjectives",
+            Router: `/member/`,
+            AllowHTTPMethods: []string{"get"},
+            MethodParams: param.Make(),
+            Filters: nil,
+            Params: nil})
+
     beego.GlobalControllerRouter["performance/controllers:TeamController"] = append(beego.GlobalControllerRouter["performance/controllers:TeamController"],
         beego.ControllerComments{
             Method: "DeleteTeam",

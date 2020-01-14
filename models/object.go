@@ -50,6 +50,7 @@ func CreateTables() {
 	Conn.AutoMigrate(&KPI{})
 	Conn.AutoMigrate(&Task{})
 	Conn.AutoMigrate(&BehaviourTest{})
+	Conn.AutoMigrate(&StrategicObjective{})
 	return
 }
 
@@ -130,6 +131,7 @@ type KPI struct {
 	TeamLeadScore   uint64 `gorm:"int(10)" json:"team_lead_score"`
 	TeamLeadComment string `gorm:"varchar(250)" json:"team_lead_comment"`
 	EmployeeComment string `gorm:"varchar(250)" json:"employee_comment"`
+	StrategivObjID  uint64 `gorm:"int(10)" json:"strategic_obj_id"`
 	Recurring       bool   `json:"recurring"`
 }
 
@@ -169,4 +171,14 @@ type BehaviourTest struct {
 type KPIRequest struct {
 	Month  uint64 `json:"month"`
 	UserID uint64 `json:"user_id"`
+}
+
+//StrategicObjective holds data for strategic objectives
+type StrategicObjective struct {
+	Model
+	Objective string `sql:"type:text" json:"objective"`
+	Year      string `gorm:"varchar(100)" json:"year"`
+	Team      string `gorm:"varchar(100)" json:"team"`
+	TeamID    uint64 `gorm:"int(10)" json:"team_id"`
+	Status    string `gorm:"varchar(100)" json:"status"`
 }
