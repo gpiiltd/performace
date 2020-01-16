@@ -1070,3 +1070,244 @@
 2020/01/14 11:22:22.646 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|   1.115377ms|   match|[97;44m GET     [0m /v1/lead/validate/   r:/v1/lead/validate
 2020/01/14 11:22:22.651 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|     28.806µs| nomatch|[90;47m OPTIONS [0m /v1/kpi/report/2/1
 2020/01/14 11:22:22.671 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|   4.772705ms|   match|[97;44m GET     [0m /v1/kpi/report/2/1   r:/v1/kpi/report/:userid/:month
+2020/01/14 16:02:30.741 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|    119.191µs|   match|[97;44m GET     [0m /v1/token/token/endy.apina@my-gpi.io   r:/v1/token/:email
+2020/01/14 16:02:30.866 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|     84.982µs| nomatch|[90;47m OPTIONS [0m /v1/user/update/
+2020/01/14 16:02:30.937 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|     817.86µs|   match|[97;46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2020/01/14 16:02:32.578 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|    872.318µs|   match|[97;46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2020/01/14 16:02:32.723 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|      47.57µs| nomatch|[90;47m OPTIONS [0m /v1/lead/validate/
+2020/01/14 16:02:32.724 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|     13.273µs| nomatch|[90;47m OPTIONS [0m /v1/lead/pending
+2020/01/14 16:02:32.749 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|     1.2016ms|   match|[97;44m GET     [0m /v1/lead/validate/   r:/v1/lead/validate
+2020/01/14 16:02:32.751 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|     20.013µs| nomatch|[90;47m OPTIONS [0m /v1/objectives/lead/
+2020/01/14 16:02:32.752 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|     14.199µs| nomatch|[90;47m OPTIONS [0m /v1/lead/myteam/
+2020/01/14 16:02:32.926 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m| 172.531755ms|   match|[97;44m GET     [0m /v1/lead/myteam/   r:/v1/lead/myteam/
+2020/01/14 16:02:32.926 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m| 177.874354ms|   match|[97;44m GET     [0m /v1/lead/pending   r:/v1/lead/pending
+2020/01/14 16:02:33.009 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m| 256.239273ms|   match|[97;44m GET     [0m /v1/objectives/lead/   r:/v1/objectives/lead/
+2020/01/14 16:02:43.390 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|     44.176µs| nomatch|[90;47m OPTIONS [0m /v1/user/update/
+2020/01/14 16:02:43.434 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|   4.096371ms|   match|[97;46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2020/01/14 16:02:43.561 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|     35.556µs| nomatch|[90;47m OPTIONS [0m /v1/lead/validate/
+2020/01/14 16:02:43.592 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|   1.020736ms|   match|[97;44m GET     [0m /v1/lead/validate/   r:/v1/lead/validate
+2020/01/14 16:02:43.594 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|     13.801µs| nomatch|[90;47m OPTIONS [0m /v1/lead/myteam/
+2020/01/14 16:02:43.597 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|   1.394084ms|   match|[97;44m GET     [0m /v1/lead/myteam/   r:/v1/lead/myteam/
+2020/01/14 16:02:45.385 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|     53.897µs| nomatch|[90;47m OPTIONS [0m /v1/kpi/report/2/1
+2020/01/14 16:02:45.386 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|     53.549µs| nomatch|[90;47m OPTIONS [0m /v1/objectives/lead/
+2020/01/14 16:02:45.426 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|    2.72032ms|   match|[97;44m GET     [0m /v1/kpi/report/2/1   r:/v1/kpi/report/:userid/:month
+2020/01/14 16:02:45.426 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|   2.052305ms|   match|[97;44m GET     [0m /v1/objectives/lead/   r:/v1/objectives/lead/
+2020/01/14 16:03:13.196 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|   1.177466ms|   match|[97;44m GET     [0m /v1/token/token/apinaendy@gmail.com   r:/v1/token/:email
+2020/01/14 16:03:13.319 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|     40.388µs| nomatch|[90;47m OPTIONS [0m /v1/user/update/
+2020/01/14 16:03:13.382 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|    740.414µs|   match|[97;46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2020/01/14 16:03:15.538 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|    875.275µs|   match|[97;46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2020/01/14 16:03:15.689 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|      51.34µs| nomatch|[90;47m OPTIONS [0m /v1/lead/validate/
+2020/01/14 16:03:15.727 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|   1.084835ms|   match|[97;44m GET     [0m /v1/lead/validate/   r:/v1/lead/validate
+2020/01/14 16:03:15.735 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|     38.256µs| nomatch|[90;47m OPTIONS [0m /v1/kpi/report/2/1
+2020/01/14 16:03:15.750 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|   7.599458ms|   match|[97;44m GET     [0m /v1/kpi/report/2/1   r:/v1/kpi/report/:userid/:month
+2020/01/14 16:03:18.410 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|     27.983µs| nomatch|[90;47m OPTIONS [0m /v1/user/update/
+2020/01/14 16:03:18.448 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|   2.300691ms|   match|[97;46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2020/01/14 16:03:18.558 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|     19.563µs| nomatch|[90;47m OPTIONS [0m /v1/team/myteam
+2020/01/14 16:03:18.558 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|     13.051µs| nomatch|[90;47m OPTIONS [0m /v1/team/invitations/pending
+2020/01/14 16:03:18.560 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|     12.715µs| nomatch|[90;47m OPTIONS [0m /v1/objectives/member/
+2020/01/14 16:03:18.584 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|   1.713489ms|   match|[97;44m GET     [0m /v1/team/invitations/pending   r:/v1/team/invitations/pending
+2020/01/14 16:03:18.585 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|   2.907747ms|   match|[97;44m GET     [0m /v1/team/myteam   r:/v1/team/myteam
+2020/01/14 16:03:18.695 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m| 112.548184ms|   match|[97;44m GET     [0m /v1/objectives/member/   r:/v1/objectives/member/
+2020/01/14 16:03:21.822 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|    726.374µs|   match|[97;46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2020/01/14 16:03:21.916 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|     38.717µs| nomatch|[90;47m OPTIONS [0m /v1/lead/validate/
+2020/01/14 16:03:21.944 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|   1.189301ms|   match|[97;44m GET     [0m /v1/lead/validate/   r:/v1/lead/validate
+2020/01/14 16:03:21.955 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|      15.52µs| nomatch|[90;47m OPTIONS [0m /v1/kpi/report/2/1
+2020/01/14 16:03:21.960 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|   1.914264ms|   match|[97;44m GET     [0m /v1/kpi/report/2/1   r:/v1/kpi/report/:userid/:month
+2020/01/14 16:03:26.142 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|     30.945µs| nomatch|[90;47m OPTIONS [0m /v1/user/update/
+2020/01/14 16:03:26.249 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|     33.983µs| nomatch|[90;47m OPTIONS [0m /v1/kpi/1
+2020/01/14 16:03:26.249 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|     55.621µs| nomatch|[90;47m OPTIONS [0m /v1/kpi/task/1
+2020/01/14 16:03:26.258 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|   2.332244ms|   match|[97;46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2020/01/14 16:03:26.279 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|   1.888896ms|   match|[97;44m GET     [0m /v1/kpi/1   r:/v1/kpi/:kpiid
+2020/01/14 16:03:26.711 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m| 433.003539ms|   match|[97;44m GET     [0m /v1/kpi/task/1   r:/v1/kpi/task/:kpiid
+2020/01/14 16:10:26.880 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|    163.442µs| nomatch|[90;47m OPTIONS [0m /v1/user/update/
+2020/01/14 16:10:27.047 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|  99.921389ms|   match|[97;46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2020/01/14 16:10:27.069 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|     16.569µs| nomatch|[90;47m OPTIONS [0m /v1/kpi/1
+2020/01/14 16:10:27.070 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|     34.194µs| nomatch|[90;47m OPTIONS [0m /v1/kpi/task/1
+2020/01/14 16:10:27.096 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|    670.225µs|   match|[97;44m GET     [0m /v1/kpi/task/1   r:/v1/kpi/task/:kpiid
+2020/01/14 16:10:27.097 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|   1.615621ms|   match|[97;44m GET     [0m /v1/kpi/1   r:/v1/kpi/:kpiid
+2020/01/14 16:11:07.077 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|    234.747µs|   match|[97;44m GET     [0m /v1/token/token/endy.apina@my-gpi.io   r:/v1/token/:email
+2020/01/14 16:11:07.216 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|     50.652µs| nomatch|[90;47m OPTIONS [0m /v1/user/update/
+2020/01/14 16:11:07.282 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|     938.84µs|   match|[97;46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2020/01/14 16:11:09.089 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|    869.891µs|   match|[97;46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2020/01/14 16:11:09.249 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|     18.444µs| nomatch|[90;47m OPTIONS [0m /v1/lead/validate/
+2020/01/14 16:11:09.249 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|     11.166µs| nomatch|[90;47m OPTIONS [0m /v1/lead/pending
+2020/01/14 16:11:09.273 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|   1.679966ms|   match|[97;44m GET     [0m /v1/lead/validate/   r:/v1/lead/validate
+2020/01/14 16:11:09.275 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|   3.150471ms|   match|[97;44m GET     [0m /v1/lead/pending   r:/v1/lead/pending
+2020/01/14 16:11:09.284 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|     44.717µs| nomatch|[90;47m OPTIONS [0m /v1/objectives/lead/
+2020/01/14 16:11:09.285 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|     53.732µs| nomatch|[90;47m OPTIONS [0m /v1/lead/myteam/
+2020/01/14 16:11:09.380 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|    1.80401ms|   match|[97;44m GET     [0m /v1/lead/myteam/   r:/v1/lead/myteam/
+2020/01/14 16:11:09.380 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|   2.008658ms|   match|[97;44m GET     [0m /v1/objectives/lead/   r:/v1/objectives/lead/
+2020/01/14 16:11:12.538 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|     30.272µs| nomatch|[90;47m OPTIONS [0m /v1/user/update/
+2020/01/14 16:11:12.582 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|   1.666991ms|   match|[97;46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2020/01/14 16:11:12.701 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|   1.086697ms|   match|[97;44m GET     [0m /v1/lead/validate/   r:/v1/lead/validate
+2020/01/14 16:11:12.733 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|   1.802248ms|   match|[97;44m GET     [0m /v1/lead/myteam/   r:/v1/lead/myteam/
+2020/01/14 16:11:15.269 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|     53.612µs| nomatch|[90;47m OPTIONS [0m /v1/kpi/report/2/1
+2020/01/14 16:11:15.271 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|     68.505µs| nomatch|[90;47m OPTIONS [0m /v1/objectives/lead/
+2020/01/14 16:11:15.312 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|   1.834943ms|   match|[97;44m GET     [0m /v1/objectives/lead/   r:/v1/objectives/lead/
+2020/01/14 16:11:15.312 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|   2.301562ms|   match|[97;44m GET     [0m /v1/kpi/report/2/1   r:/v1/kpi/report/:userid/:month
+2020/01/14 16:11:19.806 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|     56.095µs| nomatch|[90;47m OPTIONS [0m /v1/user/update/
+2020/01/14 16:11:19.862 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|   1.368267ms|   match|[97;46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2020/01/14 16:11:19.925 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|     17.686µs| nomatch|[90;47m OPTIONS [0m /v1/kpi/1
+2020/01/14 16:11:19.925 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|     17.763µs| nomatch|[90;47m OPTIONS [0m /v1/kpi/task/1
+2020/01/14 16:11:19.953 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|   1.623226ms|   match|[97;44m GET     [0m /v1/kpi/task/1   r:/v1/kpi/task/:kpiid
+2020/01/14 16:11:19.954 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|   3.081817ms|   match|[97;44m GET     [0m /v1/kpi/1   r:/v1/kpi/:kpiid
+2020/01/14 16:11:34.337 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|     26.447µs| nomatch|[90;47m OPTIONS [0m /v1/user/update/
+2020/01/14 16:11:34.391 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|   1.534652ms|   match|[97;46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2020/01/14 16:11:34.508 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|     20.272µs| nomatch|[90;47m OPTIONS [0m /v1/lead/validate/
+2020/01/14 16:11:34.542 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|   1.141434ms|   match|[97;44m GET     [0m /v1/lead/validate/   r:/v1/lead/validate
+2020/01/14 16:11:34.544 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|     17.636µs| nomatch|[90;47m OPTIONS [0m /v1/lead/myteam/
+2020/01/14 16:11:34.557 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|    985.278µs|   match|[97;44m GET     [0m /v1/lead/myteam/   r:/v1/lead/myteam/
+2020/01/14 16:12:20.154 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|     50.873µs| nomatch|[90;47m OPTIONS [0m /v1/kpi/report/2/1
+2020/01/14 16:12:20.155 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|      63.04µs| nomatch|[90;47m OPTIONS [0m /v1/objectives/lead/
+2020/01/14 16:12:20.185 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|   1.853125ms|   match|[97;44m GET     [0m /v1/objectives/lead/   r:/v1/objectives/lead/
+2020/01/14 16:12:20.186 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|   2.765085ms|   match|[97;44m GET     [0m /v1/kpi/report/2/1   r:/v1/kpi/report/:userid/:month
+2020/01/14 16:20:40.799 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|     50.105µs| nomatch|[90;47m OPTIONS [0m /v1/user/update/
+2020/01/14 16:20:40.862 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|    583.734µs|   match|[97;46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2020/01/14 16:20:41.005 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|     55.385µs| nomatch|[90;47m OPTIONS [0m /v1/lead/validate/
+2020/01/14 16:20:41.043 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|   2.810984ms|   match|[97;44m GET     [0m /v1/lead/validate/   r:/v1/lead/validate
+2020/01/14 16:20:41.049 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|     22.245µs| nomatch|[90;47m OPTIONS [0m /v1/lead/myteam/
+2020/01/14 16:20:41.053 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|   1.972866ms|   match|[97;44m GET     [0m /v1/lead/myteam/   r:/v1/lead/myteam/
+2020/01/14 16:20:44.765 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|     71.117µs| nomatch|[90;47m OPTIONS [0m /v1/kpi/report/2/1
+2020/01/14 16:20:44.768 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|     60.677µs| nomatch|[90;47m OPTIONS [0m /v1/objectives/lead/
+2020/01/14 16:20:44.810 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|   3.315901ms|   match|[97;44m GET     [0m /v1/objectives/lead/   r:/v1/objectives/lead/
+2020/01/14 16:20:44.810 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|   4.725556ms|   match|[97;44m GET     [0m /v1/kpi/report/2/1   r:/v1/kpi/report/:userid/:month
+2020/01/14 16:22:18.158 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|     31.489µs| nomatch|[90;47m OPTIONS [0m /v1/user/update/
+2020/01/14 16:22:18.269 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|    833.026µs|   match|[97;46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2020/01/14 16:22:18.439 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|      15.58µs| nomatch|[90;47m OPTIONS [0m /v1/lead/validate/
+2020/01/14 16:22:18.501 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|   2.390958ms|   match|[97;44m GET     [0m /v1/lead/validate/   r:/v1/lead/validate
+2020/01/14 16:22:18.519 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|     24.373µs| nomatch|[90;47m OPTIONS [0m /v1/lead/myteam/
+2020/01/14 16:22:18.522 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|   1.503458ms|   match|[97;44m GET     [0m /v1/lead/myteam/   r:/v1/lead/myteam/
+2020/01/14 16:22:20.209 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|     61.837µs| nomatch|[90;47m OPTIONS [0m /v1/kpi/report/2/1
+2020/01/14 16:22:20.211 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|     67.356µs| nomatch|[90;47m OPTIONS [0m /v1/objectives/lead/
+2020/01/14 16:22:20.255 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|   5.175794ms|   match|[97;44m GET     [0m /v1/kpi/report/2/1   r:/v1/kpi/report/:userid/:month
+2020/01/14 16:22:20.255 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|   1.372598ms|   match|[97;44m GET     [0m /v1/objectives/lead/   r:/v1/objectives/lead/
+2020/01/14 16:22:44.585 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|     39.593µs| nomatch|[90;47m OPTIONS [0m /v1/user/update/
+2020/01/14 16:22:44.694 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|    652.971µs|   match|[97;46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2020/01/14 16:22:44.875 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|     20.734µs| nomatch|[90;47m OPTIONS [0m /v1/lead/validate/
+2020/01/14 16:22:44.931 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|   1.483165ms|   match|[97;44m GET     [0m /v1/lead/validate/   r:/v1/lead/validate
+2020/01/14 16:22:44.952 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|     34.592µs| nomatch|[90;47m OPTIONS [0m /v1/lead/myteam/
+2020/01/14 16:22:44.958 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|   2.513472ms|   match|[97;44m GET     [0m /v1/lead/myteam/   r:/v1/lead/myteam/
+2020/01/14 16:22:46.349 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|     61.126µs| nomatch|[90;47m OPTIONS [0m /v1/kpi/report/2/1
+2020/01/14 16:22:46.350 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|     50.473µs| nomatch|[90;47m OPTIONS [0m /v1/objectives/lead/
+2020/01/14 16:22:46.388 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|   2.494581ms|   match|[97;44m GET     [0m /v1/kpi/report/2/1   r:/v1/kpi/report/:userid/:month
+2020/01/14 16:22:46.389 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|   1.637064ms|   match|[97;44m GET     [0m /v1/objectives/lead/   r:/v1/objectives/lead/
+2020/01/14 16:26:42.818 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|     306.37µs|   match|[97;44m GET     [0m /v1/token/token/apinaendy@gmail.com   r:/v1/token/:email
+2020/01/14 16:26:42.963 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|     36.269µs| nomatch|[90;47m OPTIONS [0m /v1/user/update/
+2020/01/14 16:26:43.089 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|    954.312µs|   match|[97;46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2020/01/14 16:26:45.432 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|    785.846µs|   match|[97;46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2020/01/14 16:26:45.649 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|     59.987µs| nomatch|[90;47m OPTIONS [0m /v1/lead/validate/
+2020/01/14 16:26:45.689 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|   1.157611ms|   match|[97;44m GET     [0m /v1/lead/validate/   r:/v1/lead/validate
+2020/01/14 16:26:45.692 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|     18.593µs| nomatch|[90;47m OPTIONS [0m /v1/kpi/report/2/1
+2020/01/14 16:26:45.697 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|   1.826524ms|   match|[97;44m GET     [0m /v1/kpi/report/2/1   r:/v1/kpi/report/:userid/:month
+2020/01/14 16:30:55.371 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|     31.517µs| nomatch|[90;47m OPTIONS [0m /v1/user/update/
+2020/01/14 16:30:55.490 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|     836.59µs|   match|[97;46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2020/01/14 16:30:55.664 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|     37.138µs| nomatch|[90;47m OPTIONS [0m /v1/lead/validate/
+2020/01/14 16:30:55.713 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|   1.198425ms|   match|[97;44m GET     [0m /v1/lead/validate/   r:/v1/lead/validate
+2020/01/14 16:30:55.733 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|     87.265µs| nomatch|[90;47m OPTIONS [0m /v1/kpi/report/2/1
+2020/01/14 16:30:55.747 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|   4.871342ms|   match|[97;44m GET     [0m /v1/kpi/report/2/1   r:/v1/kpi/report/:userid/:month
+2020/01/14 16:31:32.214 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|    257.222µs|   match|[97;44m GET     [0m /v1/token/token/endy.apina@my-gpi.io   r:/v1/token/:email
+2020/01/14 16:31:32.379 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|     38.336µs| nomatch|[90;47m OPTIONS [0m /v1/user/update/
+2020/01/14 16:31:32.511 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|    741.525µs|   match|[97;46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2020/01/14 16:31:34.799 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|   1.495597ms|   match|[97;46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2020/01/14 16:31:35.046 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|     16.319µs| nomatch|[90;47m OPTIONS [0m /v1/lead/validate/
+2020/01/14 16:31:35.083 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|   1.569106ms|   match|[97;44m GET     [0m /v1/lead/validate/   r:/v1/lead/validate
+2020/01/14 16:31:35.092 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|     34.032µs| nomatch|[90;47m OPTIONS [0m /v1/lead/myteam/
+2020/01/14 16:31:35.098 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|   3.155849ms|   match|[97;44m GET     [0m /v1/lead/myteam/   r:/v1/lead/myteam/
+2020/01/14 16:31:36.671 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|     48.921µs| nomatch|[90;47m OPTIONS [0m /v1/kpi/report/2/1
+2020/01/14 16:31:36.674 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|     59.746µs| nomatch|[90;47m OPTIONS [0m /v1/objectives/lead/
+2020/01/14 16:31:36.712 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|   2.319879ms|   match|[97;44m GET     [0m /v1/kpi/report/2/1   r:/v1/kpi/report/:userid/:month
+2020/01/14 16:31:36.716 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|   1.754426ms|   match|[97;44m GET     [0m /v1/objectives/lead/   r:/v1/objectives/lead/
+2020/01/14 16:31:55.115 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|     61.878µs| nomatch|[90;47m OPTIONS [0m /v1/user/update/
+2020/01/14 16:31:55.233 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|        767µs|   match|[97;46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2020/01/14 16:31:55.405 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|     22.674µs| nomatch|[90;47m OPTIONS [0m /v1/lead/validate/
+2020/01/14 16:31:55.467 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|    928.546µs|   match|[97;44m GET     [0m /v1/lead/validate/   r:/v1/lead/validate
+2020/01/14 16:31:55.484 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|     54.941µs| nomatch|[90;47m OPTIONS [0m /v1/lead/myteam/
+2020/01/14 16:31:55.490 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|   1.799288ms|   match|[97;44m GET     [0m /v1/lead/myteam/   r:/v1/lead/myteam/
+2020/01/14 16:32:02.894 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|     26.962µs| nomatch|[90;47m OPTIONS [0m /v1/user/update/
+2020/01/14 16:32:03.014 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|    1.42893ms|   match|[97;46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2020/01/14 16:32:03.185 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|     39.455µs| nomatch|[90;47m OPTIONS [0m /v1/lead/validate/
+2020/01/14 16:32:03.231 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|   1.178735ms|   match|[97;44m GET     [0m /v1/lead/validate/   r:/v1/lead/validate
+2020/01/14 16:32:03.233 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|     17.255µs| nomatch|[90;47m OPTIONS [0m /v1/lead/myteam/
+2020/01/14 16:32:03.250 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|   1.237528ms|   match|[97;44m GET     [0m /v1/lead/myteam/   r:/v1/lead/myteam/
+2020/01/14 16:32:05.239 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|     67.186µs| nomatch|[90;47m OPTIONS [0m /v1/kpi/report/2/1
+2020/01/14 16:32:05.242 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|     65.941µs| nomatch|[90;47m OPTIONS [0m /v1/objectives/lead/
+2020/01/14 16:32:05.279 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|   2.630256ms|   match|[97;44m GET     [0m /v1/kpi/report/2/1   r:/v1/kpi/report/:userid/:month
+2020/01/14 16:32:05.280 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|   1.405379ms|   match|[97;44m GET     [0m /v1/objectives/lead/   r:/v1/objectives/lead/
+2020/01/14 16:32:15.164 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|    127.266µs| nomatch|[90;47m OPTIONS [0m /v1/user/update/
+2020/01/14 16:32:15.281 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|    650.484µs|   match|[97;46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2020/01/14 16:32:15.449 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|     15.495µs| nomatch|[90;47m OPTIONS [0m /v1/lead/validate/
+2020/01/14 16:32:15.494 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|    1.90623ms|   match|[97;44m GET     [0m /v1/lead/validate/   r:/v1/lead/validate
+2020/01/14 16:32:15.505 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|     23.488µs| nomatch|[90;47m OPTIONS [0m /v1/lead/myteam/
+2020/01/14 16:32:15.512 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|   3.431389ms|   match|[97;44m GET     [0m /v1/lead/myteam/   r:/v1/lead/myteam/
+2020/01/14 16:32:17.950 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|     49.582µs| nomatch|[90;47m OPTIONS [0m /v1/kpi/report/2/1
+2020/01/14 16:32:17.951 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|     66.931µs| nomatch|[90;47m OPTIONS [0m /v1/objectives/lead/
+2020/01/14 16:32:17.987 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|   2.024361ms|   match|[97;44m GET     [0m /v1/kpi/report/2/1   r:/v1/kpi/report/:userid/:month
+2020/01/14 16:32:18.069 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|   1.900316ms|   match|[97;44m GET     [0m /v1/objectives/lead/   r:/v1/objectives/lead/
+2020/01/14 16:33:54.007 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|     43.927µs| nomatch|[90;47m OPTIONS [0m /v1/user/update/
+2020/01/14 16:33:54.127 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|     787.73µs|   match|[97;46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2020/01/14 16:33:54.311 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|     21.096µs| nomatch|[90;47m OPTIONS [0m /v1/lead/validate/
+2020/01/14 16:33:54.382 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|   1.616752ms|   match|[97;44m GET     [0m /v1/lead/validate/   r:/v1/lead/validate
+2020/01/14 16:33:54.405 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|     28.739µs| nomatch|[90;47m OPTIONS [0m /v1/lead/myteam/
+2020/01/14 16:33:54.412 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|   1.958529ms|   match|[97;44m GET     [0m /v1/lead/myteam/   r:/v1/lead/myteam/
+2020/01/14 16:33:59.303 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|    439.627µs| nomatch|[90;47m OPTIONS [0m /v1/kpi/report/2/1
+2020/01/14 16:33:59.304 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|     208.02µs| nomatch|[90;47m OPTIONS [0m /v1/objectives/lead/
+2020/01/14 16:33:59.344 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|   2.607824ms|   match|[97;44m GET     [0m /v1/kpi/report/2/1   r:/v1/kpi/report/:userid/:month
+2020/01/14 16:33:59.345 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|   1.847752ms|   match|[97;44m GET     [0m /v1/objectives/lead/   r:/v1/objectives/lead/
+2020/01/14 16:35:52.704 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|    145.752µs| nomatch|[90;47m OPTIONS [0m /v1/user/update/
+2020/01/14 16:35:52.824 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|    693.716µs|   match|[97;46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2020/01/14 16:35:53.016 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|     20.816µs| nomatch|[90;47m OPTIONS [0m /v1/lead/validate/
+2020/01/14 16:35:53.066 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|   1.764652ms|   match|[97;44m GET     [0m /v1/lead/validate/   r:/v1/lead/validate
+2020/01/14 16:35:53.073 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|     20.968µs| nomatch|[90;47m OPTIONS [0m /v1/lead/myteam/
+2020/01/14 16:35:53.099 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|    4.27152ms|   match|[97;44m GET     [0m /v1/lead/myteam/   r:/v1/lead/myteam/
+2020/01/14 16:36:06.164 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|     96.118µs| nomatch|[90;47m OPTIONS [0m /v1/kpi/report/2/1
+2020/01/14 16:36:06.164 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|      81.57µs| nomatch|[90;47m OPTIONS [0m /v1/objectives/lead/
+2020/01/14 16:36:06.193 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|   2.604703ms|   match|[97;44m GET     [0m /v1/kpi/report/2/1   r:/v1/kpi/report/:userid/:month
+2020/01/14 16:36:06.194 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|   1.383227ms|   match|[97;44m GET     [0m /v1/objectives/lead/   r:/v1/objectives/lead/
+2020/01/14 16:36:26.810 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|     34.262µs| nomatch|[90;47m OPTIONS [0m /v1/user/update/
+2020/01/14 16:36:26.919 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|    663.135µs|   match|[97;46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2020/01/14 16:36:27.088 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|     27.245µs| nomatch|[90;47m OPTIONS [0m /v1/lead/validate/
+2020/01/14 16:36:27.150 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|   1.868404ms|   match|[97;44m GET     [0m /v1/lead/validate/   r:/v1/lead/validate
+2020/01/14 16:36:27.171 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|     37.957µs| nomatch|[90;47m OPTIONS [0m /v1/lead/myteam/
+2020/01/14 16:36:27.180 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|   3.652047ms|   match|[97;44m GET     [0m /v1/lead/myteam/   r:/v1/lead/myteam/
+2020/01/14 16:36:32.322 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|     51.373µs| nomatch|[90;47m OPTIONS [0m /v1/kpi/report/2/1
+2020/01/14 16:36:32.323 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|     72.448µs| nomatch|[90;47m OPTIONS [0m /v1/objectives/lead/
+2020/01/14 16:36:32.362 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|   2.503709ms|   match|[97;44m GET     [0m /v1/kpi/report/2/1   r:/v1/kpi/report/:userid/:month
+2020/01/14 16:36:32.362 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|   1.269332ms|   match|[97;44m GET     [0m /v1/objectives/lead/   r:/v1/objectives/lead/
+2020/01/14 16:36:47.684 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|    160.887µs|   match|[97;44m GET     [0m /v1/token/token/apinaendy@gmail.com   r:/v1/token/:email
+2020/01/14 16:36:47.847 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|     58.669µs| nomatch|[90;47m OPTIONS [0m /v1/user/update/
+2020/01/14 16:36:47.973 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|   1.185836ms|   match|[97;46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2020/01/14 16:36:49.991 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|    604.478µs|   match|[97;46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2020/01/14 16:36:50.219 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|     22.311µs| nomatch|[90;47m OPTIONS [0m /v1/lead/validate/
+2020/01/14 16:36:50.270 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|   1.906111ms|   match|[97;44m GET     [0m /v1/lead/validate/   r:/v1/lead/validate
+2020/01/14 16:36:50.282 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|     47.744µs| nomatch|[90;47m OPTIONS [0m /v1/kpi/report/2/1
+2020/01/14 16:36:50.297 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|   5.885231ms|   match|[97;44m GET     [0m /v1/kpi/report/2/1   r:/v1/kpi/report/:userid/:month
+2020/01/15 05:21:18.676 [I] [asm_amd64.s:1357]  http server Running on http://:2253
+2020/01/15 05:21:23.143 [I] [asm_amd64.s:1357]  http server Running on http://:2253
+2020/01/15 06:00:39.275 [I] [asm_amd64.s:1357]  http server Running on http://:2253
+2020/01/15 06:01:36.356 [I] [asm_amd64.s:1357]  http server Running on http://:2253
+2020/01/15 06:03:30.443 [I] [asm_amd64.s:1357]  http server Running on http://:2253
+2020/01/15 06:05:47.895 [I] [asm_amd64.s:1357]  http server Running on http://:2253
+2020/01/15 06:08:05.501 [I] [asm_amd64.s:1357]  http server Running on http://:2253
+2020/01/15 06:08:54.357 [I] [asm_amd64.s:1357]  http server Running on http://:2253
+2020/01/15 06:09:32.865 [I] [asm_amd64.s:1357]  http server Running on http://:2253
+2020/01/15 06:10:43.297 [I] [asm_amd64.s:1357]  http server Running on http://:2253
+2020/01/15 06:11:55.183 [I] [asm_amd64.s:1357]  http server Running on http://:2253
+2020/01/15 06:12:24.267 [I] [asm_amd64.s:1357]  http server Running on http://:2253
+2020/01/15 10:31:03.346 [I] [asm_amd64.s:1357]  http server Running on http://:2253
+2020/01/15 13:33:00.626 [I] [asm_amd64.s:1357]  http server Running on http://:2253
+2020/01/15 14:14:51.791 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|     741.96µs|   match|[97;44m GET     [0m /v1/token/token/endy.apina@my-gpi.io   r:/v1/token/:email
+2020/01/15 14:14:51.911 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|     73.544µs| nomatch|[90;47m OPTIONS [0m /v1/user/update/
+2020/01/15 14:14:52.212 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|  209.59962ms|   match|[97;46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2020/01/15 14:48:40.169 [I] [asm_amd64.s:1357]  http server Running on http://:2253
+2020/01/15 15:50:01.086 [I] [asm_amd64.s:1357]  http server Running on http://:2253
+2020/01/15 15:56:15.788 [I] [asm_amd64.s:1357]  http server Running on http://:2253
+2020/01/15 16:25:19.046 [I] [asm_amd64.s:1357]  http server Running on http://:2253
+2020/01/15 16:26:23.895 [I] [asm_amd64.s:1357]  http server Running on http://:2253
+2020/01/15 16:26:46.009 [I] [asm_amd64.s:1357]  http server Running on http://:2253
+2020/01/15 20:38:11.188 [I] [asm_amd64.s:1357]  http server Running on http://:2253
+                                                                                                                                                                        2020/01/15 20:48:24.155 [I] [asm_amd64.s:1357]  http server Running on http://:2253
+2020/01/15 21:22:22.430 [I] [asm_amd64.s:1357]  http server Running on http://:2253
+2020/01/15 21:23:48.767 [I] [asm_amd64.s:1357]  http server Running on http://:2253
+2020/01/15 21:23:53.750 [I] [asm_amd64.s:1357]  http server Running on http://:2253
+2020/01/15 21:25:43.862 [I] [asm_amd64.s:1357]  http server Running on http://:2253
+2020/01/16 09:17:37.753 [I] [asm_amd64.s:1357]  http server Running on http://:2253

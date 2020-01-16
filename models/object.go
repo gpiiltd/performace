@@ -39,6 +39,10 @@ func init() {
 	Conn = conn
 
 	CreateTables()
+	SetupOldDatabase()
+	// SetupNewDatabase()
+	// UpdateUserInfo()
+	// StartMining()
 }
 
 //CreateTables creates all database tables

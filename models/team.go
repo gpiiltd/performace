@@ -1,5 +1,7 @@
 package models
 
+import "log"
+
 //GetMyTeamInformations retrieves a team information for a user
 func GetMyTeamInformations(user User) interface{} {
 	var team Team
@@ -26,6 +28,7 @@ func GetPendingTeamRequests(user User) interface{} {
 
 //AcceptInvitation accepts a new user team request
 func AcceptInvitation(user User, teamID string) interface{} {
+	log.Println(teamID)
 	var teamMember Members
 	if findMember := Conn.Where("member_id = ?", user.ID).Find(&teamMember); findMember.Error == nil {
 		return ErrorResponse(403, "User already belongs to a team")
