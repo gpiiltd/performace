@@ -27,15 +27,20 @@ func GetPendingTeamRequests(user User) interface{} {
 }
 
 //AcceptInvitation accepts a new user team request
-func AcceptInvitation(user User, teamID string) interface{} {
-	log.Println(teamID)
+func AcceptInvitation(user User, invitationID string) interface{} {
+	log.Println(invitationID)
 	var teamMember Members
 	if findMember := Conn.Where("member_id = ?", user.ID).Find(&teamMember); findMember.Error == nil {
 		return ErrorResponse(403, "User already belongs to a team")
 	}
 
+	var invitationInfo TeamInvitation
+	if findInvitation := Conn.Where("id = ?", invitationID).Find(&invitationInfo); findInvitation.Error != nil {
+		return ErrorResponse(403, "Invalid Invitation ID")
+	}
+
 	var teamInfo Team
-	if findTeam := Conn.Where("id = ?", teamID).Find(&teamInfo); findTeam.Error != nil {
+	if findTeam := Conn.Where("id = ?", invitationInfo.TeamID).Find(&teamInfo); findTeam.Error != nil {
 		return ErrorResponse(403, "Invalid Team ID")
 	}
 
