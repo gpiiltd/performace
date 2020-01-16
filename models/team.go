@@ -53,7 +53,7 @@ func AcceptInvitation(user User, invitationID string) interface{} {
 	createTeam.MemberID = user.ID
 
 	Conn.Create(&createTeam)
-	Conn.Where("team_id = ? AND invitee_id = ?", teamID, user.ID).Delete(TeamInvitation{})
+	Conn.Where("team_id = ? AND invitee_id = ?", invitationID, user.ID).Delete(TeamInvitation{})
 
 	return ValidResponse(200, createTeam, "Successfully joined team")
 }
