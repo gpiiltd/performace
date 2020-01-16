@@ -1314,3 +1314,6 @@
 2020/01/16 13:08:41.498 [I] [asm_amd64.s:1357]  http server Running on http://:2254
 2020/01/16 13:08:41.499 [I] [asm_amd64.s:1357]  https server Running on https://:2253
 2020/01/16 13:08:41.499 [C] [asm_amd64.s:1357]  ListenAndServeTLS:  open /etc/letsencrypt/live/my-gpitools.com-0001/fullchain.pem: no such file or directory
+2020/01/16 13:11:38.832 [I] [asm_amd64.s:1357]  http server Running on http://:2254
+2020/01/16 13:11:38.833 [I] [asm_amd64.s:1357]  https server Running on https://:2253
+2020/01/16 13:11:38.833 [C] [asm_amd64.s:1357]  ListenAndServeTLS:  open /etc/letsencrypt/live/my-gpitools.com-0001/fullchain.pem: no such file or directory

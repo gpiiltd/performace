@@ -1,6 +1,7 @@
 package models
 
 import (
+	"log"
 	"strconv"
 )
 
@@ -73,6 +74,8 @@ func GetKPIInfo(kpiID int) interface{} {
 	var kpiInfoResp kpiInfoResponse
 	kpiInfoResp.KPI = kpi
 	kpiInfoResp.Behaviour = behaviour
+
+	log.Println(kpiInfoResp)
 
 	return ValidResponse(200, kpiInfoResp, "success")
 }
