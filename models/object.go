@@ -40,9 +40,9 @@ func init() {
 
 	CreateTables()
 	SetupOldDatabase()
-	// SetupNewDatabase()
+	SetupNewDatabase()
 	// UpdateUserInfo()
-	// StartMining()
+	StartMining()
 }
 
 //CreateTables creates all database tables

@@ -58,7 +58,7 @@ func UpdateUserInfo() {
 //StartMining starts the process of extracting the data from old DB
 func StartMining() {
 	// MigrateTeam()
-	MigrateMembers()
+	// MigrateMembers()
 	return
 }
 
@@ -114,87 +114,73 @@ func CreateTeams(team Team, lead User) {
 	return
 }
 
-//MigrateMembers migrates
+//MigrateMembers gets a list of all old users
 func MigrateMembers() {
-	var allMemberArray []Members
-	stmt, err := OldDB.Query(`SELECT member, lead from members`)
-	if err != nil {
-		panic(err.Error())
+	var allOldTeamMemberArray []Members
+	allOldTeamMemberArray = GetAllOldMembers()
+
+	var teamLead User
+	var teamMember User
+	var teamData Team
+	var newMember Members
+	var allNewMembers []Members
+	var counter uint64
+	counter = 0
+	for _, member := range allOldTeamMemberArray {
+		counter = counter + 1
+		newMember.ID = counter
+		teamLead = GetNewUser(member.TeamLeadID)
+		newMember.TeamLead = teamLead.FullName
+		newMember.TeamLeadID = teamLead.ID
+		teamMember = GetNewUser(member.MemberID)
+		newMember.Member = teamMember.FullName
+		newMember.MemberID = teamMember.ID
+		teamData = GetNewTeam(member.TeamID)
+		newMember.Team = teamData.Name
+		newMember.TeamID = teamData.ID
+
+		allNewMembers = append(allNewMembers, member)
+		Conn.Create(&newMember)
 	}
-	var thisMember Members
+
+	return
+}
+
+//GetNewTeam get a new team data
+func GetNewTeam(teamID uint64) Team {
+	var oldTeam Team
+	stmt, _ := OldDB.Query(`SELECT name, lead, leadName from teams where id = ?`, teamID)
 	for stmt.Next() {
-		stmt.Scan(&thisMember.MemberID, &thisMember.TeamLeadID)
-		allMemberArray = append(allMemberArray, thisMember)
+		stmt.Scan(&oldTeam.Name, &oldTeam.LeadID, &oldTeam.Lead)
 	}
 
-	var allUsersArray []User
-	stmts, err := OldDB.Query(`SELECT ID, name from companyEmployees`)
-	if err != nil {
-		panic(err.Error())
+	var newTeam Team
+	Conn.Where("name = ?", oldTeam.Name).Find(&newTeam)
+	return newTeam
+}
+
+//GetAllOldMembers gets a list of all old members
+func GetAllOldMembers() []Members {
+	var allOldMembers []Members
+	stmt, _ := OldDB.Query(`SELECT member, lead, team from members`)
+	var user Members
+	for stmt.Next() {
+		stmt.Scan(&user.MemberID, &user.TeamLeadID, &user.TeamID)
+		allOldMembers = append(allOldMembers, user)
 	}
+
+	return allOldMembers
+}
+
+//GetNewUser tansforms the old user information to the new information
+func GetNewUser(uid uint64) User {
+	stmt, _ := OldDB.Query(`SELECT ID, name, email from companyEmployees where ID = ?`, uid)
 	var user User
-	for stmts.Next() {
-		stmts.Scan(&user.ID, &user.FullName)
-		allUsersArray = append(allUsersArray, user)
+	for stmt.Next() {
+		stmt.Scan(&user.ID, &user.FullName, &user.Email)
 	}
 
-	var allTeam []Team
-	Conn.Find(&allTeam)
-
-	var newUseArray []User
-	Conn.Find(&newUseArray)
-
-	var newUserArray []User
-	newUserArray = SortUser(allUsersArray, newUseArray)
-
-	var teamMembers Members
-	for _, eachMember := range allMemberArray {
-		var member User
-		member = GetUserFromArray(newUserArray, eachMember.ID)
-		teamMembers.Member = member.FullName
-		teamMembers.MemberID = member.ID
-		var lead User
-		lead = GetUserFromArray(newUserArray, eachMember.ID)
-		teamMembers.TeamLeadID = lead.ID
-		teamMembers.TeamLead = lead.FullName
-		var team Team
-		team = GetTeamFromArray(allTeam, lead.ID)
-		teamMembers.Team = team.Name
-		teamMembers.TeamID = team.ID
-
-		Conn.Create(&teamMembers)
-	}
-}
-
-//SortUser sorts
-func SortUser(oldDB []User, newDB []User) []User {
-	var sortedUsers []User
-	for _, firstUsers := range oldDB {
-		for _, secondUsers := range newDB {
-			if firstUsers.Email == secondUsers.Email {
-				sortedUsers = append(sortedUsers, secondUsers)
-			}
-		}
-	}
-	return sortedUsers
-}
-
-//GetUserFromArray retrieves user data
-func GetUserFromArray(userArray []User, userID uint64) User {
-	for _, user := range userArray {
-		if user.ID == userID {
-			return user
-		}
-	}
-	return User{}
-}
-
-//GetTeamFromArray gets
-func GetTeamFromArray(teamArray []Team, leadID uint64) Team {
-	for _, team := range teamArray {
-		if team.LeadID == leadID {
-			return team
-		}
-	}
-	return Team{}
+	var newUser User
+	Conn.Where("email = ?", user.Email).Find(&newUser)
+	return newUser
 }
