@@ -57,7 +57,7 @@ func UpdateUserInfo() {
 
 //StartMining starts the process of extracting the data from old DB
 func StartMining() {
-	// MigrateTeam()
+	MigrateTeam()
 	// MigrateMembers()
 	return
 }
