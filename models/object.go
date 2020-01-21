@@ -41,7 +41,7 @@ func init() {
 	CreateTables()
 	SetupOldDatabase()
 	SetupNewDatabase()
-	// UpdateUserInfo()
+	UpdateUserInfo()
 	StartMining()
 }
 
