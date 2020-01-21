@@ -40,8 +40,8 @@ func init() {
 
 	CreateTables()
 	SetupOldDatabase()
-	SetupNewDatabase()
-	UpdateUserInfo()
+	// SetupNewDatabase()
+	// UpdateUserInfo()
 	StartMining()
 }
 
