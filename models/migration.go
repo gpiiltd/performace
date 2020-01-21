@@ -100,9 +100,8 @@ func MigrateTeam() {
 //CreateTeams creates  user team
 func CreateTeams(team Team, lead User) {
 	var teamLead User
-	if findLead := Conn.Where("full_name = ?", lead.FullName).Find(&teamLead); findLead.Error != nil {
-		panic(findLead.Error.Error())
-	}
+	Conn.Where("full_name = ?", lead.FullName).Find(&teamLead)
+
 	var newTeam Team
 	newTeam.Name = team.Name
 	newTeam.LeadID = teamLead.ID
@@ -110,7 +109,9 @@ func CreateTeams(team Team, lead User) {
 	newTeam.Department = teamLead.Department
 	newTeam.DepartmentID = teamLead.DepartmentID
 
-	Conn.Create(&newTeam)
+	if newTeam.LeadID != 0 && newTeam.DepartmentID != 0 {
+		Conn.Create(&newTeam)
+	}
 	return
 }
 
