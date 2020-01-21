@@ -2,6 +2,7 @@ package models
 
 import (
 	"database/sql"
+	"log"
 
 	//Mysql driver
 	_ "github.com/go-sql-driver/mysql"
@@ -100,8 +101,10 @@ func MigrateTeam() {
 //CreateTeams creates  user team
 func CreateTeams(team Team, lead User) {
 	var teamLead User
-	Conn.Where("full_name = ?", lead.FullName).Find(&teamLead)
-
+	if findLead := Conn.Where("full_name = ?", lead.FullName).Find(&teamLead); findLead.Error != nil {
+		log.Println(findLead.Error.Error())
+		panic(findLead.Error.Error())
+	}
 	var newTeam Team
 	newTeam.Name = team.Name
 	newTeam.LeadID = teamLead.ID
@@ -109,9 +112,7 @@ func CreateTeams(team Team, lead User) {
 	newTeam.Department = teamLead.Department
 	newTeam.DepartmentID = teamLead.DepartmentID
 
-	if newTeam.LeadID != 0 && newTeam.DepartmentID != 0 {
-		Conn.Create(&newTeam)
-	}
+	Conn.Create(&newTeam)
 	return
 }
 
