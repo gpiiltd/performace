@@ -42,7 +42,7 @@ func init() {
 	SetupOldDatabase()
 	// SetupNewDatabase()
 	// UpdateUserInfo()
-	StartMining()
+	// StartMining()
 }
 
 //CreateTables creates all database tables
