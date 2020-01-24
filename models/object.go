@@ -40,6 +40,7 @@ func init() {
 
 	CreateTables()
 	SetupOldDatabase()
+	ReturnRangeValues(3, 5)
 	// SetupNewDatabase()
 	// UpdateUserInfo()
 	// StartMining()
@@ -130,6 +131,7 @@ type KPI struct {
 	TeamLeadID      uint64 `gorm:"int(10)" json:"team_lead_id"`
 	StartDate       string `gorm:"varchar(100)" json:"start_date"`
 	EndDate         string `gorm:"varchar(100)" json:"end_date"`
+	Year            string `gorm:"varchar(100)" json:"year"`
 	Weight          uint64 `gorm:"int(10)" json:"weight"`
 	Status          string `gorm:"varchar(100)" json:"status"`
 	TeamLeadScore   uint64 `gorm:"int(10)" json:"team_lead_score"`
@@ -185,4 +187,13 @@ type StrategicObjective struct {
 	Team      string `gorm:"varchar(100)" json:"team"`
 	TeamID    uint64 `gorm:"int(10)" json:"team_id"`
 	Status    string `gorm:"varchar(100)" json:"status"`
+}
+
+//DateRange holds data when fetching kpi of a date range
+type DateRange struct {
+	UserID     uint64 `json:"user_id"`
+	StartMonth uint64 `json:"start_month"`
+	EndMonth   uint64 `json:"end_month"`
+	StartYear  string `json:"start_year"`
+	EndYear    string `json:"end_year"`
 }

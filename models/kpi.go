@@ -177,3 +177,45 @@ func ScoreKPComment(kpi KPI, teamLead User) interface{} {
 	}
 	return ValidResponse(200, kpi, "success")
 }
+
+//GetKPIsFromRange gets all kpi from month range
+func GetKPIsFromRange(requestInfo DateRange) []KPI {
+	var allKPIArray []KPI
+	var monthIDs []uint64
+	monthIDs = ReturnRangeValues(requestInfo.StartMonth, requestInfo.EndMonth)
+	for _, monthID := range monthIDs {
+		var thisMonthKPI []KPI
+		thisMonthKPI = GetKPIFromMonth(monthID)
+		allKPIArray = AddToKPIArray(allKPIArray, thisMonthKPI)
+	}
+	return allKPIArray
+}
+
+//AddToKPIArray appends arrayTwo to arrayOne
+func AddToKPIArray(arrayOne []KPI, arrayTwo []KPI) []KPI {
+	for _, arraytwo := range arrayTwo {
+		arrayOne = append(arrayOne, arraytwo)
+	}
+	return arrayOne
+}
+
+//GetKPIFromMonth retrieves all KPI information for a particular month
+func GetKPIFromMonth(monthID uint64) []KPI {
+	var monthKPI []KPI
+	if findKPI := Conn.Where("start_date = ?", monthID).Find(&monthKPI); findKPI.Error != nil {
+		Conn.Where("end_date = ?", monthID).Find(&monthKPI)
+	}
+	return monthKPI
+}
+
+//ReturnRangeValues return the individual value of an array
+func ReturnRangeValues(startNumber uint64, endNumber uint64) []uint64 {
+	allNumbers := [12]uint64{1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12}
+	var selectedNumbers []uint64
+	for _, number := range allNumbers {
+		if number >= startNumber && number <= endNumber {
+			selectedNumbers = append(selectedNumbers, number)
+		}
+	}
+	return selectedNumbers
+}

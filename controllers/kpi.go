@@ -117,6 +117,25 @@ func (kpi *KPIController) GetKPIFromID() {
 	kpi.ServeJSON()
 }
 
+//GetKPIRange gets the kpi information for a kpi ID
+// @Title GetKPIFromID
+// @Description gets a kpi information from ID
+// @Success 200 {object} models.ValidResponse
+// @Failure 403 body is empty
+// @router /range/ [get]
+func (kpi *KPIController) GetKPIRange() {
+	var requestInfo models.DateRange
+	err := json.Unmarshal(kpi.Ctx.Input.RequestBody, &requestInfo)
+	if err != nil {
+		kpi.Data["json"] = models.ErrorResponse(405, err.Error())
+		kpi.ServeJSON()
+		return
+	}
+	rangeKPI := models.GetKPIsFromRange(requestInfo)
+	kpi.Data["json"] = models.ValidResponse(200, rangeKPI, "success")
+	kpi.ServeJSON()
+}
+
 //GetAllTasks gets all tasks on the system
 // @Title GetAllTasks
 // @Description gets all tasks belonging to a KPI
