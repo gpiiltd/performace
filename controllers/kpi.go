@@ -122,7 +122,7 @@ func (kpi *KPIController) GetKPIFromID() {
 // @Description gets a kpi information from ID
 // @Success 200 {object} models.ValidResponse
 // @Failure 403 body is empty
-// @router /range/ [get]
+// @router /range/ [POST]
 func (kpi *KPIController) GetKPIRange() {
 	var requestInfo models.DateRange
 	err := json.Unmarshal(kpi.Ctx.Input.RequestBody, &requestInfo)

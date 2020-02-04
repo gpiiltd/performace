@@ -38,7 +38,7 @@ func init() {
         beego.ControllerComments{
             Method: "GetKPIRange",
             Router: `/range/`,
-            AllowHTTPMethods: []string{"get"},
+            AllowHTTPMethods: []string{"POST"},
             MethodParams: param.Make(),
             Filters: nil,
             Params: nil})

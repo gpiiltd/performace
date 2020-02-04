@@ -188,6 +188,11 @@ func GetKPIsFromRange(requestInfo DateRange) []KPI {
 		thisMonthKPI = GetKPIFromMonth(monthID)
 		allKPIArray = AddToKPIArray(allKPIArray, thisMonthKPI)
 	}
+
+	if allKPIArray == nil {
+		return []KPI{}
+	}
+
 	return allKPIArray
 }
 
