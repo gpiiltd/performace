@@ -108,6 +108,24 @@ func init() {
 
     beego.GlobalControllerRouter["performance/controllers:ObjectiveController"] = append(beego.GlobalControllerRouter["performance/controllers:ObjectiveController"],
         beego.ControllerComments{
+            Method: "DeleteStrategicObj",
+            Router: `/:objid`,
+            AllowHTTPMethods: []string{"delete"},
+            MethodParams: param.Make(),
+            Filters: nil,
+            Params: nil})
+
+    beego.GlobalControllerRouter["performance/controllers:ObjectiveController"] = append(beego.GlobalControllerRouter["performance/controllers:ObjectiveController"],
+        beego.ControllerComments{
+            Method: "MarkObjectiveComplete",
+            Router: `/complete/:objectiveid`,
+            AllowHTTPMethods: []string{"GET"},
+            MethodParams: param.Make(),
+            Filters: nil,
+            Params: nil})
+
+    beego.GlobalControllerRouter["performance/controllers:ObjectiveController"] = append(beego.GlobalControllerRouter["performance/controllers:ObjectiveController"],
+        beego.ControllerComments{
             Method: "GetTeamStrategiveObjectives",
             Router: `/lead/`,
             AllowHTTPMethods: []string{"get"},
@@ -153,9 +171,27 @@ func init() {
 
     beego.GlobalControllerRouter["performance/controllers:TeamController"] = append(beego.GlobalControllerRouter["performance/controllers:TeamController"],
         beego.ControllerComments{
+            Method: "DeleteTeamPendingInvitation",
+            Router: `/invitations/:invitationid`,
+            AllowHTTPMethods: []string{"delete"},
+            MethodParams: param.Make(),
+            Filters: nil,
+            Params: nil})
+
+    beego.GlobalControllerRouter["performance/controllers:TeamController"] = append(beego.GlobalControllerRouter["performance/controllers:TeamController"],
+        beego.ControllerComments{
             Method: "GetMyPendingTeam",
             Router: `/invitations/pending`,
             AllowHTTPMethods: []string{"get"},
+            MethodParams: param.Make(),
+            Filters: nil,
+            Params: nil})
+
+    beego.GlobalControllerRouter["performance/controllers:TeamController"] = append(beego.GlobalControllerRouter["performance/controllers:TeamController"],
+        beego.ControllerComments{
+            Method: "DeleteTeamMember",
+            Router: `/member/:id`,
+            AllowHTTPMethods: []string{"delete"},
             MethodParams: param.Make(),
             Filters: nil,
             Params: nil})

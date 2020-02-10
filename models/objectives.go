@@ -12,6 +12,7 @@ func CreateStrategicObjective(obj StrategicObjective, teamLead User) interface{}
 	strategicObjective.Team = team.Name
 	strategicObjective.TeamID = team.ID
 	strategicObjective.Status = "in progress"
+	strategicObjective.Year = obj.Year
 
 	if createObj := Conn.Create(&strategicObjective); createObj.Error != nil {
 		return ErrorResponse(403, createObj.Error.Error())
@@ -48,4 +49,39 @@ func GetTeamMemberStrategicObj(teamMember User) ([]StrategicObjective, error) {
 	}
 
 	return allStrategivObjective, nil
+}
+
+//DeleteStrategicObjective deletes a team's strategic objective using it's ID
+func DeleteStrategicObjective(teamLead User, objectiveID int) ValidResponseData {
+	var team Team
+	if findMyTeam := Conn.Where("lead_id = ?", teamLead.ID).Find(&team); findMyTeam.Error != nil {
+		return ValidResponse(403, "User not a team lead", findMyTeam.Error.Error())
+	}
+
+	var strategicObjective StrategicObjective
+	if findObjective := Conn.Where("team_id = ? AND id = ?", team.ID, objectiveID).Find(&strategicObjective); findObjective.Error != nil {
+		return ValidResponse(403, "User not authorized o delete strategic objective", findObjective.Error.Error())
+	}
+
+	Conn.Where("id = ?", objectiveID).Delete(&StrategicObjective{})
+	return ValidResponse(200, "Successfully deleted strategic Objective.", "success")
+}
+
+//MarkObjComplete marks a strategic objective as complete.
+func MarkObjComplete(user User, objectiveID int) ValidResponseData {
+	objectiveStatus := "completed"
+
+	var myTeam Team
+	if findMyTeam := Conn.Where("lead_id = ?", user.ID).Find(&myTeam); findMyTeam.Error != nil {
+		return ValidResponse(403, "User does not have a team", findMyTeam.Error.Error())
+	}
+
+	var strategicObj StrategicObjective
+	if findObjective := Conn.Where("team_id = ? AND id = ?", myTeam.ID, objectiveID); findObjective.Error != nil {
+		return ValidResponse(403, "Invalid Strategic Objective ID", findObjective.Error.Error())
+	}
+
+	Conn.Model(&strategicObj).Where("id = ? AND team_id = ?", objectiveID, myTeam.ID).Updates(StrategicObjective{Status: objectiveStatus})
+
+	return ValidResponse(200, strategicObj, "success")
 }

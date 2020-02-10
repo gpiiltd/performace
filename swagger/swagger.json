@@ -46,6 +46,26 @@
                 }
             }
         },
+        "/kpi/range/": {
+            "post": {
+                "tags": [
+                    "kpi"
+                ],
+                "description": "gets a kpi information from ID",
+                "operationId": "KPIController.GetKPIFromID",
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/models.ValidResponse"
+                        }
+                    },
+                    "403": {
+                        "description": "body is empty"
+                    }
+                }
+            }
+        },
         "/kpi/report/{userid}/{month}": {
             "get": {
                 "tags": [
@@ -237,7 +257,7 @@
                 "tags": [
                     "lead"
                 ],
-                "description": "adds a new team member using the user ID",
+                "description": "send an invitation to add a new team member using the user ID",
                 "operationId": "TeamLeadController.AddNewMember",
                 "parameters": [
                     {
@@ -363,6 +383,134 @@
                 }
             }
         },
+        "/objectives/": {
+            "post": {
+                "tags": [
+                    "objectives"
+                ],
+                "description": "creates a stategic Objective",
+                "operationId": "ObjectiveController.CreateObjective",
+                "parameters": [
+                    {
+                        "in": "KPIObject",
+                        "name": "object",
+                        "description": "the KPI object",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/models.KPI"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/models.ValidResponse"
+                        }
+                    },
+                    "403": {
+                        "description": "body is empty"
+                    }
+                }
+            }
+        },
+        "/objectives/complete/{objectiveid}": {
+            "get": {
+                "tags": [
+                    "objectives"
+                ],
+                "description": "mark strategic objective as complete",
+                "operationId": "ObjectiveController.MarkObjectiveComplete",
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "The Objective ID",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/models.Visit"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "{string} \"Success\""
+                    },
+                    "403": {
+                        "description": "body is empty"
+                    }
+                }
+            }
+        },
+        "/objectives/lead/": {
+            "get": {
+                "tags": [
+                    "objectives"
+                ],
+                "description": "gets a team strategic objectives",
+                "operationId": "ObjectiveController.GetStrategiveObjectives",
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/models.ValidResponse"
+                        }
+                    },
+                    "403": {
+                        "description": "body is empty"
+                    }
+                }
+            }
+        },
+        "/objectives/member/": {
+            "get": {
+                "tags": [
+                    "objectives"
+                ],
+                "description": "gets the strategic objectives of the team they belong to.",
+                "operationId": "ObjectiveController.GetMemberStrategiveObjectives",
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/models.ValidResponse"
+                        }
+                    },
+                    "403": {
+                        "description": "body is empty"
+                    }
+                }
+            }
+        },
+        "/objectives/{objid}": {
+            "delete": {
+                "tags": [
+                    "objectives"
+                ],
+                "description": "deletes a team strategic objective",
+                "operationId": "ObjectiveController.Delete",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "teamid",
+                        "description": "the id of the objective you want to delete",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/models.ValidResponse"
+                        }
+                    },
+                    "403": {
+                        "description": "body is empty"
+                    }
+                }
+            }
+        },
         "/team/": {
             "delete": {
                 "tags": [
@@ -456,6 +604,64 @@
                 ],
                 "description": "gets a team pending team requests",
                 "operationId": "TeamController.GetMyPendingTeam",
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/models.ValidResponse"
+                        }
+                    },
+                    "403": {
+                        "description": "body is empty"
+                    }
+                }
+            }
+        },
+        "/team/invitations/{invitationid}": {
+            "delete": {
+                "tags": [
+                    "team"
+                ],
+                "description": "deletes a team pending invtation.",
+                "operationId": "TeamController.Delete",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "teamid",
+                        "description": "the id of the invitation you want to delete",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/models.ValidResponse"
+                        }
+                    },
+                    "403": {
+                        "description": "body is empty"
+                    }
+                }
+            }
+        },
+        "/team/member/{id}": {
+            "delete": {
+                "tags": [
+                    "team"
+                ],
+                "description": "deletes a team member using the team id",
+                "operationId": "TeamController.DeleteTeamMember",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "teamid",
+                        "description": "the id of the team member you want to delete",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
                 "responses": {
                     "200": {
                         "description": "",
@@ -651,6 +857,10 @@
                 "status": {
                     "type": "string"
                 },
+                "strategic_obj_id": {
+                    "type": "integer",
+                    "format": "int64"
+                },
                 "team_lead": {
                     "type": "string"
                 },
@@ -670,6 +880,10 @@
                     "format": "datetime"
                 },
                 "weight": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "year": {
                     "type": "integer",
                     "format": "int64"
                 }
@@ -827,6 +1041,10 @@
         {
             "name": "kpi",
             "description": "KPIController controls all KPI related activities\n"
+        },
+        {
+            "name": "objectives",
+            "description": "ObjectiveController controls all strategic objectives\n"
         }
     ]
 }

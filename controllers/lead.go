@@ -12,9 +12,9 @@ type TeamLeadController struct {
 	beego.Controller
 }
 
-//AddNewMember add a new team member to the system
+//AddNewMember sends an invitation to add a new team member to the system
 // @Title AddNewMember
-// @Description adds a new team member using the user ID
+// @Description send an invitation to add a new team member using the user ID
 // @Param	visitid		path 	string	true		"the id of the user you want to make a front desk officer"
 // @Success 200 {string} id of the user
 // @Failure 403 body is empty

@@ -3,6 +3,7 @@ package controllers
 import (
 	"encoding/json"
 	"performance/models"
+	"strconv"
 
 	"github.com/astaxie/beego"
 )
@@ -83,5 +84,57 @@ func (o *ObjectiveController) GetMemberStrategiveObjectives() {
 		return
 	}
 	o.Data["json"] = models.ValidResponse(200, strategicObjective, "success")
+	o.ServeJSON()
+}
+
+//DeleteStrategicObj deletes a team's strategic objective
+// @Title Delete
+// @Description deletes a team strategic objective
+// @Param	teamid		path 	string	true		"the id of the objective you want to delete"
+// @Success 200 {object} models.ValidResponse
+// @Failure 403 body is empty
+// @router /:objid [delete]
+func (o *ObjectiveController) DeleteStrategicObj() {
+	objectiveIDstring := o.GetString(":objid")
+	var teamLead models.User
+	resCode, teamLead := models.GetUserFromTokenString(o.Ctx.Input.Header("authorization"))
+	if resCode != 200 {
+		o.Data["json"] = models.ErrorResponse(403, "Unable to get user from token string")
+		o.ServeJSON()
+		return
+	}
+	objectiveID, err := strconv.Atoi(objectiveIDstring)
+	if err != nil {
+		o.Data["json"] = models.ErrorResponse(403, "Invalid Strategic Objective ID.")
+		o.ServeJSON()
+		return
+	}
+	o.Data["json"] = models.DeleteStrategicObjective(teamLead, objectiveID)
+	o.ServeJSON()
+}
+
+//MarkObjectiveComplete marks a strategic objective as completed
+// @Title MarkObjectiveComplete
+// @Description mark strategic objective as complete
+// @Param	body		body 	models.Visit	true		"The Objective ID"
+// @Success 200 {string} "Success"
+// @Failure 403 body is empty
+// @router /complete/:objectiveid [GET]
+func (o *ObjectiveController) MarkObjectiveComplete() {
+	objectiveID := o.GetString(":objectiveid")
+	objectiveIDint, err := strconv.Atoi(objectiveID)
+	if err != nil {
+		o.Data["json"] = models.ErrorResponse(403, err.Error())
+		o.ServeJSON()
+		return
+	}
+	var user models.User
+	code, user := models.GetUserFromTokenString(o.Ctx.Input.Header("authorization"))
+	if code != 200 {
+		o.Data["json"] = models.ErrorResponse(403, "Invalid token string")
+		o.ServeJSON()
+		return
+	}
+	o.Data["json"] = models.MarkObjComplete(user, objectiveIDint)
 	o.ServeJSON()
 }

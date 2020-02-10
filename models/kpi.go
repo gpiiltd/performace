@@ -10,11 +10,36 @@ func AssignNewKPI(kpi KPI, user User) interface{} {
 		return ErrorResponse(403, "Unauthorized. Not a member of your Team")
 	}
 
+	weightStatus, status := ValidateKPIWeight(kpi, user)
+	if weightStatus != true {
+		return ErrorResponse(403, status)
+	}
+
 	kpi.TeamLead = user.FullName
 	kpi.TeamLeadID = user.ID
 	kpi.Status = "pending"
 	Conn.Create(&kpi)
 	return ValidResponse(200, kpi, "Successfully assigned KPI")
+}
+
+//ValidateKPIWeight checks if KPI weight is not more than 100
+func ValidateKPIWeight(kpi KPI, user User) (bool, string) {
+	var myKPI []KPI
+	if findMyKPI := Conn.Where("employee_id = ? AND start_date = ?", user.ID, kpi.StartDate).Find(&myKPI); findMyKPI.Error != nil {
+		return false, findMyKPI.Error.Error()
+	}
+
+	var kpiWeight uint64
+	kpiWeight = 0
+	for _, individualKPI := range myKPI {
+		kpiWeight = kpiWeight + individualKPI.Weight
+	}
+
+	if kpiWeight >= 100 {
+		return false, "Maximum weight attained for the month"
+	}
+
+	return true, " "
 }
 
 //GetKPIFromIDString gets a user kpi from kpi id (string)

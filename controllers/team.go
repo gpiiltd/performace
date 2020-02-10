@@ -151,3 +151,55 @@ func (t *TeamController) DeleteTeam() {
 	t.Data["json"] = models.DeleteTeamFunc(teamLead)
 	t.ServeJSON()
 }
+
+//DeleteTeamMember deletes a team member
+// @Title DeleteTeamMember
+// @Description deletes a team member using the team id
+// @Param	teamid		path 	string	true		"the id of the team member you want to delete"
+// @Success 200 {object} models.ValidResponse
+// @Failure 403 body is empty
+// @router /member/:id [delete]
+func (t *TeamController) DeleteTeamMember() {
+	var teamLead models.User
+	resCode, teamLead := models.GetUserFromTokenString(t.Ctx.Input.Header("authorization"))
+	if resCode != 200 {
+		t.Data["json"] = models.ErrorResponse(403, "Unable to get user from token string")
+		t.ServeJSON()
+		return
+	}
+	memberIDstring := t.GetString(":id")
+	memberIDint, err := strconv.Atoi(memberIDstring)
+	if err != nil {
+		t.Data["json"] = models.ValidResponse(403, "Invalid Member ID", err.Error())
+		t.ServeJSON()
+		return
+	}
+	t.Data["json"] = models.DeleteTeamMemberFunc(teamLead, memberIDint)
+	t.ServeJSON()
+}
+
+//DeleteTeamPendingInvitation deletes a team's pending invitation
+// @Title Delete
+// @Description deletes a team pending invtation.
+// @Param	teamid		path 	string	true		"the id of the invitation you want to delete"
+// @Success 200 {object} models.ValidResponse
+// @Failure 403 body is empty
+// @router /invitations/:invitationid [delete]
+func (t *TeamController) DeleteTeamPendingInvitation() {
+	invitationID := t.GetString(":invitationid")
+	var teamLead models.User
+	resCode, teamLead := models.GetUserFromTokenString(t.Ctx.Input.Header("authorization"))
+	if resCode != 200 {
+		t.Data["json"] = models.ErrorResponse(403, "Unable to get user from token string")
+		t.ServeJSON()
+		return
+	}
+	invitationINT, err := strconv.Atoi(invitationID)
+	if err != nil {
+		t.Data["json"] = models.ErrorResponse(403, "Invalid invitationID.")
+		t.ServeJSON()
+		return
+	}
+	t.Data["json"] = models.DeletePendingTeamInvitation(teamLead, invitationINT)
+	t.ServeJSON()
+}

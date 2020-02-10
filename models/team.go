@@ -107,3 +107,31 @@ func DeleteTeamFunc(teamLead User) ValidResponseData {
 	Conn.Where("lead_id = ?", teamLead.ID).Delete(&Team{})
 	return ValidResponse(200, "Successfully deleted team.", "success")
 }
+
+//DeletePendingTeamInvitation deletes a pending team invitation from the system using the team id
+func DeletePendingTeamInvitation(teamLead User, invitationID int) ValidResponseData {
+	var team Team
+	if findMyTeam := Conn.Where("lead_id = ?", teamLead.ID).Find(&team); findMyTeam.Error != nil {
+		return ValidResponse(403, "User not a team lead", findMyTeam.Error.Error())
+	}
+	var pendingInvitation TeamInvitation
+	if findPendingInvitation := Conn.Where("team_lead_id = ? AND invitee_id = ?", teamLead.ID, invitationID).Find(&pendingInvitation); findPendingInvitation.Error != nil {
+		return ValidResponse(403, "User not authorized to delete invitation. ", findPendingInvitation.Error.Error())
+	}
+	Conn.Where("invitee_id = ?", invitationID).Delete(&TeamInvitation{})
+	return ValidResponse(200, "Successfully deleted pending invitation.", "success")
+}
+
+//DeleteTeamMemberFunc deletes a pending team invitation from the system using the team id
+func DeleteTeamMemberFunc(teamLead User, memberID int) ValidResponseData {
+	var team Team
+	if findMyTeam := Conn.Where("lead_id = ?", teamLead.ID).Find(&team); findMyTeam.Error != nil {
+		return ValidResponse(403, "User not a team lead", findMyTeam.Error.Error())
+	}
+	var teamMember Members
+	if findMember := Conn.Where("team_lead_id = ? AND member_id = ?", teamLead.ID, memberID).Find(&teamMember); findMember.Error != nil {
+		return ValidResponse(403, "User not authorized to delete member. ", findMember.Error.Error())
+	}
+	Conn.Where("member_id = ? AND team_lead_id = ?", memberID, teamLead.ID).Delete(&Members{})
+	return ValidResponse(200, "Successfully deleted member.", "success")
+}

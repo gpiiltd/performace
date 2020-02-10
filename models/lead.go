@@ -6,6 +6,10 @@ import (
 
 //AddNewTeamMember adds a new member to the team
 func AddNewTeamMember(member User, teamLead User) interface{} {
+	if member.ID == teamLead.ID {
+		return ErrorResponse(403, "You cannot add yourself to your team.")
+	}
+
 	var team Team
 	hasTeam, team := MyTeam(teamLead)
 	if hasTeam != true {
@@ -21,6 +25,7 @@ func AddNewTeamMember(member User, teamLead User) interface{} {
 	invitation.InviteeName = member.FullName
 	invitation.Status = "pending"
 
+	Conn.Where("invitee_id = ?", member.ID).Delete(&TeamInvitation{})
 	Conn.Create(&invitation)
 
 	return ValidResponse(200, teamLead, "success")

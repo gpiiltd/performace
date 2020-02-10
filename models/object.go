@@ -131,7 +131,7 @@ type KPI struct {
 	TeamLeadID      uint64 `gorm:"int(10)" json:"team_lead_id"`
 	StartDate       string `gorm:"varchar(100)" json:"start_date"`
 	EndDate         string `gorm:"varchar(100)" json:"end_date"`
-	Year            string `gorm:"varchar(100)" json:"year"`
+	Year            uint64 `gorm:"varchar(100)" json:"year"`
 	Weight          uint64 `gorm:"int(10)" json:"weight"`
 	Status          string `gorm:"varchar(100)" json:"status"`
 	TeamLeadScore   uint64 `gorm:"int(10)" json:"team_lead_score"`
