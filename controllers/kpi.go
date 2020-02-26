@@ -225,6 +225,7 @@ func (kpi *KPIController) MarkTaskComplete() {
 		response := models.ErrorResponse(405, "Unable to get task from task_id")
 		kpi.Data["json"] = response
 		kpi.ServeJSON()
+		return
 	}
 	var user models.User
 	code, user := models.GetUserFromTokenString(kpi.Ctx.Input.Header("authorization"))

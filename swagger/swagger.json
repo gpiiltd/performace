@@ -511,6 +511,247 @@
                 }
             }
         },
+        "/task/": {
+            "post": {
+                "tags": [
+                    "task"
+                ],
+                "description": "creates a stategic Objective",
+                "operationId": "TTController.CreateNewTask",
+                "parameters": [
+                    {
+                        "in": "KPIObject",
+                        "name": "object",
+                        "description": "the task object needed",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/models.TaskTracker"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/models.ValidResponse"
+                        }
+                    },
+                    "403": {
+                        "description": "body is empty"
+                    }
+                }
+            }
+        },
+        "/task/complete/": {
+            "post": {
+                "tags": [
+                    "task"
+                ],
+                "description": "completes a specified task",
+                "operationId": "TTController.StartTaskTracking",
+                "parameters": [
+                    {
+                        "in": "KPIObject",
+                        "name": "object",
+                        "description": "the task update data object needed",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/models.TaskTracker"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "{string} \"Success\""
+                    },
+                    "403": {
+                        "description": "body is empty"
+                    }
+                }
+            }
+        },
+        "/task/start/{tid}": {
+            "get": {
+                "tags": [
+                    "task"
+                ],
+                "description": "starts a specified task",
+                "operationId": "TTController.StartTaskTracking",
+                "responses": {
+                    "200": {
+                        "description": "{string} \"Success\""
+                    },
+                    "403": {
+                        "description": "body is empty"
+                    }
+                }
+            }
+        },
+        "/task/uncomplete/": {
+            "get": {
+                "tags": [
+                    "task"
+                ],
+                "description": "gets a team user task information for a particular day, time and year",
+                "operationId": "TTController.GetAllUncompletedTasks",
+                "parameters": [
+                    {
+                        "in": "TaskObject",
+                        "name": "object",
+                        "description": "the task object containing the day, month and year",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/models.TaskTracker"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/models.ValidResponse"
+                        }
+                    },
+                    "403": {
+                        "description": "body is empty"
+                    }
+                }
+            }
+        },
+        "/task/uncomplete/{userid}": {
+            "get": {
+                "tags": [
+                    "task"
+                ],
+                "description": "gets a team user task information for a particular day, time and year",
+                "operationId": "TTController.GetAllUserUncompletedTask",
+                "parameters": [
+                    {
+                        "in": "TaskObject",
+                        "name": "object",
+                        "description": "the task object containing the day, month and year",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/models.TaskTracker"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/models.ValidResponse"
+                        }
+                    },
+                    "403": {
+                        "description": "body is empty"
+                    }
+                }
+            }
+        },
+        "/task/update/": {
+            "post": {
+                "tags": [
+                    "task"
+                ],
+                "description": "adds a new update to the task",
+                "operationId": "TTController.AddNewUpdate",
+                "parameters": [
+                    {
+                        "in": "KPIObject",
+                        "name": "object",
+                        "description": "the task update data object needed",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/models.TaskTrackerUpdates"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/models.ValidResponse"
+                        }
+                    },
+                    "403": {
+                        "description": "body is empty"
+                    }
+                }
+            }
+        },
+        "/task/{day}/{month}/{year}": {
+            "get": {
+                "tags": [
+                    "task"
+                ],
+                "description": "gets a team user task information for a particular day, time and year",
+                "operationId": "TTController.GetUserTasks",
+                "parameters": [
+                    {
+                        "in": "TaskObject",
+                        "name": "object",
+                        "description": "the task object containing the day, month and year",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/models.TaskTracker"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/models.ValidResponse"
+                        }
+                    },
+                    "403": {
+                        "description": "body is empty"
+                    }
+                }
+            }
+        },
+        "/task/{tid}": {
+            "get": {
+                "tags": [
+                    "task"
+                ],
+                "description": "gets a task from ID",
+                "operationId": "TTController.GetTrackedTask",
+                "responses": {
+                    "200": {
+                        "description": "{string} \"Success\""
+                    },
+                    "403": {
+                        "description": "body is empty"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "task"
+                ],
+                "description": "delete a tracked task",
+                "operationId": "TTController.DeleteTaskTracked",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "uid",
+                        "description": "The id of Task to be deleted",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "{string} delete success!"
+                    },
+                    "403": {
+                        "description": "uid is empty"
+                    }
+                }
+            }
+        },
         "/team/": {
             "delete": {
                 "tags": [
@@ -915,6 +1156,97 @@
             "title": "Success",
             "type": "object"
         },
+        "models.TaskTracker": {
+            "title": "TaskTracker",
+            "type": "object",
+            "properties": {
+                "comments": {
+                    "type": "string"
+                },
+                "created_at": {
+                    "type": "string",
+                    "format": "datetime"
+                },
+                "day": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "deleted_at": {
+                    "type": "string",
+                    "format": "datetime"
+                },
+                "department": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "end_time": {
+                    "type": "string",
+                    "format": "datetime"
+                },
+                "id": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "month": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "start_time": {
+                    "type": "string",
+                    "format": "datetime"
+                },
+                "status": {
+                    "type": "string"
+                },
+                "task": {
+                    "type": "string"
+                },
+                "task_description": {
+                    "type": "string"
+                },
+                "updated_at": {
+                    "type": "string",
+                    "format": "datetime"
+                },
+                "user_id": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "year": {
+                    "type": "integer",
+                    "format": "int64"
+                }
+            }
+        },
+        "models.TaskTrackerUpdates": {
+            "title": "TaskTrackerUpdates",
+            "type": "object",
+            "properties": {
+                "created_at": {
+                    "type": "string",
+                    "format": "datetime"
+                },
+                "deleted_at": {
+                    "type": "string",
+                    "format": "datetime"
+                },
+                "id": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "task_id": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "task_update": {
+                    "type": "string"
+                },
+                "updated_at": {
+                    "type": "string",
+                    "format": "datetime"
+                }
+            }
+        },
         "models.Team": {
             "title": "Team",
             "type": "object",
@@ -1045,6 +1377,10 @@
         {
             "name": "objectives",
             "description": "ObjectiveController controls all strategic objectives\n"
+        },
+        {
+            "name": "task",
+            "description": "TTController controls all task tracking related activities\n"
         }
     ]
 }

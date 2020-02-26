@@ -56,6 +56,8 @@ func CreateTables() {
 	Conn.AutoMigrate(&Task{})
 	Conn.AutoMigrate(&BehaviourTest{})
 	Conn.AutoMigrate(&StrategicObjective{})
+	Conn.AutoMigrate(&TaskTracker{})
+	Conn.AutoMigrate(&TaskTrackerUpdates{})
 	return
 }
 
@@ -196,4 +198,27 @@ type DateRange struct {
 	EndMonth   uint64 `json:"end_month"`
 	StartYear  string `json:"start_year"`
 	EndYear    string `json:"end_year"`
+}
+
+//TaskTracker holds tasks tracking data
+type TaskTracker struct {
+	Model
+	UserID          uint64    `gorm:"int(10)" json:"user_id"`
+	DepartmentID    uint64    `gorm:"int(10)" json:"department"`
+	Day             uint64    `gorm:"int(10)" json:"day"`
+	Month           uint64    `gorm:"int(10)" json:"month"`
+	Year            uint64    `gorm:"int(10)" json:"year"`
+	Task            string    `gorm:"varchar(100)" json:"task"`
+	TaskDescription string    `gorm:"varchar(250)" json:"task_description"`
+	Comments        string    `gorm:"varchar(100)" json:"comments"`
+	StartTime       time.Time `json:"start_time"`
+	EndTime         time.Time `json:"end_time"`
+	Status          string    `gorm:"varchar(100)" json:"status"`
+}
+
+//TaskTrackerUpdates provides daily update to the task
+type TaskTrackerUpdates struct {
+	Model
+	TaskID uint64 `gorm:"int(10)" json:"task_id"`
+	Update string `sql:"type:text" json:"task_update"`
 }

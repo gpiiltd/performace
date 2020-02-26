@@ -45,6 +45,11 @@ func init() {
 				&controllers.ObjectiveController{},
 			),
 		),
+		beego.NSNamespace("/task",
+			beego.NSInclude(
+				&controllers.TTController{},
+			),
+		),
 	)
 	beego.AddNamespace(ns)
 }

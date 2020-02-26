@@ -1,6 +1,6 @@
 package models
 
-//CreateStrategicObjective handles creating a strategic objective
+//CreateStrategicObjective handles bee run creating a strategic objective
 func CreateStrategicObjective(obj StrategicObjective, teamLead User) interface{} {
 	var team Team
 	if verifyTeamLead := Conn.Where("lead_id = ?", teamLead.ID).Find(&team); verifyTeamLead.Error != nil {

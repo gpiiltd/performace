@@ -142,6 +142,96 @@ func init() {
             Filters: nil,
             Params: nil})
 
+    beego.GlobalControllerRouter["performance/controllers:TTController"] = append(beego.GlobalControllerRouter["performance/controllers:TTController"],
+        beego.ControllerComments{
+            Method: "CreateNewTask",
+            Router: `/`,
+            AllowHTTPMethods: []string{"post"},
+            MethodParams: param.Make(),
+            Filters: nil,
+            Params: nil})
+
+    beego.GlobalControllerRouter["performance/controllers:TTController"] = append(beego.GlobalControllerRouter["performance/controllers:TTController"],
+        beego.ControllerComments{
+            Method: "GetMyTasks",
+            Router: `/:day/:month/:year`,
+            AllowHTTPMethods: []string{"GET"},
+            MethodParams: param.Make(),
+            Filters: nil,
+            Params: nil})
+
+    beego.GlobalControllerRouter["performance/controllers:TTController"] = append(beego.GlobalControllerRouter["performance/controllers:TTController"],
+        beego.ControllerComments{
+            Method: "GetAllUsersTasks",
+            Router: `/:day/:month/:year/`,
+            AllowHTTPMethods: []string{"GET"},
+            MethodParams: param.Make(),
+            Filters: nil,
+            Params: nil})
+
+    beego.GlobalControllerRouter["performance/controllers:TTController"] = append(beego.GlobalControllerRouter["performance/controllers:TTController"],
+        beego.ControllerComments{
+            Method: "DeleteTrackedTask",
+            Router: `/:tid`,
+            AllowHTTPMethods: []string{"delete"},
+            MethodParams: param.Make(),
+            Filters: nil,
+            Params: nil})
+
+    beego.GlobalControllerRouter["performance/controllers:TTController"] = append(beego.GlobalControllerRouter["performance/controllers:TTController"],
+        beego.ControllerComments{
+            Method: "GetTrackedTask",
+            Router: `/:tid`,
+            AllowHTTPMethods: []string{"GET"},
+            MethodParams: param.Make(),
+            Filters: nil,
+            Params: nil})
+
+    beego.GlobalControllerRouter["performance/controllers:TTController"] = append(beego.GlobalControllerRouter["performance/controllers:TTController"],
+        beego.ControllerComments{
+            Method: "CompleteTaskTracking",
+            Router: `/complete/`,
+            AllowHTTPMethods: []string{"POST"},
+            MethodParams: param.Make(),
+            Filters: nil,
+            Params: nil})
+
+    beego.GlobalControllerRouter["performance/controllers:TTController"] = append(beego.GlobalControllerRouter["performance/controllers:TTController"],
+        beego.ControllerComments{
+            Method: "StartTaskTracking",
+            Router: `/start/:tid`,
+            AllowHTTPMethods: []string{"GET"},
+            MethodParams: param.Make(),
+            Filters: nil,
+            Params: nil})
+
+    beego.GlobalControllerRouter["performance/controllers:TTController"] = append(beego.GlobalControllerRouter["performance/controllers:TTController"],
+        beego.ControllerComments{
+            Method: "GetAllUncompletedTasks",
+            Router: `/uncomplete/`,
+            AllowHTTPMethods: []string{"GET"},
+            MethodParams: param.Make(),
+            Filters: nil,
+            Params: nil})
+
+    beego.GlobalControllerRouter["performance/controllers:TTController"] = append(beego.GlobalControllerRouter["performance/controllers:TTController"],
+        beego.ControllerComments{
+            Method: "GetAllUserUncompletedTasks",
+            Router: `/uncomplete/:userid`,
+            AllowHTTPMethods: []string{"GET"},
+            MethodParams: param.Make(),
+            Filters: nil,
+            Params: nil})
+
+    beego.GlobalControllerRouter["performance/controllers:TTController"] = append(beego.GlobalControllerRouter["performance/controllers:TTController"],
+        beego.ControllerComments{
+            Method: "AddNewUpdate",
+            Router: `/update/`,
+            AllowHTTPMethods: []string{"post"},
+            MethodParams: param.Make(),
+            Filters: nil,
+            Params: nil})
+
     beego.GlobalControllerRouter["performance/controllers:TeamController"] = append(beego.GlobalControllerRouter["performance/controllers:TeamController"],
         beego.ControllerComments{
             Method: "DeleteTeam",
