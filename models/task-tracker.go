@@ -35,6 +35,21 @@ func ValidateTaskObject(task TaskTracker) error {
 	return nil
 }
 
+//ValidateTaskObject checks if a task struct is valid
+func ValidateTeamTaskObject(task TaskTracker) error {
+	if task.Day == 0 || task.Month == 0 || task.Year == 0 {
+		LogError(errors.New("Empty Date Object"))
+		return errors.New("Empty Date Object")
+	}
+
+	if task.UserID == 0 {
+		LogError(errors.New("Empty user ID"))
+		return errors.New("Empty user ID")
+	}
+
+	return nil
+}
+
 //ConvertDayMonthYear converts the day, month, year in string to integers {}
 func ConvertDayMonthYear(day string, month string, year string) (uint64, uint64, uint64, error) {
 	var dayInt uint64
@@ -135,6 +150,26 @@ func GetAllTodayTask(task TaskTracker) ([]TaskTracker, error) {
 
 	var retrievedTask []TaskTracker
 	if findTasks := Conn.Where("day = ? AND year = ? AND month = ?", task.Day, task.Year, task.Month).Find(&retrievedTask); findTasks.Error != nil {
+		return []TaskTracker{}, findTasks.Error
+	}
+
+	return retrievedTask, nil
+}
+
+//GetTeamMemberTodayTask retrieves the task that needs to be tracked speciifed by task Day, month, and year. This gets data for all users
+func GetTeamMemberTodayTask(task TaskTracker, teamLead User) ([]TaskTracker, error) {
+	err := ValidateTeamTaskObject(task)
+	if err != nil {
+		return []TaskTracker{}, err
+	}
+
+	var team Members
+	if isMyTeamLead := Conn.Where("member_id = ? AND team_lead_id = ?", task.UserID, teamLead.ID).Find(&team); isMyTeamLead.Error != nil {
+		return []TaskTracker{}, errors.New("Team member doesn't belong to your team")
+	}
+
+	var retrievedTask []TaskTracker
+	if findTasks := Conn.Where("day = ? AND year = ? AND month = ? AND user_id = ?", task.Day, task.Year, task.Month, task.UserID).Find(&retrievedTask); findTasks.Error != nil {
 		return []TaskTracker{}, findTasks.Error
 	}
 

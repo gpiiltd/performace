@@ -4,7 +4,10 @@ import (
 	"bytes"
 	"encoding/json"
 	"io/ioutil"
+	"log"
 	"net/http"
+	"os"
+	"strconv"
 	"time"
 
 	"github.com/astaxie/beego"
@@ -98,4 +101,24 @@ func GetUserDataFromID(userID int) (User, error) {
 		return userData, findUser.Error
 	}
 	return userData, nil
+}
+
+//ConvertStringToUint64 converts an integer to usigned integer
+func ConvertStringToUint64(data string) (uint64, error) {
+	dataUInt, err := strconv.ParseUint(data, 10, 64)
+	if err != nil {
+		LogError(err)
+		return dataUInt, err
+	}
+
+	return dataUInt, nil
+}
+
+//LogError writes all application error into the error log file
+func LogError(funcError error) {
+	f, _ := os.OpenFile("logs/error.log", os.O_APPEND|os.O_CREATE|os.O_WRONLY, 0644)
+	defer f.Close()
+
+	logger := log.New(f, "PAS: ", log.LstdFlags)
+	logger.Println(funcError.Error())
 }

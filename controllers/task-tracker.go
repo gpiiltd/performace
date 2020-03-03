@@ -306,6 +306,54 @@ func (tt *TTController) GetTrackedTask() {
 	return
 }
 
+//GetTeamMemberTask gets user all tasks for the specified day, month, and year
+// @Title GetUserTasks
+// @Description gets a team user task information for a particular day, time and year
+// @Success 200 {object} models.ValidResponse
+// @Failure 403 body is empty
+// @Param	object		TaskObject 	models.TaskTracker	true		"the task object containing the day, month and year"
+// @router /:day/:month/:year/:memberid [GET]
+func (tt *TTController) GetTeamMemberTask() {
+	day := tt.GetString(":day")
+	month := tt.GetString(":month")
+	year := tt.GetString(":year")
+	memberID := tt.GetString(":memberid")
+	memberUint, _ := models.ConvertStringToUint64(memberID)
+
+	var dayInt, monthInt, yearInt uint64
+	dayInt, monthInt, yearInt, err := models.ConvertDayMonthYear(day, month, year)
+	if err != nil {
+		tt.Data["json"] = models.ErrorResponse(403, err.Error())
+		tt.ServeJSON()
+		return
+	}
+
+	var user models.User
+	code, user := models.GetUserFromTokenString(tt.Ctx.Input.Header("authorization"))
+	if code != 200 {
+		tt.Data["json"] = models.ErrorResponse(403, "Invalid token string")
+		tt.ServeJSON()
+		return
+	}
+
+	var taskTrackerObject models.TaskTracker
+	taskTrackerObject.Day = dayInt
+	taskTrackerObject.Month = monthInt
+	taskTrackerObject.Year = yearInt
+	taskTrackerObject.UserID = memberUint
+
+	allUserTask, err := models.GetTeamMemberTodayTask(taskTrackerObject, user)
+	if err != nil {
+		tt.Data["json"] = models.ValidResponse(403, "Error Getting all user tasks for today", err.Error())
+		tt.ServeJSON()
+		return
+	}
+
+	tt.Data["json"] = models.ValidResponse(200, allUserTask, "success")
+	tt.ServeJSON()
+	return
+}
+
 //AddNewUpdate add a new update
 // @Title AddNewUpdate
 // @Description adds a new update to the task
