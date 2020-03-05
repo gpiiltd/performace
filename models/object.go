@@ -222,3 +222,9 @@ type TaskTrackerUpdates struct {
 	TaskID uint64 `gorm:"int(10)" json:"task_id"`
 	Update string `sql:"type:text" json:"task_update"`
 }
+
+//TaskUpdateResponseBody structures data to holds task and task updates
+type TaskUpdateResponseBody struct {
+	Task    TaskTracker          `json:"task"`
+	Updates []TaskTrackerUpdates `json:"updates"`
+}

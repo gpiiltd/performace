@@ -35,7 +35,7 @@ func ValidateTaskObject(task TaskTracker) error {
 	return nil
 }
 
-//ValidateTaskObject checks if a task struct is valid
+//ValidateTeamTaskObject checks if a task struct is valid
 func ValidateTeamTaskObject(task TaskTracker) error {
 	if task.Day == 0 || task.Month == 0 || task.Year == 0 {
 		LogError(errors.New("Empty Date Object"))
@@ -186,6 +186,17 @@ func GetTrackedTaskFromID(taskID string) (TaskTracker, error) {
 	return taskTracked, nil
 }
 
+//GetUserTrackedTasks retrieves user task information from user id
+func GetUserTrackedTasks(userid string) ([]TaskTracker, error) {
+	var retrievedTask []TaskTracker
+	if findTasks := Conn.Where("user_id = ?", userid).Find(&retrievedTask); findTasks.Error != nil {
+		LogError(findTasks.Error)
+		return retrievedTask, findTasks.Error
+	}
+
+	return retrievedTask, nil
+}
+
 //GetTaskUpdatesFromID gets task updates
 func GetTaskUpdatesFromID(taskID string) ([]TaskTrackerUpdates, error) {
 	var taskUpdates []TaskTrackerUpdates
@@ -262,13 +273,8 @@ func DeleteTrackedTask(user User, task TaskTracker) interface{} {
 }
 
 //StructureTaskAndUpdates structures the task and updates
-func StructureTaskAndUpdates(task TaskTracker, updates []TaskTrackerUpdates) interface{} {
-	type updateResponseBody struct {
-		Task    TaskTracker          `json:"task"`
-		Updates []TaskTrackerUpdates `json:"updates"`
-	}
-
-	var response updateResponseBody
+func StructureTaskAndUpdates(task TaskTracker, updates []TaskTrackerUpdates) TaskUpdateResponseBody {
+	var response TaskUpdateResponseBody
 	response.Task = task
 	response.Updates = updates
 

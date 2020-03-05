@@ -241,6 +241,15 @@ func init() {
             Filters: nil,
             Params: nil})
 
+    beego.GlobalControllerRouter["performance/controllers:TTController"] = append(beego.GlobalControllerRouter["performance/controllers:TTController"],
+        beego.ControllerComments{
+            Method: "GetUserTrackedTask",
+            Router: `/user/:userid`,
+            AllowHTTPMethods: []string{"GET"},
+            MethodParams: param.Make(),
+            Filters: nil,
+            Params: nil})
+
     beego.GlobalControllerRouter["performance/controllers:TeamController"] = append(beego.GlobalControllerRouter["performance/controllers:TeamController"],
         beego.ControllerComments{
             Method: "DeleteTeam",

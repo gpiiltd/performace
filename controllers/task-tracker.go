@@ -2,6 +2,7 @@ package controllers
 
 import (
 	"encoding/json"
+	"fmt"
 	"performance/models"
 	"strconv"
 
@@ -377,6 +378,36 @@ func (tt *TTController) AddNewUpdate() {
 		return
 	}
 	tt.Data["json"] = models.UpdateTaskProgress(user, taskUpdate)
+	tt.ServeJSON()
+	return
+}
+
+//GetUserTrackedTask retrieves a tracked task from a user
+// @Title GetUserTrackedTask
+// @Description gets a tracked task from user ID
+// @Success 200 {string} "success"
+// @Failure 403 body is empty
+// @router /user/:userid [GET]
+func (tt *TTController) GetUserTrackedTask() {
+	userID := tt.GetString(":userid")
+	var task []models.TaskTracker
+	task, err := models.GetUserTrackedTasks(userID)
+	if err != nil {
+		tt.Data["json"] = models.ErrorResponse(405, "Unable to get task from user_id")
+		tt.ServeJSON()
+		return
+	}
+	var taskUpdates []models.TaskTrackerUpdates
+	var structuredTaskAndUpdates []models.TaskUpdateResponseBody
+	var structuredUpdates models.TaskUpdateResponseBody
+
+	for _, individualTasks := range task {
+		taskUpdates, _ = models.GetTaskUpdatesFromID(fmt.Sprint(individualTasks.ID))
+		structuredUpdates = models.StructureTaskAndUpdates(individualTasks, taskUpdates)
+		structuredTaskAndUpdates = append(structuredTaskAndUpdates, structuredUpdates)
+	}
+
+	tt.Data["json"] = models.ValidResponse(200, structuredTaskAndUpdates, "success")
 	tt.ServeJSON()
 	return
 }
