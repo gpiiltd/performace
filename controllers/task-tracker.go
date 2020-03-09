@@ -139,9 +139,7 @@ func (tt *TTController) GetAllUncompletedTasks() {
 		return
 	}
 
-	response := models.ValidResponse(200, uncompletedTasks, "success")
-
-	tt.Data["json"] = response
+	tt.Data["json"] = models.ValidResponse(200, uncompletedTasks, "success")
 	tt.ServeJSON()
 	return
 }
@@ -397,11 +395,13 @@ func (tt *TTController) GetUserTrackedTask() {
 		tt.ServeJSON()
 		return
 	}
+	var sortedTasks []models.TaskTracker
+	sortedTasks = models.RemoveTodayFromTasks(task)
 	var taskUpdates []models.TaskTrackerUpdates
 	var structuredTaskAndUpdates []models.TaskUpdateResponseBody
 	var structuredUpdates models.TaskUpdateResponseBody
 
-	for _, individualTasks := range task {
+	for _, individualTasks := range sortedTasks {
 		taskUpdates, _ = models.GetTaskUpdatesFromID(fmt.Sprint(individualTasks.ID))
 		structuredUpdates = models.StructureTaskAndUpdates(individualTasks, taskUpdates)
 		structuredTaskAndUpdates = append(structuredTaskAndUpdates, structuredUpdates)

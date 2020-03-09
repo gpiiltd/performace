@@ -80,7 +80,7 @@ func GetAllUncompleteTasks(user User) ([]TaskTracker, error) {
 	taskStatus := "in progress"
 	var allUncompletedTask []TaskTracker
 	if findTasks := Conn.Where("status = ?", taskStatus).Find(&allUncompletedTask); findTasks.Error != nil {
-		return allUncompletedTask, findTasks.Error
+		return []TaskTracker{}, findTasks.Error
 	}
 	var sortedTask []TaskTracker
 	sortedTask = RemoveTodayFromUncompletedTask(allUncompletedTask)
@@ -205,6 +205,30 @@ func GetTaskUpdatesFromID(taskID string) ([]TaskTrackerUpdates, error) {
 	}
 
 	return taskUpdates, nil
+}
+
+//RemoveTodayFromTasks removes today data from task array
+func RemoveTodayFromTasks(taskArray []TaskTracker) []TaskTracker {
+	todayDate := time.Now().Format("01-02-2006")
+	splitedString := strings.Split(todayDate, "-")
+
+	day := splitedString[1]
+	month := splitedString[0]
+	year := splitedString[2]
+
+	dayUint, _ := strconv.ParseUint(day, 10, 64)
+	monthUint, _ := strconv.ParseUint(month, 10, 64)
+	yearUint, _ := strconv.ParseUint(year, 10, 64)
+
+	var sortedTaskArray []TaskTracker
+	for _, tasks := range taskArray {
+		if tasks.Day == dayUint && tasks.Month == monthUint && tasks.Year == yearUint {
+			break
+		}
+		sortedTaskArray = append(sortedTaskArray, tasks)
+	}
+
+	return sortedTaskArray
 }
 
 //StartTrackingTask marks a task has started.
