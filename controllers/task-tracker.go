@@ -84,14 +84,18 @@ func (tt *TTController) GetMyTasks() {
 // @Success 200 {object} models.ValidResponse
 // @Failure 403 body is empty
 // @Param	object		TaskObject 	models.TaskTracker	true		"the task object containing the day, month and year"
-// @router /:day/:month/:year/ [GET]
+// @router /alltask/ [POST]
 func (tt *TTController) GetAllUsersTasks() {
-	day := tt.GetString(":day")
-	month := tt.GetString(":month")
-	year := tt.GetString(":year")
+	tasksInfo := models.TaskInfo{}
+	err := json.Unmarshal(tt.Ctx.Input.RequestBody, &tasksInfo)
+	if err != nil {
+		tt.Data["json"] = models.ValidResponse(403, err.Error(), "error")
+		tt.ServeJSON()
+		return
+	}
 
 	var dayInt, monthInt, yearInt uint64
-	dayInt, monthInt, yearInt, err := models.ConvertDayMonthYear(day, month, year)
+	dayInt, monthInt, yearInt, err = models.ConvertDayMonthYear(tasksInfo.Day, tasksInfo.Month, tasksInfo.Year)
 	if err != nil {
 		tt.Data["json"] = models.ErrorResponse(403, err.Error())
 		tt.ServeJSON()
@@ -103,7 +107,27 @@ func (tt *TTController) GetAllUsersTasks() {
 	taskTrackerObject.Month = monthInt
 	taskTrackerObject.Year = yearInt
 
-	allUserTask, err := models.GetAllTodayTask(taskTrackerObject)
+	allUserTask, err := models.GetAllTodayTask(tasksInfo)
+	if err != nil {
+		tt.Data["json"] = models.ValidResponse(403, "Error Getting all user tasks for today", err.Error())
+		tt.ServeJSON()
+		return
+	}
+
+	tt.Data["json"] = models.ValidResponse(200, allUserTask, "success")
+	tt.ServeJSON()
+	return
+}
+
+//GetAllUsersTasksHistory gets user all task history
+// @Title GetAllUsersTasksHistory
+// @Description gets a team user task information for a particular day, time and year
+// @Success 200 {object} models.ValidResponse
+// @Failure 403 body is empty
+// @Param	object		TaskObject 	models.TaskTracker	true		"the task object containing the day, month and year"
+// @router /alltask/all [GET]
+func (tt *TTController) GetAllUsersTasksHistory() {
+	allUserTask, err := models.GetAllTaskHistory()
 	if err != nil {
 		tt.Data["json"] = models.ValidResponse(403, "Error Getting all user tasks for today", err.Error())
 		tt.ServeJSON()

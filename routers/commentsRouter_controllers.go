@@ -162,8 +162,8 @@ func init() {
 
     beego.GlobalControllerRouter["performance/controllers:TTController"] = append(beego.GlobalControllerRouter["performance/controllers:TTController"],
         beego.ControllerComments{
-            Method: "GetAllUsersTasks",
-            Router: `/:day/:month/:year/`,
+            Method: "GetTeamMemberTask",
+            Router: `/:day/:month/:year/:memberid`,
             AllowHTTPMethods: []string{"GET"},
             MethodParams: param.Make(),
             Filters: nil,
@@ -171,8 +171,8 @@ func init() {
 
     beego.GlobalControllerRouter["performance/controllers:TTController"] = append(beego.GlobalControllerRouter["performance/controllers:TTController"],
         beego.ControllerComments{
-            Method: "GetTeamMemberTask",
-            Router: `/:day/:month/:year/:memberid`,
+            Method: "GetTrackedTask",
+            Router: `/:tid`,
             AllowHTTPMethods: []string{"GET"},
             MethodParams: param.Make(),
             Filters: nil,
@@ -189,8 +189,17 @@ func init() {
 
     beego.GlobalControllerRouter["performance/controllers:TTController"] = append(beego.GlobalControllerRouter["performance/controllers:TTController"],
         beego.ControllerComments{
-            Method: "GetTrackedTask",
-            Router: `/:tid`,
+            Method: "GetAllUsersTasks",
+            Router: `/alltask/`,
+            AllowHTTPMethods: []string{"POST"},
+            MethodParams: param.Make(),
+            Filters: nil,
+            Params: nil})
+
+    beego.GlobalControllerRouter["performance/controllers:TTController"] = append(beego.GlobalControllerRouter["performance/controllers:TTController"],
+        beego.ControllerComments{
+            Method: "GetAllUsersTasksHistory",
+            Router: `/alltask/all`,
             AllowHTTPMethods: []string{"GET"},
             MethodParams: param.Make(),
             Filters: nil,
@@ -315,6 +324,15 @@ func init() {
 
     beego.GlobalControllerRouter["performance/controllers:TeamController"] = append(beego.GlobalControllerRouter["performance/controllers:TeamController"],
         beego.ControllerComments{
+            Method: "GetNonMembers",
+            Router: `/non/`,
+            AllowHTTPMethods: []string{"get"},
+            MethodParams: param.Make(),
+            Filters: nil,
+            Params: nil})
+
+    beego.GlobalControllerRouter["performance/controllers:TeamController"] = append(beego.GlobalControllerRouter["performance/controllers:TeamController"],
+        beego.ControllerComments{
             Method: "GetTeamReport",
             Router: `/report`,
             AllowHTTPMethods: []string{"get"},
@@ -334,7 +352,7 @@ func init() {
     beego.GlobalControllerRouter["performance/controllers:TeamLeadController"] = append(beego.GlobalControllerRouter["performance/controllers:TeamLeadController"],
         beego.ControllerComments{
             Method: "AddNewMember",
-            Router: `/member/:id`,
+            Router: `/member/`,
             AllowHTTPMethods: []string{"post"},
             MethodParams: param.Make(),
             Filters: nil,
@@ -344,6 +362,15 @@ func init() {
         beego.ControllerComments{
             Method: "GetMyTeamInfo",
             Router: `/myteam/`,
+            AllowHTTPMethods: []string{"get"},
+            MethodParams: param.Make(),
+            Filters: nil,
+            Params: nil})
+
+    beego.GlobalControllerRouter["performance/controllers:TeamLeadController"] = append(beego.GlobalControllerRouter["performance/controllers:TeamLeadController"],
+        beego.ControllerComments{
+            Method: "GetLoggedInUserTeams",
+            Router: `/nonteam/`,
             AllowHTTPMethods: []string{"get"},
             MethodParams: param.Make(),
             Filters: nil,

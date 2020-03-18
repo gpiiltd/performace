@@ -228,3 +228,10 @@ type TaskUpdateResponseBody struct {
 	Task    TaskTracker          `json:"task"`
 	Updates []TaskTrackerUpdates `json:"updates"`
 }
+
+//TaskInfo holds object for task info
+type TaskInfo struct {
+	Day   string `json:"day"`
+	Month string `json:"month"`
+	Year  string `json:"year"`
+}

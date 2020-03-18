@@ -5,15 +5,23 @@ import (
 )
 
 //AddNewTeamMember adds a new member to the team
-func AddNewTeamMember(member User, teamLead User) interface{} {
-	if member.ID == teamLead.ID {
+func AddNewTeamMember(member Members, teamLead User) interface{} {
+	if member.MemberID == teamLead.ID {
 		return ErrorResponse(403, "You cannot add yourself to your team.")
 	}
 
+	var teamMember User
+	if findMember := Conn.Where("id = ?", member.MemberID).Find(&teamMember); findMember.Error != nil {
+		return ValidResponse(403, teamMember, "User has not yet signed on to PAS")
+	}
+
 	var team Team
-	hasTeam, team := MyTeam(teamLead)
-	if hasTeam != true {
-		return ErrorResponse(403, "User does not have a team")
+	if findTeam := Conn.Where("id = ?", member.TeamID).Find(&team); findTeam.Error != nil {
+		return ValidResponse(403, team, "Invalid Team ID")
+	}
+
+	if team.LeadID != teamLead.ID {
+		return ValidResponse(403, member, "Not authorized to invite team member to this team.")
 	}
 
 	var invitation TeamInvitation
@@ -21,8 +29,8 @@ func AddNewTeamMember(member User, teamLead User) interface{} {
 	invitation.TeamID = team.ID
 	invitation.TeamLead = teamLead.FullName
 	invitation.TeamLeadID = teamLead.ID
-	invitation.InviteeID = member.ID
-	invitation.InviteeName = member.FullName
+	invitation.InviteeID = teamMember.ID
+	invitation.InviteeName = teamMember.FullName
 	invitation.Status = "pending"
 
 	Conn.Where("invitee_id = ?", member.ID).Delete(&TeamInvitation{})
@@ -41,12 +49,12 @@ func MyTeam(user User) (bool, Team) {
 }
 
 //LeadHasTeam checks if a team Lead has a team
-func LeadHasTeam(teamLead User) (bool, string) {
-	var team Team
+func LeadHasTeam(teamLead User) (bool, []Team) {
+	var team []Team
 	if findTeam := Conn.Where("lead_id = ?", teamLead.ID).Find(&team); findTeam.Error != nil {
-		return false, "No team created"
+		return false, nil
 	}
-	return true, team.Name
+	return true, team
 }
 
 //AddNewTeam adds a new member to the team
@@ -66,9 +74,11 @@ func AddNewTeam(teamLead User, team Team) interface{} {
 		return ErrorResponse(401, "User not authorized to create team.")
 	}
 
-	var checkTeam Team
-	if findTeam := Conn.Where("lead_id = ?", teamLead.ID).Find(&checkTeam); findTeam.Error == nil {
-		return ErrorResponse(200, "Users not allowed to own more than 1 team")
+	var checkTeam []Team
+	Conn.Where("lead_id = ?", teamLead.ID).Find(&checkTeam)
+
+	if len(checkTeam) > 2 {
+		return ValidResponse(403, checkTeam, "User cannot lead more than 2 teams.")
 	}
 
 	var newTeam Team
@@ -122,6 +132,17 @@ func GetTeamInfo(teamLead User) interface{} {
 	return ValidResponse(200, allMembersArray, "success")
 }
 
+//GetMyTeams gets an array of teams a user leads
+func GetMyTeams(teamLead User) []Team {
+	var teams []Team
+	if findTeam := Conn.Where("lead_id = ?", teamLead.ID).Find(&teams); findTeam.Error != nil {
+		LogError(findTeam.Error)
+		return nil
+	}
+
+	return teams
+}
+
 //MyPendingTeamInfo retrieves all information for pending team members
 func MyPendingTeamInfo(teamLead User) interface{} {
 	var myTeam Team
@@ -133,8 +154,8 @@ func MyPendingTeamInfo(teamLead User) interface{} {
 	}
 
 	type invitationResponse struct {
-		User             User   `json:"user"`
-		InvitationStatus string `json:"status"`
+		User   User           `json:"user"`
+		Invite TeamInvitation `json:"invite"`
 	}
 	var inviteStatus invitationResponse
 	var inviteStatusArray []invitationResponse
@@ -146,7 +167,7 @@ func MyPendingTeamInfo(teamLead User) interface{} {
 		for _, invite := range invitations {
 			if invite.InviteeID == user.ID {
 				inviteStatus.User = user
-				inviteStatus.InvitationStatus = invite.Status
+				inviteStatus.Invite = invite
 
 				inviteStatusArray = append(inviteStatusArray, inviteStatus)
 			}

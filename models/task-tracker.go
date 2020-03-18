@@ -32,6 +32,10 @@ func ValidateTaskObject(task TaskTracker) error {
 		return errors.New("Empty Date Object")
 	}
 
+	if task.Task == "" {
+		return errors.New("Empty task")
+	}
+
 	return nil
 }
 
@@ -127,9 +131,8 @@ func RemoveTodayFromUncompletedTask(taskTracked []TaskTracker) []TaskTracker {
 
 //GetTask retrieves the task that needs to be tracked speciifed by task Day, month, and year. User Data must be passed too.
 func GetTask(user User, task TaskTracker) interface{} {
-	err := ValidateTaskObject(task)
-	if err != nil {
-		return ValidResponse(403, err.Error(), "error")
+	if task.Month == 0 || task.Day == 0 || task.Year == 0 {
+		return ValidResponse(403, "Empty Date Range", "error")
 	}
 	task.UserID = user.ID
 
@@ -142,18 +145,67 @@ func GetTask(user User, task TaskTracker) interface{} {
 }
 
 //GetAllTodayTask retrieves the task that needs to be tracked speciifed by task Day, month, and year. This gets data for all users
-func GetAllTodayTask(task TaskTracker) ([]TaskTracker, error) {
-	err := ValidateTaskObject(task)
-	if err != nil {
-		return []TaskTracker{}, err
-	}
+func GetAllTodayTask(task TaskInfo) (interface{}, error) {
+	var allUsers []User
+	Conn.Find(&allUsers)
 
 	var retrievedTask []TaskTracker
 	if findTasks := Conn.Where("day = ? AND year = ? AND month = ?", task.Day, task.Year, task.Month).Find(&retrievedTask); findTasks.Error != nil {
 		return []TaskTracker{}, findTasks.Error
 	}
 
-	return retrievedTask, nil
+	type taskResponse struct {
+		Task  TaskTracker `json:"task"`
+		Staff User        `json:"staff"`
+	}
+
+	var responseObject taskResponse
+	var responseObjectArray []taskResponse
+
+	for _, thisTask := range retrievedTask {
+		for _, thisUser := range allUsers {
+			if thisTask.UserID == thisUser.ID {
+				responseObject.Task = thisTask
+				responseObject.Staff = thisUser
+
+				responseObjectArray = append(responseObjectArray, responseObject)
+			}
+		}
+	}
+
+	return responseObjectArray, nil
+}
+
+//GetAllTaskHistory retrieves the task history of every user
+func GetAllTaskHistory() (interface{}, error) {
+	var allUsers []User
+	Conn.Find(&allUsers)
+
+	var retrievedTask []TaskTracker
+	if findTasks := Conn.Find(&retrievedTask); findTasks.Error != nil {
+		return []TaskTracker{}, findTasks.Error
+	}
+
+	type taskResponse struct {
+		Task  TaskTracker `json:"task"`
+		Staff User        `json:"staff"`
+	}
+
+	var responseObject taskResponse
+	var responseObjectArray []taskResponse
+
+	for _, thisTask := range retrievedTask {
+		for _, thisUser := range allUsers {
+			if thisTask.UserID == thisUser.ID {
+				responseObject.Task = thisTask
+				responseObject.Staff = thisUser
+
+				responseObjectArray = append(responseObjectArray, responseObject)
+			}
+		}
+	}
+
+	return responseObjectArray, nil
 }
 
 //GetTeamMemberTodayTask retrieves the task that needs to be tracked speciifed by task Day, month, and year. This gets data for all users

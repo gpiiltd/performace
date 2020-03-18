@@ -1,20 +1,23 @@
 package models
 
-import "log"
+import (
+	"log"
+	"sync"
+)
 
 //GetMyTeamInformations retrieves a team information for a user
 func GetMyTeamInformations(user User) interface{} {
-	var team Team
-	var teamMember Members
+	// var team Team
+	var teamMember []Members
 	if findTeam := Conn.Where("member_id = ?", user.ID).Find(&teamMember); findTeam.Error != nil {
-		return ValidResponse(404, team, "User does not belong to any team")
+		return ValidResponse(404, teamMember, "User does not belong to any team")
 	}
 
-	if findTeamInfo := Conn.Where("id = ?", teamMember.TeamID).Find(&team); findTeamInfo.Error != nil {
-		return ValidResponse(404, team, "Unable to get team Information")
-	}
+	// if findTeamInfo := Conn.Where("id = ?", teamMember.TeamID).Find(&team); findTeamInfo.Error != nil {
+	// 	return ValidResponse(404, team, "Unable to get team Information")
+	// }
 
-	return ValidResponse(200, team, "success")
+	return ValidResponse(200, teamMember, "My Team Information")
 }
 
 //GetPendingTeamRequests gets a team memeber team requests
@@ -29,9 +32,10 @@ func GetPendingTeamRequests(user User) interface{} {
 //AcceptInvitation accepts a new user team request
 func AcceptInvitation(user User, invitationID string) interface{} {
 	log.Println(invitationID)
-	var teamMember Members
-	if findMember := Conn.Where("member_id = ?", user.ID).Find(&teamMember); findMember.Error == nil {
-		return ErrorResponse(403, "User already belongs to a team")
+	var teamMembers []Members
+	Conn.Where("member_id = ?", user.ID).Find(&teamMembers)
+	if len(teamMembers) > 2 {
+		return ErrorResponse(403, "User already belongs to more than 2 teams.")
 	}
 
 	var invitationInfo TeamInvitation
@@ -134,4 +138,51 @@ func DeleteTeamMemberFunc(teamLead User, memberID int) ValidResponseData {
 	}
 	Conn.Where("member_id = ? AND team_lead_id = ?", memberID, teamLead.ID).Delete(&Members{})
 	return ValidResponse(200, "Successfully deleted member.", "success")
+}
+
+//GetNonMembers retrieves an array of other users that are not in User's team
+func GetNonMembers(teamLead User) []User {
+	var teamMembers []Members
+	if findMembers := Conn.Where("team_lead_id = ?", teamLead.ID).Find(&teamMembers); findMembers.Error != nil {
+		LogError(findMembers.Error)
+		return nil
+	}
+
+	var allUsers []User
+	Conn.Find(&allUsers)
+	userArrayLength := len(allUsers)
+
+	var sortedArray []User
+
+	var wg sync.WaitGroup
+	wg.Add(userArrayLength)
+
+	for i := 0; i < userArrayLength; i++ {
+		go func(i int) {
+			defer wg.Done()
+			var thisUser User
+			thisUser = allUsers[i]
+			for _, member := range teamMembers {
+				if thisUser.ID != member.ID {
+					sortedArray = append(sortedArray, thisUser)
+				}
+			}
+		}(i)
+	}
+
+	wg.Wait()
+
+	return sortedArray
+
+}
+
+//AppendUserdataFromArrayID extends an operation for func GetNonMembers
+func AppendUserdataFromArrayID(allUsers []User, userID uint64) User {
+	for _, user := range allUsers {
+		if userID != user.ID {
+			return user
+		}
+	}
+
+	return User{}
 }

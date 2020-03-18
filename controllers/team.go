@@ -203,3 +203,25 @@ func (t *TeamController) DeleteTeamPendingInvitation() {
 	t.Data["json"] = models.DeletePendingTeamInvitation(teamLead, invitationINT)
 	t.ServeJSON()
 }
+
+//GetNonMembers gets pending team information
+// @Title GetMyPendingTeam
+// @Description gets a team pending team requests
+// @Success 200 {object} models.ValidResponse
+// @Failure 403 body is empty
+// @router /non/ [get]
+func (t *TeamController) GetNonMembers() {
+	var user models.User
+	resCode, user := models.GetUserFromTokenString(t.Ctx.Input.Header("authorization"))
+	if resCode != 200 {
+		t.Data["json"] = models.ErrorResponse(403, "Unable to get token string")
+		t.ServeJSON()
+		return
+	}
+
+	var nonMembers []models.User
+	nonMembers = models.GetNonMembers(user)
+
+	t.Data["json"] = models.ValidResponse(200, nonMembers, "All Non-members of your team")
+	t.ServeJSON()
+}

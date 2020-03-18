@@ -18,7 +18,7 @@ type TeamLeadController struct {
 // @Param	visitid		path 	string	true		"the id of the user you want to make a front desk officer"
 // @Success 200 {string} id of the user
 // @Failure 403 body is empty
-// @router /member/:id [post]
+// @router /member/ [post]
 func (t *TeamLeadController) AddNewMember() {
 	var user models.User
 	resCode, user := models.GetUserFromTokenString(t.Ctx.Input.Header("authorization"))
@@ -27,15 +27,16 @@ func (t *TeamLeadController) AddNewMember() {
 		t.ServeJSON()
 		return
 	}
-	var member models.User
-	memberID := t.GetString(":id")
-	member, err := models.GetDataFromIDString(memberID)
+	var team models.Members
+	err := json.Unmarshal(t.Ctx.Input.RequestBody, &team)
 	if err != nil {
-		t.Data["json"] = models.ErrorResponse(404, "Member data does not exist on the system")
+		models.LogError(err)
+		t.Data["json"] = models.ValidResponse(405, "Method not allowed", err.Error())
 		t.ServeJSON()
 		return
 	}
-	t.Data["json"] = models.AddNewTeamMember(member, user)
+
+	t.Data["json"] = models.AddNewTeamMember(team, user)
 	t.ServeJSON()
 }
 
@@ -83,6 +84,28 @@ func (t *TeamLeadController) GetMyTeamInfo() {
 	t.ServeJSON()
 }
 
+//GetLoggedInUserTeams gets team details of authenticated user team information
+// @Title GetMyTeamInfo
+// @Description gets a team information
+// @Success 200 {object} models.ValidResponse
+// @Failure 403 body is empty
+// @router /nonteam/ [get]
+func (t *TeamLeadController) GetLoggedInUserTeams() {
+	var user models.User
+	resCode, user := models.GetUserFromTokenString(t.Ctx.Input.Header("authorization"))
+	if resCode != 200 {
+		t.Data["json"] = models.ErrorResponse(403, "Unable to get token string")
+		t.ServeJSON()
+		return
+	}
+
+	var myTeams []models.Team
+	myTeams = models.GetMyTeams(user)
+
+	t.Data["json"] = models.ValidResponse(200, myTeams, "All my team information")
+	t.ServeJSON()
+}
+
 //GetMyPendingTeam gets pending team details of authenticated user team
 // @Title GetMyPendingTeam
 // @Description gets a team's pending member information
@@ -127,12 +150,12 @@ func (t *TeamLeadController) VerifiHasTeam() {
 		t.ServeJSON()
 		return
 	}
-	verifiLead, teamName := models.LeadHasTeam(user)
+	verifiLead, team := models.LeadHasTeam(user)
 	if verifiLead != true {
-		t.Data["json"] = models.ValidResponse(404, teamName, "false")
+		t.Data["json"] = models.ValidResponse(404, team, "false")
 		t.ServeJSON()
 		return
 	}
-	t.Data["json"] = models.ValidResponse(200, teamName, "true")
+	t.Data["json"] = models.ValidResponse(200, team, "true")
 	t.ServeJSON()
 }
