@@ -26,7 +26,7 @@ func CreateTaskTrack(user User, task TaskTracker) interface{} {
 		return ValidResponse(403, err.Error(), "error")
 	}
 
-	return ValidResponse(200, "success", "success")
+	return ValidResponse(200, task, "success")
 }
 
 //ValidateTaskObject checks if a task struct is valid
