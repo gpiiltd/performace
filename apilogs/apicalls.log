@@ -5,3 +5,24 @@
 2020/05/18 08:30:17.190 [I] [asm_amd64.s:1357]  http server Running on http://:2254
 2020/05/18 08:30:17.191 [I] [asm_amd64.s:1357]  https server Running on https://:2253
 2020/05/18 08:30:17.191 [C] [asm_amd64.s:1357]  ListenAndServeTLS:  open /etc/letsencrypt/live/my-gpitools.com/fullchain.pem: no such file or directory
+2020/05/18 08:37:45.476 [I] [asm_amd64.s:1357]  http server Running on http://:2253
+2020/05/18 08:38:00.561 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|   1.189311ms|   match|[97;44m GET     [0m /v1/token/token/endy.apina@my-gpi.io   r:/v1/token/:email
+2020/05/18 08:38:01.271 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|     40.555µs| nomatch|[90;47m OPTIONS [0m /v1/user/update/
+2020/05/18 08:38:01.668 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m| 394.873874ms|   match|[97;46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2020/05/18 08:38:03.672 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m| 127.655758ms|   match|[97;46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2020/05/18 08:38:04.562 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|     53.597µs| nomatch|[90;47m OPTIONS [0m /v1/task/18/05/2020
+2020/05/18 08:38:04.567 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|     69.321µs| nomatch|[90;47m OPTIONS [0m /v1/task/uncomplete/
+2020/05/18 08:38:04.567 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|    173.053µs| nomatch|[90;47m OPTIONS [0m /v1/task/user/1
+2020/05/18 08:38:04.597 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|   29.42096ms|   match|[97;44m GET     [0m /v1/task/18/05/2020   r:/v1/task/:day/:month/:year
+2020/05/18 08:38:04.598 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|  24.820507ms|   match|[97;44m GET     [0m /v1/task/uncomplete/   r:/v1/task/uncomplete/
+2020/05/18 08:38:04.600 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|  26.245641ms|   match|[97;44m GET     [0m /v1/task/user/1   r:/v1/task/user/:userid
+2020/05/18 08:38:15.257 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|      87.22µs| nomatch|[90;47m OPTIONS [0m /v1/task/
+2020/05/18 08:38:15.849 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m| 588.998821ms|   match|[97;46m POST    [0m /v1/task/   r:/v1/task/
+2020/05/18 08:38:16.918 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|     29.746µs| nomatch|[90;47m OPTIONS [0m /v1/user/update/
+2020/05/18 08:38:17.087 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|     17.642µs| nomatch|[90;47m OPTIONS [0m /v1/task/18/05/2020
+2020/05/18 08:38:17.088 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|     13.175µs| nomatch|[90;47m OPTIONS [0m /v1/task/uncomplete/
+2020/05/18 08:38:17.089 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|     28.195µs| nomatch|[90;47m OPTIONS [0m /v1/task/user/1
+2020/05/18 08:38:17.090 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|   1.696977ms|   match|[97;44m GET     [0m /v1/task/18/05/2020   r:/v1/task/:day/:month/:year
+2020/05/18 08:38:17.092 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|   2.090316ms|   match|[97;44m GET     [0m /v1/task/uncomplete/   r:/v1/task/uncomplete/
+2020/05/18 08:38:17.093 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|    1.29154ms|   match|[97;44m GET     [0m /v1/task/user/1   r:/v1/task/user/:userid
+2020/05/18 08:38:18.177 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m| 1.256912046s|   match|[97;46m POST    [0m /v1/user/update/   r:/v1/user/update/
