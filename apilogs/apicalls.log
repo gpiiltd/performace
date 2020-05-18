@@ -26,3 +26,9 @@
 2020/05/18 08:38:17.092 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|   2.090316ms|   match|[97;44m GET     [0m /v1/task/uncomplete/   r:/v1/task/uncomplete/
 2020/05/18 08:38:17.093 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|    1.29154ms|   match|[97;44m GET     [0m /v1/task/user/1   r:/v1/task/user/:userid
 2020/05/18 08:38:18.177 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m| 1.256912046s|   match|[97;46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2020/05/18 10:27:11.887 [I] [asm_amd64.s:1357]  http server Running on http://:2254
+2020/05/18 10:27:11.888 [I] [asm_amd64.s:1357]  https server Running on https://:2253
+2020/05/18 10:27:11.888 [C] [asm_amd64.s:1357]  ListenAndServeTLS:  open /etc/letsencrypt/live/concerto.my-gpi.io/fullchain.pem: no such file or directory
+2020/05/18 11:20:34.288 [I] [asm_amd64.s:1357]  http server Running on http://:2254
+2020/05/18 11:20:34.289 [I] [asm_amd64.s:1357]  https server Running on https://:2253
+2020/05/18 11:20:34.289 [C] [asm_amd64.s:1357]  ListenAndServeTLS:  open /etc/letsencrypt/live/concerto.my-gpi.io/fullchain.pem: no such file or directory

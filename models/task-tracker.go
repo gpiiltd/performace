@@ -298,11 +298,14 @@ func StartTrackingTask(user User, task TaskTracker) interface{} {
 		return ValidResponse(403, "User can only start pending tasks", "error")
 	}
 
-	nowTime := time.Now()
+	layout := "15:04:05"
+	str := "00:00:00"
+	t, _ := time.Parse(layout, str)
+	// nowTime := "0000-00-00"
 
 	//change task status
 	taskStatus = "in progress"
-	Conn.Model(&myTask).Where("id = ?", task.ID).Updates(TaskTracker{Status: taskStatus, StartTime: nowTime})
+	Conn.Model(&myTask).Where("id = ?", task.ID).Updates(TaskTracker{Status: taskStatus, StartTime: t})
 	return ValidResponse(200, "Task Started", "success")
 }
 
