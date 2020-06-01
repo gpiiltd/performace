@@ -235,3 +235,9 @@ type TaskInfo struct {
 	Month string `json:"month"`
 	Year  string `json:"year"`
 }
+
+//KPIReport holds the data format for kpi report
+type KPIReport struct {
+	TeamMember Members `json:"member"`
+	MemberKPI  KPI     `json:"member_kpi"`
+}

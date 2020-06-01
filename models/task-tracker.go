@@ -17,6 +17,12 @@ func CreateTaskTrack(user User, task TaskTracker) interface{} {
 		return ValidResponse(403, err.Error(), "error")
 	}
 
+	layout := "15:04:05"
+	str := "00:00:00"
+	t, _ := time.Parse(layout, str)
+
+	task.StartTime = t
+	task.EndTime = t
 	task.Status = taskStatus
 	task.UserID = user.ID
 	task.DepartmentID = user.DepartmentID

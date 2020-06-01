@@ -142,6 +142,15 @@ func init() {
             Filters: nil,
             Params: nil})
 
+    beego.GlobalControllerRouter["performance/controllers:ReportController"] = append(beego.GlobalControllerRouter["performance/controllers:ReportController"],
+        beego.ControllerComments{
+            Method: "GetTeamReport",
+            Router: `/kpi/:month`,
+            AllowHTTPMethods: []string{"GET"},
+            MethodParams: param.Make(),
+            Filters: nil,
+            Params: nil})
+
     beego.GlobalControllerRouter["performance/controllers:TTController"] = append(beego.GlobalControllerRouter["performance/controllers:TTController"],
         beego.ControllerComments{
             Method: "CreateNewTask",
