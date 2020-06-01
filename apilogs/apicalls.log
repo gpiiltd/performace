@@ -318,3 +318,6 @@
 2020/06/01 14:59:10.597 [I] [asm_amd64.s:1357]  http server Running on http://:2254
 2020/06/01 14:59:10.598 [I] [asm_amd64.s:1357]  https server Running on https://:2253
 2020/06/01 14:59:10.598 [C] [asm_amd64.s:1357]  ListenAndServeTLS:  open /etc/letsencrypt/live/concerto.my-gpi.io/fullchain.pem: no such file or directory
+2020/06/01 15:10:24.583 [I] [asm_amd64.s:1357]  http server Running on http://:2254
+2020/06/01 15:10:24.584 [I] [asm_amd64.s:1357]  https server Running on https://:2253
+2020/06/01 15:10:24.584 [C] [asm_amd64.s:1357]  ListenAndServeTLS:  open /etc/letsencrypt/live/concerto.my-gpi.io/fullchain.pem: no such file or directory
