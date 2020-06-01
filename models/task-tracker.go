@@ -17,7 +17,7 @@ func CreateTaskTrack(user User, task TaskTracker) interface{} {
 		return ValidResponse(403, err.Error(), "error")
 	}
 
-	layout := "15:04:05"
+	layout := "2006-01-02 15:04:05"
 	str := "00:00:01"
 	t, _ := time.Parse(layout, str)
 
