@@ -37,13 +37,13 @@ func CreateTaskTrack(user User, task TaskTracker) interface{} {
 		return ValidResponse(403, err.Error(), "error")
 	}
 
-	// layout := "2006-01-02 15:04:05"
+	// layout := "2006-01-02T15:04:05Z"
 	str := "0000-01-01 00:00:01"
 	// timer, _ := time.Parse(layout, str)
 
 	t := time.Now()
 
-	task.StartTime = t.Format("2006-01-02 15:04:05")
+	task.StartTime = t.Format("2006-01-02T15:04:05Z")
 	task.EndTime = str
 	// task.EndTime = t
 	task.Status = taskStatus
@@ -335,7 +335,7 @@ func StartTrackingTask(user User, task TaskTracker) interface{} {
 
 	//change task status
 	taskStatus = "in progress"
-	if startTask := Conn.Model(&myTask).Where("id = ?", task.ID).Updates(TaskTracker{Status: taskStatus, StartTime: t.Format("2006-01-02 15:04:05")}); startTask.Error != nil {
+	if startTask := Conn.Model(&myTask).Where("id = ?", task.ID).Updates(TaskTracker{Status: taskStatus, StartTime: t.Format("2006-01-02T15:04:05Z")}); startTask.Error != nil {
 		LogError(startTask.Error)
 		return ValidResponse(403, startTask.Error.Error(), "error")
 	}
@@ -369,7 +369,7 @@ func CompleteTrackingTask(user User, taskUpdate TaskTracker) interface{} {
 	taskStatus = "completed"
 	endTIme := time.Now()
 
-	Conn.Model(&task).Where("id = ?", task.ID).Updates(TaskTracker{Comments: task.Comments, EndTime: endTIme.Format("2006-01-02 15:04:05"), Status: taskStatus})
+	Conn.Model(&task).Where("id = ?", task.ID).Updates(TaskTracker{Comments: task.Comments, EndTime: endTIme.Format("2006-01-02T15:04:05Z"), Status: taskStatus})
 
 	return ValidResponse(200, taskUpdate, "success")
 }
