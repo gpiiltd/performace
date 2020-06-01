@@ -42,6 +42,7 @@ func CreateTaskTrack(user User, task TaskTracker) interface{} {
 	// timer, _ := time.Parse(layout, str)
 
 	t := time.Now()
+	LogError(errors.New(t.Format("01-02-2006")))
 
 	task.StartTime = t
 	task.EndTime = &time.Time{}
