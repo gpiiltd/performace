@@ -51,6 +51,8 @@ func CreateTaskTrack(user User, task TaskTracker) interface{} {
 	task.UserID = user.ID
 	task.DepartmentID = user.DepartmentID
 
+	LogError(errors.New("Please work"))
+
 	if createTask := Conn.Create(&task); createTask.Error != nil {
 		LogError(createTask.Error)
 		return ValidResponse(403, err.Error(), "error")
