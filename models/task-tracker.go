@@ -1,12 +1,32 @@
 package models
 
 import (
+	"database/sql/driver"
 	"errors"
 	"fmt"
 	"strconv"
 	"strings"
 	"time"
 )
+
+type NullTime struct {
+	Time  time.Time
+	Valid bool // Valid is true if Time is not NULL
+}
+
+// Scan implements the Scanner interface.
+func (nt *NullTime) Scan(value interface{}) error {
+	nt.Time, nt.Valid = value.(time.Time)
+	return nil
+}
+
+// Value implements the driver Valuer interface.
+func (nt NullTime) Value() (driver.Value, error) {
+	if !nt.Valid {
+		return nil, nil
+	}
+	return nt.Time, nil
+}
 
 //CreateTaskTrack updates a new task to be tracked
 func CreateTaskTrack(user User, task TaskTracker) interface{} {
@@ -17,13 +37,14 @@ func CreateTaskTrack(user User, task TaskTracker) interface{} {
 		return ValidResponse(403, err.Error(), "error")
 	}
 
-	// layout := "2006-01-02 15:04:05"
-	// str := "1111-01-01 00:00:01"
-	// t, _ := time.Parse(layout, str)
+	layout := "2006-01-02 15:04:05"
+	str := "1111-01-01 00:00:01"
+	timer, _ := time.Parse(layout, str)
 
 	t := time.Now()
 
 	task.StartTime = t
+	task.EndTime = &timer
 	// task.EndTime = t
 	task.Status = taskStatus
 	task.UserID = user.ID
@@ -348,7 +369,7 @@ func CompleteTrackingTask(user User, taskUpdate TaskTracker) interface{} {
 	taskStatus = "completed"
 	endTIme := time.Now()
 
-	Conn.Model(&task).Where("id = ?", task.ID).Updates(TaskTracker{Comments: task.Comments, EndTime: endTIme, Status: taskStatus})
+	Conn.Model(&task).Where("id = ?", task.ID).Updates(TaskTracker{Comments: task.Comments, EndTime: &endTIme, Status: taskStatus})
 
 	return ValidResponse(200, taskUpdate, "success")
 }

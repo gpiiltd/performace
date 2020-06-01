@@ -203,17 +203,17 @@ type DateRange struct {
 //TaskTracker holds tasks tracking data
 type TaskTracker struct {
 	Model
-	UserID          uint64    `gorm:"int(10)" json:"user_id"`
-	DepartmentID    uint64    `gorm:"int(10)" json:"department"`
-	Day             uint64    `gorm:"int(10)" json:"day"`
-	Month           uint64    `gorm:"int(10)" json:"month"`
-	Year            uint64    `gorm:"int(10)" json:"year"`
-	Task            string    `gorm:"varchar(100)" json:"task"`
-	TaskDescription string    `gorm:"varchar(250)" json:"task_description"`
-	Comments        string    `gorm:"varchar(100)" json:"comments"`
-	StartTime       time.Time `json:"start_time"`
-	EndTime         time.Time `json:"end_time"`
-	Status          string    `gorm:"varchar(100)" json:"status"`
+	UserID          uint64     `gorm:"int(10)" json:"user_id"`
+	DepartmentID    uint64     `gorm:"int(10)" json:"department"`
+	Day             uint64     `gorm:"int(10)" json:"day"`
+	Month           uint64     `gorm:"int(10)" json:"month"`
+	Year            uint64     `gorm:"int(10)" json:"year"`
+	Task            string     `gorm:"varchar(100)" json:"task"`
+	TaskDescription string     `gorm:"varchar(250)" json:"task_description"`
+	Comments        string     `gorm:"varchar(100)" json:"comments"`
+	StartTime       time.Time  `json:"start_time"`
+	EndTime         *time.Time `json:"end_time"`
+	Status          string     `gorm:"varchar(100)" json:"status"`
 }
 
 //TaskTrackerUpdates provides daily update to the task
