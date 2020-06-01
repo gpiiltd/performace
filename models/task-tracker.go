@@ -18,7 +18,7 @@ func CreateTaskTrack(user User, task TaskTracker) interface{} {
 	}
 
 	// layout := "00:00:00"
-	str := "00:00:00"
+	str := "0000-00-00 00:00:00"
 
 	task.StartTime = str
 	task.EndTime = str
