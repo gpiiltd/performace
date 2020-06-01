@@ -286,3 +286,14 @@
 2020/06/01 13:03:54.609 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|   1.675408ms|   match|[97;44m GET     [0m /v1/task/user/1   r:/v1/task/user/:userid
 2020/06/01 13:29:05.881 [I] [asm_amd64.s:1357]  http server Running on http://:2253
 2020/06/01 13:49:51.064 [I] [asm_amd64.s:1357]  http server Running on http://:2253
+2020/06/01 14:01:36.810 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|     43.961µs| nomatch|[90;47m OPTIONS [0m /v1/user/update/
+2020/06/01 14:01:36.980 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|     26.675µs| nomatch|[90;47m OPTIONS [0m /v1/task/01/06/2020
+2020/06/01 14:01:36.981 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|     35.668µs| nomatch|[90;47m OPTIONS [0m /v1/task/user/1
+2020/06/01 14:01:36.981 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|     20.402µs| nomatch|[90;47m OPTIONS [0m /v1/task/uncomplete/
+2020/06/01 14:01:36.983 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|   2.204438ms|   match|[97;44m GET     [0m /v1/task/01/06/2020   r:/v1/task/:day/:month/:year
+2020/06/01 14:01:36.985 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|   2.256687ms|   match|[97;44m GET     [0m /v1/task/uncomplete/   r:/v1/task/uncomplete/
+2020/06/01 14:01:36.985 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|    2.81132ms|   match|[97;44m GET     [0m /v1/task/user/1   r:/v1/task/user/:userid
+2020/06/01 14:01:37.144 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m| 333.132027ms|   match|[97;46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2020/06/01 14:07:10.142 [I] [asm_amd64.s:1357]  http server Running on http://:2254
+2020/06/01 14:07:10.143 [I] [asm_amd64.s:1357]  https server Running on https://:2253
+2020/06/01 14:07:10.144 [C] [asm_amd64.s:1357]  ListenAndServeTLS:  open /etc/letsencrypt/live/concerto.my-gpi.io/fullchain.pem: no such file or directory
