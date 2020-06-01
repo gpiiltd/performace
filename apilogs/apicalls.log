@@ -345,3 +345,15 @@
 2020/06/01 22:08:58.040 [I] [asm_amd64.s:1357]  http server Running on http://:2253
 2020/06/01 22:09:10.087 [I] [asm_amd64.s:1357]  http server Running on http://:2253
 2020/06/01 22:10:01.639 [I] [asm_amd64.s:1357]  http server Running on http://:2253
+2020/06/01 22:30:56.258 [I] [asm_amd64.s:1357]  http server Running on http://:2253
+2020/06/01 22:33:23.578 [I] [asm_amd64.s:1357]  http server Running on http://:2253
+2020/06/01 22:34:01.520 [D] [server.go:2802]  |            ::1|[90;47m 302 [0m|    293.124µs|   match|[97;44m GET     [0m /swagger
+2020/06/01 22:34:01.642 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m| 116.735129ms|   match|[97;44m GET     [0m /swagger/
+2020/06/01 22:34:01.698 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|   1.120847ms|   match|[97;44m GET     [0m /swagger/swagger-ui.css
+2020/06/01 22:34:01.704 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|    6.08927ms|   match|[97;44m GET     [0m /swagger/swagger-ui-standalone-preset.js
+2020/06/01 22:34:01.731 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|  32.929817ms|   match|[97;44m GET     [0m /swagger/swagger-ui-bundle.js
+2020/06/01 22:34:02.171 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|  53.069706ms|   match|[97;44m GET     [0m /swagger/swagger.json
+2020/06/01 22:34:02.171 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|  26.885083ms|   match|[97;44m GET     [0m /swagger/favicon-32x32.png
+2020/06/01 22:49:33.948 [I] [asm_amd64.s:1357]  http server Running on http://:2254
+2020/06/01 22:49:33.949 [I] [asm_amd64.s:1357]  https server Running on https://:2253
+2020/06/01 22:49:33.949 [C] [asm_amd64.s:1357]  ListenAndServeTLS:  open /etc/letsencrypt/live/concerto.my-gpi.io/fullchain.pem: no such file or directory

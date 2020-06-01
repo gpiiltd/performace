@@ -38,7 +38,7 @@ func CreateTaskTrack(user User, task TaskTracker) interface{} {
 	}
 
 	// layout := "2006-01-02T15:04:05Z"
-	str := "0000-01-01 00:00:01"
+	str := "0000-01-01T00:00:01Z"
 	// timer, _ := time.Parse(layout, str)
 
 	t := time.Now()
@@ -376,8 +376,7 @@ func CompleteTrackingTask(user User, taskUpdate TaskTracker) interface{} {
 
 //DeleteTrackedTask deletes a task has not been tracked.
 func DeleteTrackedTask(user User, task TaskTracker) interface{} {
-	taskStatus := "Pending"
-	if findTask := Conn.Where("id = ? AND user_id = ? AND status = ?", task.ID, user.ID, taskStatus).Find(&TaskTracker{}); findTask.Error != nil {
+	if findTask := Conn.Where("id = ? AND user_id = ?", task.ID, user.ID).Find(&TaskTracker{}); findTask.Error != nil {
 		return ValidResponse(403, "User not authorized to delete task", findTask.Error.Error())
 	}
 
