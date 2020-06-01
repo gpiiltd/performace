@@ -10,19 +10,21 @@ import (
 
 //CreateTaskTrack updates a new task to be tracked
 func CreateTaskTrack(user User, task TaskTracker) interface{} {
-	taskStatus := "pending"
+	taskStatus := "in progress"
 
 	err := ValidateTaskObject(task)
 	if err != nil {
 		return ValidResponse(403, err.Error(), "error")
 	}
 
-	layout := "2006-01-02 15:04:05"
-	str := "1111-01-01 00:00:01"
-	t, _ := time.Parse(layout, str)
+	// layout := "2006-01-02 15:04:05"
+	// str := "1111-01-01 00:00:01"
+	// t, _ := time.Parse(layout, str)
+
+	t := time.Now()
 
 	task.StartTime = t
-	task.EndTime = t
+	// task.EndTime = t
 	task.Status = taskStatus
 	task.UserID = user.ID
 	task.DepartmentID = user.DepartmentID
