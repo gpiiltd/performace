@@ -357,3 +357,45 @@
 2020/06/01 22:49:33.948 [I] [asm_amd64.s:1357]  http server Running on http://:2254
 2020/06/01 22:49:33.949 [I] [asm_amd64.s:1357]  https server Running on https://:2253
 2020/06/01 22:49:33.949 [C] [asm_amd64.s:1357]  ListenAndServeTLS:  open /etc/letsencrypt/live/concerto.my-gpi.io/fullchain.pem: no such file or directory
+2020/06/09 10:39:44.845 [I] [asm_amd64.s:1357]  http server Running on http://:2254
+2020/06/09 10:39:44.847 [I] [asm_amd64.s:1357]  https server Running on https://:2253
+2020/06/09 10:39:44.901 [C] [asm_amd64.s:1357]  ListenAndServeTLS:  listen tcp :2253: listen: address already in use
+2020/06/09 10:42:14.095 [I] [asm_amd64.s:1357]  http server Running on http://:2253
+2020/06/09 10:45:43.190 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|    166.774µs|   match|[97;44m GET     [0m /v1/token/token/noreply@my-gpi.io   r:/v1/token/:email
+2020/06/09 10:46:21.958 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|     85.394µs|   match|[97;44m GET     [0m /v1/token/token/noreply@my-gpi.io   r:/v1/token/:email
+2020/06/09 11:47:48.761 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|     98.436µs|   match|[97;44m GET     [0m /v1/token/token/noreply@my-gpi.io   r:/v1/token/:email
+2020/06/09 11:47:55.823 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|    131.292µs| nomatch|[90;47m OPTIONS [0m /v1/lead/myteam/
+2020/06/09 11:47:56.041 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m| 214.718048ms|   match|[97;44m GET     [0m /v1/lead/myteam/   r:/v1/lead/myteam/
+2020/06/09 11:49:01.057 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|    244.483µs|   match|[97;44m GET     [0m /v1/token/token/eniye.princewill@my-gpi.io   r:/v1/token/:email
+2020/06/09 11:49:01.168 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|     25.114µs| nomatch|[90;47m OPTIONS [0m /v1/user/update/
+2020/06/09 11:49:01.208 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|  38.818586ms|   match|[97;46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2020/06/09 11:49:03.977 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|    972.967µs|   match|[97;46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2020/06/09 11:49:04.217 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|      69.83µs| nomatch|[90;47m OPTIONS [0m /v1/lead/validate/
+2020/06/09 11:49:04.221 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|     59.026µs| nomatch|[90;47m OPTIONS [0m /v1/lead/pending
+2020/06/09 11:49:04.227 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|   4.110341ms|   match|[97;44m GET     [0m /v1/lead/validate/   r:/v1/lead/validate
+2020/06/09 11:49:04.242 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|   16.11611ms|   match|[97;44m GET     [0m /v1/lead/pending   r:/v1/lead/pending
+2020/06/09 11:49:04.270 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|      25.67µs| nomatch|[90;47m OPTIONS [0m /v1/objectives/lead/
+2020/06/09 11:49:04.270 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|     17.594µs| nomatch|[90;47m OPTIONS [0m /v1/lead/myteam/
+2020/06/09 11:49:04.273 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|   1.250774ms|   match|[97;44m GET     [0m /v1/objectives/lead/   r:/v1/objectives/lead/
+2020/06/09 11:49:04.293 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|  21.945311ms|   match|[97;44m GET     [0m /v1/lead/myteam/   r:/v1/lead/myteam/
+2020/06/09 11:49:09.734 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|     71.997µs| nomatch|[90;47m OPTIONS [0m /v1/user/update/
+2020/06/09 11:49:09.744 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|    4.40788ms|   match|[97;46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2020/06/09 11:49:10.032 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|     61.631µs| nomatch|[90;47m OPTIONS [0m /v1/team/myteam
+2020/06/09 11:49:10.033 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|     66.007µs| nomatch|[90;47m OPTIONS [0m /v1/team/invitations/pending
+2020/06/09 11:49:10.039 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|     46.386µs| nomatch|[90;47m OPTIONS [0m /v1/objectives/member/
+2020/06/09 11:49:10.046 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|   4.308344ms|   match|[97;44m GET     [0m /v1/team/myteam   r:/v1/team/myteam
+2020/06/09 11:49:10.048 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|   4.991692ms|   match|[97;44m GET     [0m /v1/team/invitations/pending   r:/v1/team/invitations/pending
+2020/06/09 11:49:10.053 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|   8.358422ms|   match|[97;44m GET     [0m /v1/objectives/member/   r:/v1/objectives/member/
+2020/06/09 11:49:32.718 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|     37.196µs| nomatch|[90;47m OPTIONS [0m /v1/user/update/
+2020/06/09 11:49:32.721 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|    857.893µs|   match|[97;46m POST    [0m /v1/user/update/   r:/v1/user/update/
+2020/06/09 11:49:32.855 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|     16.047µs| nomatch|[90;47m OPTIONS [0m /v1/lead/validate/
+2020/06/09 11:49:32.856 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|     11.712µs| nomatch|[90;47m OPTIONS [0m /v1/lead/pending
+2020/06/09 11:49:32.858 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|   1.243645ms|   match|[97;44m GET     [0m /v1/lead/validate/   r:/v1/lead/validate
+2020/06/09 11:49:32.862 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|   5.010769ms|   match|[97;44m GET     [0m /v1/lead/pending   r:/v1/lead/pending
+2020/06/09 11:49:32.933 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|     27.503µs| nomatch|[90;47m OPTIONS [0m /v1/objectives/lead/
+2020/06/09 11:49:32.933 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|     15.954µs| nomatch|[90;47m OPTIONS [0m /v1/lead/myteam/
+2020/06/09 11:49:32.937 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|   2.480198ms|   match|[97;44m GET     [0m /v1/objectives/lead/   r:/v1/objectives/lead/
+2020/06/09 11:49:32.940 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|   5.974788ms|   match|[97;44m GET     [0m /v1/lead/myteam/   r:/v1/lead/myteam/
+2020/06/09 12:58:48.261 [I] [asm_amd64.s:1357]  http server Running on http://:2253
+2020/06/09 13:20:42.572 [I] [asm_amd64.s:1357]  http server Running on http://:2253
+2020/06/09 13:20:44.925 [I] [asm_amd64.s:1357]  http server Running on http://:2253

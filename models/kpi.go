@@ -25,7 +25,7 @@ func AssignNewKPI(kpi KPI, user User) interface{} {
 //ValidateKPIWeight checks if KPI weight is not more than 100
 func ValidateKPIWeight(kpi KPI, user User) (bool, string) {
 	var myKPI []KPI
-	if findMyKPI := Conn.Where("employee_id = ? AND start_date = ?", user.ID, kpi.StartDate).Find(&myKPI); findMyKPI.Error != nil {
+	if findMyKPI := Conn.Where("employee_id = ? AND start_date = ?", kpi.EmployeeID, kpi.StartDate).Find(&myKPI); findMyKPI.Error != nil {
 		return false, findMyKPI.Error.Error()
 	}
 
